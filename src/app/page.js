@@ -1,113 +1,39 @@
 import Image from "next/image";
+import {Navbar} from "./components/Navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <Navbar />
+      <h1/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat. Faucibus et molestie ac feugiat sed lectus. Amet dictum sit amet justo donec enim. Lectus nulla at volutpat diam. Non diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Urna molestie at elementum eu facilisis sed odio. Ornare arcu odio ut sem nulla. Ac odio tempor orci dapibus ultrices in. Quam quisque id diam vel. Nam aliquam sem et tortor consequat id porta nibh. Pulvinar pellentesque habitant morbi tristique senectus et. Arcu felis bibendum ut tristique et egestas quis ipsum suspendisse. Arcu vitae elementum curabitur vitae.
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+Ultricies tristique nulla aliquet enim. Vitae nunc sed velit dignissim sodales ut eu. Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Volutpat lacus laoreet non curabitur gravida arcu ac tortor. Amet porttitor eget dolor morbi non arcu risus. Donec pretium vulputate sapien nec sagittis aliquam malesuada. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Vel facilisis volutpat est velit egestas dui id. Turpis in eu mi bibendum neque egestas congue quisque. Pellentesque id nibh tortor id aliquet lectus proin nibh. Ultricies mi eget mauris pharetra. Nunc consequat interdum varius sit amet mattis. Et leo duis ut diam quam nulla porttitor massa id.
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+Vitae et leo duis ut diam. Vitae auctor eu augue ut lectus arcu bibendum. Suspendisse in est ante in nibh mauris cursus mattis molestie. Morbi leo urna molestie at. Velit ut tortor pretium viverra. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Tempor nec feugiat nisl pretium. Imperdiet massa tincidunt nunc pulvinar sapien. Tempor orci eu lobortis elementum nibh tellus molestie. Turpis egestas maecenas pharetra convallis. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Aliquam malesuada bibendum arcu vitae elementum curabitur. Lobortis mattis aliquam faucibus purus. Nibh mauris cursus mattis molestie a iaculis at erat. Turpis cursus in hac habitasse platea dictumst quisque.
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+Velit egestas dui id ornare. Nibh cras pulvinar mattis nunc. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor. Eget dolor morbi non arcu risus quis varius. Leo vel fringilla est ullamcorper eget nulla facilisi. Habitasse platea dictumst vestibulum rhoncus. Vitae tempus quam pellentesque nec nam aliquam. Suspendisse sed nisi lacus sed. Risus pretium quam vulputate dignissim suspendisse in est. Feugiat in ante metus dictum at. Vitae sapien pellentesque habitant morbi. Placerat orci nulla pellentesque dignissim enim sit. Cursus in hac habitasse platea dictumst. Donec enim diam vulputate ut pharetra sit. Eget nullam non nisi est sit amet facilisis. Aliquet lectus proin nibh nisl condimentum id venenatis a condimentum. Integer malesuada nunc vel risus commodo viverra maecenas accumsan.
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+Convallis a cras semper auctor. Risus nullam eget felis eget nunc. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Pulvinar proin gravida hendrerit lectus a. Ac ut consequat semper viverra nam libero justo. Risus quis varius quam quisque id diam vel. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Aliquet lectus proin nibh nisl condimentum id. Ipsum suspendisse ultrices gravida dictum fusce ut placerat. Euismod lacinia at quis risus sed vulputate odio. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod. Amet porttitor eget dolor morbi non arcu.
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+Volutpat sed cras ornare arcu dui vivamus. Elit pellentesque habitant morbi tristique senectus et netus et. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Quam id leo in vitae turpis massa sed elementum. Nibh praesent tristique magna sit amet. Urna duis convallis convallis tellus id interdum velit laoreet id. Sagittis purus sit amet volutpat consequat mauris nunc congue nisi. Ipsum a arcu cursus vitae congue mauris rhoncus aenean. Massa placerat duis ultricies lacus sed. Arcu felis bibendum ut tristique et egestas quis. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quisque egestas diam in arcu. Rutrum quisque non tellus orci ac auctor augue mauris. Ut pharetra sit amet aliquam id diam maecenas. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Vulputate ut pharetra sit amet aliquam id diam maecenas. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium. A scelerisque purus semper eget duis at.
+
+Amet consectetur adipiscing elit duis tristique sollicitudin nibh. In ante metus dictum at tempor. Faucibus purus in massa tempor nec feugiat nisl. Nunc eget lorem dolor sed viverra ipsum. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Integer vitae justo eget magna fermentum iaculis eu non. Sollicitudin nibh sit amet commodo nulla facilisi nullam. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Tincidunt augue interdum velit euismod. Senectus et netus et malesuada fames ac. Adipiscing bibendum est ultricies integer quis. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Quis lectus nulla at volutpat diam ut venenatis. Sapien et ligula ullamcorper malesuada proin libero. Aliquet eget sit amet tellus cras adipiscing. Arcu cursus vitae congue mauris. Lobortis mattis aliquam faucibus purus in. Sagittis purus sit amet volutpat consequat mauris nunc congue nisi.
+
+Facilisi morbi tempus iaculis urna. Ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras tincidunt. Etiam erat velit scelerisque in dictum non consectetur. Massa sapien faucibus et molestie ac feugiat sed. Lobortis feugiat vivamus at augue eget arcu dictum varius. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Dui faucibus in ornare quam viverra orci. Tincidunt arcu non sodales neque. Sed vulputate mi sit amet mauris commodo quis. Aenean euismod elementum nisi quis eleifend. Arcu dictum varius duis at consectetur lorem donec massa sapien. Netus et malesuada fames ac turpis egestas sed. Ornare quam viverra orci sagittis eu volutpat odio facilisis mauris. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Vitae sapien pellentesque habitant morbi. Nibh tortor id aliquet lectus proin nibh nisl condimentum. Vitae tempus quam pellentesque nec.
+
+Diam maecenas sed enim ut sem viverra aliquet. Elementum nisi quis eleifend quam adipiscing. Ornare massa eget egestas purus viverra accumsan. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Nisl tincidunt eget nullam non nisi. Sem integer vitae justo eget magna fermentum iaculis eu non. Cursus vitae congue mauris rhoncus aenean vel. Ut diam quam nulla porttitor massa id. Aliquam id diam maecenas ultricies mi eget mauris pharetra.
+
+Vivamus arcu felis bibendum ut tristique et egestas quis ipsum. Pharetra pharetra massa massa ultricies mi quis. Arcu dictum varius duis at consectetur lorem donec massa. Consequat interdum varius sit amet mattis vulputate enim nulla. Natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et. Vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur. Augue interdum velit euismod in pellentesque. Vulputate sapien nec sagittis aliquam malesuada. In cursus turpis massa tincidunt dui ut ornare. Donec adipiscing tristique risus nec feugiat in. Arcu odio ut sem nulla pharetra diam sit amet. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. Ut venenatis tellus in metus vulputate eu. In vitae turpis massa sed.
+
+Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Ipsum faucibus vitae aliquet nec. Turpis egestas pretium aenean pharetra magna ac placerat. Nullam vehicula ipsum a arcu cursus vitae. Aliquam sem fringilla ut morbi tincidunt. Habitant morbi tristique senectus et netus et malesuada fames ac. Et netus et malesuada fames ac turpis egestas sed. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Sodales neque sodales ut etiam sit. Massa massa ultricies mi quis hendrerit. Amet mauris commodo quis imperdiet massa tincidunt. Dui vivamus arcu felis bibendum ut tristique. Pharetra et ultrices neque ornare aenean euismod. Blandit massa enim nec dui nunc mattis enim ut tellus. Tellus cras adipiscing enim eu. Sed adipiscing diam donec adipiscing tristique risus. Amet nisl purus in mollis nunc.
+
+Lacinia quis vel eros donec ac odio tempor. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Viverra orci sagittis eu volutpat odio. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Posuere ac ut consequat semper viverra nam libero justo laoreet. Viverra justo nec ultrices dui sapien eget mi proin. Eu nisl nunc mi ipsum faucibus vitae aliquet. Sit amet porttitor eget dolor morbi non arcu risus. Id faucibus nisl tincidunt eget nullam. Ultrices neque ornare aenean euismod elementum nisi. Odio morbi quis commodo odio aenean sed adipiscing diam. Tempor nec feugiat nisl pretium fusce. Vestibulum rhoncus est pellentesque elit. Elementum curabitur vitae nunc sed velit dignissim sodales ut. Quam viverra orci sagittis eu volutpat odio. Id porta nibh venenatis cras sed felis eget. Aliquam etiam erat velit scelerisque in. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus.
+
+Ut aliquam purus sit amet luctus. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Urna cursus eget nunc scelerisque viverra mauris. A pellentesque sit amet porttitor eget dolor morbi. Dui nunc mattis enim ut tellus elementum. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Cras pulvinar mattis nunc sed blandit libero. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Euismod nisi porta lorem mollis aliquam ut. Quisque non tellus orci ac auctor augue. Adipiscing tristique risus nec feugiat in fermentum posuere. Velit scelerisque in dictum non consectetur a erat. Sed faucibus turpis in eu.
+
+Enim ut sem viverra aliquet eget sit amet tellus cras. At consectetur lorem donec massa. Adipiscing bibendum est ultricies integer quis auctor. Pretium nibh ipsum consequat nisl. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel. Nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Ridiculus mus mauris vitae ultricies leo integer. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Feugiat sed lectus vestibulum mattis ullamcorper.
+
+In fermentum et sollicitudin ac orci phasellus egestas. Interdum velit euismod in pellentesque massa placerat. Ultricies leo integer malesuada nunc vel. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Morbi tristique senectus et netus. Morbi tristique senectus et netus et malesuada. Laoreet sit amet cursus sit amet dictum sit amet justo. Et tortor consequat id porta nibh venenatis cras sed felis. Praesent semper feugiat nibh sed pulvinar proin gravida. Mauris rhoncus aenean vel elit scelerisque.
+    </>
   );
 }
