@@ -1,7 +1,9 @@
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 400px;
-    height: auto;
-  }
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  height: auto;
+  transition: width 0.3s ease;
+}

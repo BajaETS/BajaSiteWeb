@@ -3,30 +3,16 @@
     padding: 20px;
     padding-bottom: 80px;
     text-align: right;
-    position: sticky;
+    position:fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
     align-items: right;
     transition: top 0.5s ease;
 }
-
-img{
-    max-width: 400px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
 
 ul {
     list-style: none;

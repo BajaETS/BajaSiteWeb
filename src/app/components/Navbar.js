@@ -1,12 +1,8 @@
 import './Navbar.css'
-import {Logo} from'./Logo'
 
 export function Navbar(){
     return(
         <nav id="navbar">
-            <div> 
-                <Logo />
-            </div>
             <ul>
                 <li>
                 <a href="/pages/whatwedo.html">What We Do</a>
