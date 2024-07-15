@@ -1,17 +1,13 @@
 "use client";
 import React from "react";
-import {Navbar} from "./components/Navbar";
-import {VideoHome} from "./components/VideoHome";
-import "./page.css";
-import {Logo} from'./components/Logo'
+import HomePage from "./pages/HomePage";
+import "./Page.css";
 
 
-export default function Home() {
+export default function Page() {
   return (
     <>
-      <Logo/>
-      <Navbar/>
-      <VideoHome/>
+      <HomePage/>
       <div className="content">
         <p>This is a paragraph that appears after the video.
         This is a paragraph that appears after the video.
