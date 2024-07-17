@@ -1,3 +1,5 @@
+import React from 'react';
+import { Outlet, Link } from "react-router-dom";
 import './Navbar.css'
 
 export function Navbar(){
@@ -5,22 +7,22 @@ export function Navbar(){
         <nav id="navbar">
             <ul>
                 <li>
-                <a href="/pages/whatwedo.html">What We Do</a>
+                    <Link to="/whatwedo">What We Do</Link>
                 </li>
                 <li>
-                <a href="/pages/fundraisingevent.html">Fundraising Event</a>
+                    <Link to="/fundraiser">Fundraiser</Link>
                 </li>
                 <li>
-                <a href="/pages/team.html">Team</a>
+                    <Link to="/team">Team</Link>
                 </li>
                 <li>
-                <a href="/pages/prizes.html">Prizes</a>
+                    <Link to="/prizes">Prizes</Link>
                 </li>
                 <li>
-                <a href="/pages/partners.html">Partners</a>
+                    <Link to="/partners">Partners</Link>
                 </li>
                 <li>
-                <a href="/pages/history.html">History</a>
+                    <Link to="/history">History</Link>
                 </li>
             </ul>
         </nav>
