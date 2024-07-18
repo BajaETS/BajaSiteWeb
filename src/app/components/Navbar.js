@@ -15,6 +15,7 @@ export function Navbar(){
     }
 
     useEffect(() => {
+        handleResize();
         window.addEventListener('resize', handleResize);
         // Clean up the event listener on component unmount
         return () => {
