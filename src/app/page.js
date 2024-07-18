@@ -9,6 +9,7 @@ import Team from "./pages/Team";
 import Prizes from "./pages/Prizes";
 import Partners from "./pages/Partners";
 import History from "./pages/History";
+import HamburgerNav from "./pages/HamburgerNav";
 
 
 export default function Page() {
@@ -22,6 +23,7 @@ export default function Page() {
         <Route path="prizes" element={<Prizes />} />
         <Route path="partners" element={<Partners />} />
         <Route path="history" element={<History />} />
+        <Route path="nav" element={<HamburgerNav />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
     </BrowserRouter>

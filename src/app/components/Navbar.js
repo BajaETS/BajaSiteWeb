@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Navbar.css'
 
 export function Navbar(){
@@ -7,7 +7,7 @@ export function Navbar(){
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
     function handleResize(){
-        if(window.innerWidth <= 1000){
+        if(window.innerWidth <= 900){
             setHamburger(true);
         }else{
             setHamburger(false);
@@ -22,9 +22,24 @@ export function Navbar(){
         };
     }, []);
 
+    //Use this function to decide if hamburger navigation is open or not (because nested conditional rendering is not working)
+    function hamburgerNavBar(){
+        if(isHamburgerOpen){
+            //set the visible page to hamburger
+        }else{
+            return(
+                <Link to="/nav">
+                    <button id="hamburger" onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}>
+                        <img src="/hamburger.png" width="25" height="25"></img>
+                    </button>
+                </Link>
+            );
+        }
+    }
+
     return(
         <>
-            {!isHamburger && (
+            {!isHamburger ? (
                 <nav id="navbar">
                     <ul>
                         <li>
@@ -47,11 +62,10 @@ export function Navbar(){
                         </li>
                     </ul>
                 </nav>
-            )}
-            {isHamburger && (
-                <button id="hamburger" onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}>
-                    <img src="/hamburger.png" width="25" height="25"></img>
-                </button>
+            ) : (
+                <div>
+                    {hamburgerNavBar()}
+                </div>
             )}
         </>
     );

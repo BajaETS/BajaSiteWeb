@@ -1,0 +1,57 @@
+/* HamburgerNav.css */
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#cancel{
+    padding:20px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content:flex-end;
+    align-items: right;
+}
+
+#nav-container-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000; /* Light background color */
+}
+
+#navbar-hamburger {
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    height: 100%;
+    width: 100%;
+}
+
+#navbar-hamburger ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+#navbar-hamburger ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Link color */
+    font-size: 3rem; /* Font size for the links */
+    transition: color 0.3s ease;
+}
+
+#navbar-hamburger ul li a:hover {
+    color: #652D91; /* Hover color */
+}
