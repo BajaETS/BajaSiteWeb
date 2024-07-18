@@ -7,7 +7,7 @@ export function Navbar(){
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
     function handleResize(){
-        if(window.innerWidth <= 500){
+        if(window.innerWidth <= 1000){
             setHamburger(true);
         }else{
             setHamburger(false);
