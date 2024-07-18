@@ -10,7 +10,7 @@ body, html {
     z-index: 1; /* Ensure content is above the background video */
     padding: 20px;
     background-color: rgb(0, 0, 0); /* Optional: add background color for readability */
-    margin-top: 100vh; /* Ensure content starts after the full viewport height of the video */
+    margin-top: 10px; /* Ensure content starts after the full viewport height of the video */
   }
   
   p {
