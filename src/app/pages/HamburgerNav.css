@@ -11,11 +11,11 @@ html, body {
     position:fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1000;
     display: flex;
     justify-content:flex-end;
     align-items: right;
+    width: 65px;
 }
 
 #nav-container-hamburger {
@@ -58,4 +58,11 @@ html, body {
 
 button #hamburger {
     width: 25;
+}
+
+#cancel{
+    align-items: right;
+    position: fixed;
+    width: 65px;
+    right: 0;
 }

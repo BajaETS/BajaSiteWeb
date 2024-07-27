@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar";
 import { VideoHome } from "../components/VideoHome";
 import "./HomePage.css";
 import { HomePageScrollSection } from "../components/HomePageScrollSection";
+import Footer from "../components/Footer";
 
 
 export default function HomePage(){
@@ -13,6 +14,7 @@ export default function HomePage(){
             <Navbar/>
             <VideoHome/>
             <HomePageScrollSection/>
+            <Footer/>
         </>
     );
 }
