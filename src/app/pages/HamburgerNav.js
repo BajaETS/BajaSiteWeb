@@ -5,11 +5,11 @@ import "./HamburgerNav.css"
 export default function HamburgerNav(){
     return(
         <div id="nav-container-hamburger">
-            <Link to="/">
                 <button id='cancel'>
-                    <img src='/x-white.png' width='25' height='25'></img>
+                    <Link to="/">
+                        <img src='/x-white.png' width='25' height='25'></img>
+                    </Link>
                 </button>
-            </Link>
             <nav id="navbar-hamburger">
                 <ul>
                     <li>

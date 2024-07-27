@@ -1,7 +1,13 @@
 import React from "react";
+import { Navbar } from "../components/Navbar";
+import { MiniLogo } from "../components/MiniLogo";
 
 export default function Fundraiser(){
     return(
-        <p>Fundraiser</p>
+        <>
+            <MiniLogo/>
+            <Navbar/>
+            <p>Fundraiser</p>
+        </>
     );
 }

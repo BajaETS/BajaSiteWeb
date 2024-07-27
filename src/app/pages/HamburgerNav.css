@@ -55,3 +55,7 @@ html, body {
 #navbar-hamburger ul li a:hover {
     color: #652D91; /* Hover color */
 }
+
+button #hamburger {
+    width: 25;
+}

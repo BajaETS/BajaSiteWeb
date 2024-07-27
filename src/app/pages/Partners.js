@@ -1,7 +1,13 @@
 import React from "react";
+import { Navbar } from "../components/Navbar";
+import { MiniLogo } from "../components/MiniLogo";
 
 export default function Partners(){
     return(
-        <p>Partners</p>
+        <>
+            <MiniLogo/>
+            <Navbar/>
+            <p>Partners</p>
+        </>
     );
 }

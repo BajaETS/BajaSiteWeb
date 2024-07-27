@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Document, {Head} from "next/document";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import "./Page.css";
@@ -14,18 +15,21 @@ import HamburgerNav from "./pages/HamburgerNav";
 
 export default function Page() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="whatwedo" element={<WhatWeDo />} />
-        <Route path="fundraiser" element={<Fundraiser />} />
-        <Route path="team" element={<Team />} />
-        <Route path="prizes" element={<Prizes />} />
-        <Route path="partners" element={<Partners />} />
-        <Route path="history" element={<History />} />
-        <Route path="nav" element={<HamburgerNav />} />
-        <Route path="*" element={<HomePage />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="whatwedo" element={<WhatWeDo />} />
+          <Route path="fundraiser" element={<Fundraiser />} />
+          <Route path="team" element={<Team />} />
+          <Route path="prizes" element={<Prizes />} />
+          <Route path="partners" element={<Partners />} />
+          <Route path="history" element={<History />} />
+          <Route path="nav" element={<HamburgerNav />} />
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+    
   );
 }
