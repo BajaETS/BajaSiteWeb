@@ -158,7 +158,7 @@ export default function PrizesPage() {
             '2nd place overall dynamic',
             '2nd place overall static',
           ],
-          imageUrl: '/images/2022_tennessee.jpg',
+          imageUrl: '/Prizes/tene2022.jpg',
         },
         {
           title: 'Baja SAE Rochester',
@@ -170,7 +170,7 @@ export default function PrizesPage() {
             '2nd place maneuverability',
             '2nd place overall static',
           ],
-          imageUrl: '/images/2022_rochester.jpg',
+          imageUrl: '/Prizes/roch2022.jpg',
         },
         {
           title: 'Baja SAE Arizona',
@@ -206,7 +206,7 @@ export default function PrizesPage() {
             '2nd place hill climb',
             '1st place endurance',
           ],
-          imageUrl: '/images/2021_oktobajafest.jpg',
+          imageUrl: '/Prizes/okto2021.jpg',
         },
       ],
     },
