@@ -113,7 +113,7 @@ export default function Team() {
           name: "Léo Bazinet",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.suspension-lead'),
-          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/in/léo-bazinet-78165a232/"
         },
       ]
     },
@@ -154,56 +154,56 @@ export default function Team() {
           name: "Pierre-Alexis Lachance",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.mechanics'),
-          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/in/pierre-alexis-lachance-360a51314/"
         },
         {
           image: "/Team/elie.JPG",
           name: "Élie Bazinet",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.mechanics'),
-          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/company/baja-ets/"
         },
         {
           image: "/Team/dannick.JPEG",
           name: "Danick Rouillier",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.mechanics'),
-          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/in/danick-rouillier-4805a1335/"
         },
         {
           image: "/Team/Maorie.JPEG",
           name: "Maorie Barbeau",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.mechanics'),
-          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/in/maorie-barbeau-b07292232/"
         },
         {
           image: "/Team/samViens.JPG",
           name: "Samuel Viens",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.mechanics'),
-          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/company/baja-ets/"
         },
         {
           image: "/Team/charlo.JPG",
           name: "Charles-Olivier Deschênes",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.mechanics'),
-          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/in/charles-olivier-deschênes-a6216a28b/"
         },
         {
           image: "/Team/Aymerick.JPG",
           name: "Aymeric Bellon",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.mechanics'),
-          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/in/aymeric-bellon-855b77259/"
         },
         {
           image: "/Team/Adrien.JPEG",
           name: "Adrean Domenko",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.mechanics'),
-          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/in/adrean-domenko-aa63562b3/"
         }
       ]
     },
@@ -238,7 +238,7 @@ export default function Team() {
           name: "Félix Desrochers",
           program: t('programs.electrical-engineering'),
           roles: t('roles.electronics'),
-          linkedin: "https://www.linkedin.com/in/leo-lefebvre-9b6b7b1b2/"
+          linkedin: "https://www.linkedin.com/in/felix-desrochers-312051193/"
         }
       ]
     }
