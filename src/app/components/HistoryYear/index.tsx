@@ -1,6 +1,12 @@
 import React from "react";
 
-export default function HistoryYear({ image, year, text }) {
+interface HistoryYearProps {
+  image: string;
+  year: number;
+  text: string;
+}
+
+export default function HistoryYear({ image, year, text }: HistoryYearProps) {
   const isEven = year % 2 === 0;
 
   return (
