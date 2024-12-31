@@ -1,0 +1,270 @@
+import React from "react";
+import Member from "../../../components/Member";
+import { useTranslations } from "next-intl";
+import Page from "@/app/components/Page";
+import { TMemberProps } from "@/app/components/Member/inteface";
+
+type TMemberSection = {
+  title: string
+  members: TMemberProps[]
+}
+
+export default function Team() {
+
+  const t = useTranslations('team')
+
+  const sections: TMemberSection[] = [
+    {
+      title: t('title.management'),
+      members: [
+        {
+          image: "/Team/BlasterSquare.jpg",
+          name: "Samuel Leblanc",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.technical-director'),
+          nickname: "Blaster",
+          linkedin: "https://www.linkedin.com/in/samuel-leblanc-bmw/"
+        },
+        {
+          image: "/Team/Boisvert.jpg",
+          name: "Olivier Boisvert",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.powertrain-lead'),
+          nickname: "Oli",
+          linkedin: "https://www.linkedin.com/in/olivier-boisvert/"
+        },
+        {
+          image: "/Team/Chando.jpg",
+          name: "Olivier Chandonnet",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.team-captain'),
+          nickname: "Chando",
+          linkedin: "https://www.linkedin.com/in/olivier-chandonnet-103404263/"
+        },
+        {
+          image: "/Team/Hubert.jpeg",
+          name: "Hubert Moisan-Leduc",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.treasurer'),
+          linkedin: "https://www.linkedin.com/in/hubert-moisan-leduc-4ba002293/"
+        }
+      ]
+    },
+    {
+      title: t('title.team-leads'),
+      members: [
+        {
+          image: "/Team/Lavigne.jpg",
+          name: "Samuel Lavigne-Cloutier",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.chassis-lead'),
+          nickname: "Lavigne",
+          linkedin: "https://www.linkedin.com/in/samuellavigne-cloutier/"
+        },
+        {
+          image: "/Team/MIKA.JPEG",
+          name: "Mika Loiselle",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.brakes-lead'),
+          linkedin: "https://www.linkedin.com/in/mika-loiselle-ba010b231/"
+        },
+        {
+          image: "/Team/Xav.jpg",
+          name: "Xavier Vaillancourt",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.machining-lead'),
+          nickname: "Xav",
+          linkedin: "https://www.linkedin.com/in/xavier-vaillancourt-8924a1242/"
+        },
+        {
+          image: "/Team/Antoine.jpg",
+          name: "Antoine Proulx",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.direction-lead'),
+          nickname: "BDT",
+          linkedin: "https://www.linkedin.com/in/antoine-proulx-884480231/"
+        },
+        {
+          image: "/Team/berp.JPG",
+          name: "Charles Grenier",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.cvt-lead'),
+          nickname: "Berp",
+          linkedin: "https://www.linkedin.com/in/charles-grenier-b45627292/"
+        },
+        {
+          image: "/Team/Kantin.jpeg",
+          name: "Justin Desbois",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.driveline-lead'),
+          nickname: "Kantin",
+          linkedin: "https://www.linkedin.com/in/justin-desbois-043bb9293/"
+        },
+        {
+          image: "/Team/Nico.jpg",
+          name: "Nicolas Legault-Young",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.differential-lead'),
+          nickname: "Nico",
+          linkedin: "https://www.linkedin.com/company/baja-ets/"
+        },
+        {
+          image: "/Team/Leo.JPEG",
+          name: "Léo Bazinet",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.suspension-lead'),
+          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+        },
+      ]
+    },
+    {
+      title: t('title.mechanics'),
+      members: [
+        {
+          image: "/Team/Titou.jpg",
+          name: "Titouan Moron",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.sponsor-relations'),
+          nickname: "Titou",
+          linkedin: "https://www.linkedin.com/in/titouan-almeida-moron-9105b1206/"
+        },
+        {
+          image: "/Team/Annabelle.jpeg",
+          name: "Annabelle Gagnon",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.composite'),
+          linkedin: "https://www.linkedin.com/in/annabelle-gagnon-ab8313311/"
+        },
+        {
+          image: "/Team/Charlotte.jpg",
+          name: "Charlotte St-Pierre",
+          program: t('programs.construction-engineering'),
+          roles: t('roles.project-manager'),
+          linkedin: "https://www.linkedin.com/in/charlotte-st-pierre-888327261/"
+        },
+        {
+          image: "/Team/Steph.jpeg",
+          name: "Steph Bienvenue",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.composite'),
+          linkedin: "https://www.linkedin.com/in/steph-bienvenue-22948b250/"
+        },
+        {
+          image: "/Team/PA.JPEG",
+          name: "Pierre-Alexis Lachance",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.mechanics'),
+          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+        },
+        {
+          image: "/Team/elie.JPG",
+          name: "Élie Bazinet",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.mechanics'),
+          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+        },
+        {
+          image: "/Team/dannick.JPEG",
+          name: "Danick Rouillier",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.mechanics'),
+          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+        },
+        {
+          image: "/Team/Maorie.JPEG",
+          name: "Maorie Barbeau",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.mechanics'),
+          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+        },
+        {
+          image: "/Team/samViens.JPG",
+          name: "Samuel Viens",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.mechanics'),
+          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+        },
+        {
+          image: "/Team/charlo.JPG",
+          name: "Charles-Olivier Deschênes",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.mechanics'),
+          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+        },
+        {
+          image: "/Team/Aymerick.JPG",
+          name: "Aymeric Bellon",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.mechanics'),
+          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+        },
+        {
+          image: "/Team/Adrien.JPEG",
+          name: "Adrean Domenko",
+          program: t('programs.mechanical-engineering'),
+          roles: t('roles.mechanics'),
+          linkedin: "https://www.linkedin.com/in/maxime-lefebvre-9b6b7b1b2/"
+        }
+      ]
+    },
+    {
+      title: t('title.electronics'),
+      members: [
+        {
+          image: "/Team/Maxwell.jpg",
+          name: "Maxence Lafond",
+          program: t('programs.software-engineering'),
+          roles: t('roles.electronics-lead'),
+          nickname: "Maxwell",
+          linkedin: "https://www.linkedin.com/in/maxence-lafond-b211a5218/"
+        },
+        {
+          image: "/Team/Alex.jpeg",
+          name: "Alex Maheu",
+          program: t('programs.electrical-engineering'),
+          roles: t('roles.electronics'),
+          linkedin: "https://www.linkedin.com/in/alex-maheu-6382752b5/"
+        },
+        {
+          image: "/Team/oscar.JPG",
+          name: "Xavier Orsat-Parker",
+          program: t('programs.software-engineering'),
+          roles: t('roles.electronics'),
+          nickname: "Oscar",
+          linkedin: "https://www.linkedin.com/in/xavier-orsat-parker-0b6697251/"
+        },
+        {
+          image: "/Team/Felix.JPEG",
+          name: "Félix Desrochers",
+          program: t('programs.electrical-engineering'),
+          roles: t('roles.electronics'),
+          linkedin: "https://www.linkedin.com/in/leo-lefebvre-9b6b7b1b2/"
+        }
+      ]
+    }
+  ]
+
+  return (
+    <Page>
+      {sections.map((section) => (
+        <>
+          <h2 className="text-2xl font-bold mb-0 text-center">{section.title}</h2>
+          <div className="flex justify-center items-center">
+            <div className="pt-8 pb-24 px-5 md:px-36 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8 h-auto overflow-y-auto max-w-screen-2xl">
+              {section.members.map(member => (
+                <Member
+                  image={member.image}
+                  name={member.name}
+                  program={member.program}
+                  roles={member.roles}
+                  nickname={member.nickname}
+                  linkedin={member.linkedin}
+                />
+              ))}
+            </div>
+          </div>
+        </>
+      ))}
+    </Page>
+  );
+}

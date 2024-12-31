@@ -1,0 +1,93 @@
+{
+  "pages": {
+    "home": {
+      "title": "Home",
+      "content": {
+        "who-we-are": {
+          "title": "Who we are",
+          "text": "BajaETS is a student team from École de Technologie Supérieure (ETS) in Montreal, Canada that competes in the Baja SAE competition. The team is comprised of students from various engineering disciplines who come together to design, build, and race an off-road vehicle against other universities from around the world. BajaETS has been participating in the competition since 1989 and has consistently placed well, including several top 10 finishes. The team prides itself on its innovative designs, strong teamwork, and dedication to pushing the limits of off-road racing technology."
+        },
+        "research-and-innovation": {
+          "title": "Research and Innovation",
+          "text": "At BajaETS, integrating technology is a top priority. In the 2017 season, we made history as the first team to win using an electronically actuated continuously variable transmission (EVT) that we developed ourselves. This innovation was a game-changer, now patented to B-Cinq Technologies, a company funded by BajaETS alumni. We're proud of our achievement and excited for the future of this technology."
+        }
+      }
+    },
+    "history": {
+      "title": "History"
+    },
+    "partners": {
+      "title": "Partners"
+    },
+    "prizes": {
+      "title": "Prizes"
+    },
+    "team": {
+      "title": "Team"
+    },
+    "whatwedo": {
+      "title":"What we do"
+    }
+  },
+  "team": {
+    "role": "Role(s)",
+    "nickname": "Nickname",
+    "title": {
+      "management": "Management",
+      "team-leads": "Team Leads",
+      "mechanics": "Mechanics",
+      "electronics": "Electronics"
+    },
+    "programs": {
+      "mechanical-engineering": "Mechanical Engineering",
+      "construction-engineering": "Construction Engineering",
+      "software-engineering": "Software Engineering",
+      "electrical-engineering": "Electrical Engineering"
+    },
+    "roles": {
+      "mechanics": "Mechanics",
+      "technical-director": "Technical Director",
+      "powertrain-lead": "Powertrain Lead",
+      "team-captain": "Team Captain",
+      "treasurer": "Treasurer",
+      "chassis-lead": "Chassis Lead",
+      "brakes-lead": "Brakes Lead",
+      "machining-lead": "Machining Lead",
+      "direction-lead": "Direction Lead",
+      "cvt-lead": "CVT Lead",
+      "driveline-lead": "Driveline Lead",
+      "differential-lead": "Differential Lead",
+      "suspension-lead": "Suspension Lead",
+      "sponsor-relations": "Sponsor Relations",
+      "composite": "Composite",
+      "project-manager": "Project Manager",
+      "electronics-lead": "Electronics Lead",
+      "electronics": "Electronics",
+      "aerodynamics-lead": "Aerodynamics Lead",
+      "safety-officer": "Safety Officer",
+      "software-lead": "Software Lead",
+      "communications-lead": "Communications Lead",
+      "cooling-system-lead": "Cooling System Lead",
+      "ergonomics-lead": "Ergonomics Lead",
+      "data-analysis-lead": "Data Analysis Lead",
+      "marketing-lead": "Marketing Lead"
+    }
+  },
+  "partners":{
+    "title": "Partners",
+    "ranking":{
+      "platinum":"Platinum",
+      "gold":"Gold",
+      "silver": "Silver",
+      "bronze":"Bronze"
+    },
+    "message": "We are deeply grateful to our sponsors for their unwavering support and partnership. Their contributions are vital to our success, empowering us to innovate and expand. We'd like to thank them for investing in our future and for being an essential part of our community.",
+    "platinum-messages":{
+      "Blaxes":"Blaxes Usinage CNC is a Sherbrooke-based company that specializes in the manufacturing of high-precision machined parts. This year, Baja ÉTS was able to count on the expertise of this small team for the manufacturing of complex 5-axis parts, allowing us to save precious grams on the vehicle. Passionate, the staff at Blaxes CNC Machining offers a human and pragmatic approach to each challenge encountered. Baja ÉTS thanks Blaxes CNC Machining deeply for their work!",
+      "ETS": "Founded in 1974, the École de technologie supérieure stands out in its engineering training by its emphasis on practical experience. This philosophy drives the unparalleled support that the school provides to our club. Baja ÉTS could not be awarded the distinctions it received this year without the numerous services made available to us and the impeccable work of the members of the club management and student life bords.",
+      "SKF":"SKF is a renowned company in the field of bearings and associated technologies. It specializes in designing, manufacturing, and distributing high-quality bearing solutions for various industrial sectors, including automotive, aerospace, energy, and many others. SKF provides invaluable technical guidance, mechanical design advice, and material resources to support the students in creating innovative and competitive vehicles for national and international competitions",
+      "EngrenageLB":"Engrenage LB is a company specializing in the machining of custom-made parts tailored to the needs of its clients since 1996. Their outstanding reputation in the industry stems from their meticulous attention to detail and their relentless pursuit of excellence. Engrenage LB supplies Baja ETS with high-quality components, including gears and others. We are proud to be associated with such a reputable company and look forward to continuing our partnership for years to come.",
+      "Altium":"Altium Designer is a premier software suite dedicated to PCB design, offering engineers advanced tools for schematic capture, layout, and simulation since its founding. This powerful software supports Baja ETS by enabling the design of intricate and reliable PCBs that drive our innovative projects forward. We value our partnership with Altium Designer, as it empowers us to achieve excellence in every PCB design we undertake."
+    }
+  }
+}
