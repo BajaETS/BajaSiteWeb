@@ -1,7 +1,11 @@
 "use client"
 import React from 'react';
 
-export default function Timeline({ position }) {
+interface TimelineProps {
+  position: number;
+}
+
+export default function Timeline({ position }: TimelineProps) {
 
   return (
     <div className="flex justify-center items-center fixed bottom-0 w-full mb-10 mt-20">
