@@ -6,7 +6,17 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      bebas: ['Bebas', 'sans-serif'],
+      hemi: ['Hemi Head', 'sans-serif']
+    },
     extend: {
+      margin: {
+        nav: '115px',
+      },
+      colors: {
+        primary: '#652D91',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
