@@ -143,7 +143,6 @@ export default function HistorySection() {
     <>
       <div ref={ref} className="overflow-x-auto no-scrollbar">
         <div className="grid grid-flow-col auto-cols-max gap-10">
-        <iframe className="p-4" width="560" height="315" src="https://www.youtube.com/embed/GYUdOOpH0oE?si=z2F1-PoCPF2Vuk9L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           {sections.map(({ image, year, text }) => (
             <HistoryYear key={year} image={image} year={year} text={text} />
           ))}
