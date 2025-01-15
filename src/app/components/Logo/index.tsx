@@ -2,36 +2,23 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useMotionValueEvent, useScroll } from "motion/react"
 
 export function Logo() {
   const nativeWidth = 1740;
   const nativeHeight = 779;
-  const WHRatio = nativeWidth / nativeHeight;
 
-  const [dimensions, setDimensions] = useState({
-    width: window.innerWidth / 3,
-    height: (window.innerWidth / 3) / WHRatio
-  });
+  const [scrollY, setScrollY] = useState<number>(0)
 
-  function handleResize() {
-    setDimensions({
-      width: window.innerWidth / 3,
-      height: (window.innerWidth / 3) / WHRatio
-    });
-  }
+  const { scrollYProgress } = useScroll();
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    setScrollY(latest)
+  })
 
   return (
-    <div className='p-4 absolute top-0 left-0 flex items-start justify-start h-auto w-auto transition-all'>
-      <Image src='/logo.png' alt='LogoBaja' width={dimensions.width} height={dimensions.height} />
+    <div className='p-4 fixed top-0 left-0 flex items-start justify-start h-auto w-auto transition-all z-20'>
+      <Image src='/logo.png' alt='LogoBaja' width={nativeWidth / (1.5 + 8.5 *scrollY) } height={nativeHeight / (1.5 + 8.5 *scrollY) } />
     </div>
   );
 }

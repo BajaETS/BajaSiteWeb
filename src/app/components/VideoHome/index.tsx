@@ -24,24 +24,25 @@ export function VideoHome() {
   }, []);
 
   return (
-    <div className="w-full h-full -z-[1]">
-      <video
-        className='
-          absolute
-          top-[50%] 
-          left-[50%] 
-          min-w-full 
-          min-h-full 
-          object-cover 
-          -translate-x-1/2 
-          -translate-y-1/2
-        '
-        ref={videoRef}
-        src='/montageSansEVT.mp4'
-        autoPlay
-        muted
-        loop
-      />
-    </div>
+      <div className="w-full h-full -z-[1]">
+        <div className='bg-gradient-to-t from-black from-10% absolute w-screen z-10 h-screen'></div>
+        <video
+          className='
+            absolute
+            top-[50%] 
+            left-[50%] 
+            min-w-full 
+            min-h-full 
+            object-cover 
+            -translate-x-1/2 
+            -translate-y-1/2
+          '
+          ref={videoRef}
+          src='/montageSansEVT.mp4'
+          autoPlay
+          muted
+          loop
+        />
+      </div>
   );
 };
