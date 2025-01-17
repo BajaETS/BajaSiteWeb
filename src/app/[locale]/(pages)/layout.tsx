@@ -1,11 +1,11 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { MiniLogo } from "../components/MiniLogo";
-import Footer from "../components/Footer";
+import "../globals.css";
+import { MiniLogo } from "../../components/MiniLogo";
+import Footer from "../../components/Footer";
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from 'next-intl/server';
 import { ReactNode } from "react";
-import { Menu } from "../components/Menu";
+import { Menu } from "../../components/Menu";
 import clsx from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });

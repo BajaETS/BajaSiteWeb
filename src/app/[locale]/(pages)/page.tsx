@@ -1,6 +1,6 @@
 import React from "react";
-import { VideoHome } from "../components/VideoHome";
-import { HomePageScrollSection } from "../components/HomePageScrollSection";
+import { VideoHome } from "../../components/VideoHome";
+import { HomePageScrollSection } from "../../components/HomePageScrollSection";
 
 
 export default function HomePage() {
