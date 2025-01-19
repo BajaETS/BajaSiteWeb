@@ -1,12 +1,12 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { MiniLogo } from "../components/MiniLogo";
-import Footer from "../components/Footer";
+import "../globals.css";
+import Footer from "../../components/Footer";
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from 'next-intl/server';
 import { ReactNode } from "react";
-import { Menu } from "../components/Menu";
+import { Menu } from "../../components/Menu";
 import clsx from "clsx";
+import { Logo } from "../../components/Logo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,7 +35,7 @@ export default async function RootLayout(props: TRootLayoutProps) {
     <html lang={locale} className="bg-black m-0 p-0 h-full overflow-visible text-white">
       <body className={clsx(inter.className, 'bg-black m-0 p-0 h-full overflow-visible text-white')}>
         <NextIntlClientProvider messages={messages}>
-          <MiniLogo />
+          <Logo />
           <Menu />
           {children}
           <Footer />
