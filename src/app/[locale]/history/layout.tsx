@@ -1,4 +1,3 @@
-
 import { Inter } from "next/font/google";
 import "../globals.css";
 import { MiniLogo } from "../../components/MiniLogo";
@@ -33,13 +32,12 @@ export default async function RootLayout(props: TRootLayoutProps) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="bg-black m-0 p-0 h-auto overflow-visible text-white">
-      <body className={clsx(inter.className, 'bg-black m-0 p-0 h-full overflow-visible text-white')}>
+    <html lang={locale} className="bg-black m-0 p-0 h-full overflow-hidden text-white no-scrollbar">
+      <body className={clsx(inter.className, 'bg-black m-0 p-0 h-full text-white')}>
         <NextIntlClientProvider messages={messages}>
           <MiniLogo />
           <Menu />
           {children}
-          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -10,8 +10,8 @@ export default function History() {
 
   return (
     <Page>
-      <div className="min-h-full">
-        <p className="text-2xl font-bold mb-2 text-center">{t('history.title')}</p>
+      <div className="h-full">
+        <p className="text-5xl font-bebas m-4 text-center bg-transparent">{t('history.title')}</p>
         <HistorySection />
       </div>
     </Page>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { TMemberPopup } from './interface';
 import { useScrollLock } from 'usehooks-ts';
+import Image from "next/image";
+
 
 export default function MemberPopup(props: TMemberPopup) {
 
@@ -14,7 +16,7 @@ export default function MemberPopup(props: TMemberPopup) {
       onClick={onClose}
     >
       <div
-        className="w-[60%] md:w-full text-white p-5 bg-black rounded-2xl relative max-w-[700px] h-auto text-center"
+        className="w-[60%] md:w-full text-white p-5 bg-neutral-900 rounded-2xl relative max-w-[700px] h-auto text-center"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -24,10 +26,14 @@ export default function MemberPopup(props: TMemberPopup) {
           <img src='/x-white.png' width='25' height='25'></img>
         </button>
         <div className="flex flex-col md:flex-row items-center h-full ">
-          <img
+          <Image
             src={image}
             alt="Member"
+            width={300}
+            height={300}
             className="mb-5 w-full h-auto md:w-[300px] md:h-[300px] m-8 object-cover rounded-full"
+            sizes="(max-width: 768px) 150px, 250px"
+            quality={90}
           />
           <div className="flex-1">
             {children}

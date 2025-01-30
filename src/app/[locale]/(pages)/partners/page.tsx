@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { useTranslations } from "next-intl";
 import Page from "@/app/components/Page";
@@ -325,13 +326,13 @@ export default function Partners() {
 
   return (
     <Page>
-      <p className="text-center text-3xl font-bold p-5">{t('title')}</p>
+      <p className="text-center text-5xl font-bebas p-5">{t('title')}</p>
       <div className="flex justify-center">
         <p className="text-center text-xl max-w-3xl pb-10">{t('message')}</p>
       </div>
       {sections.map((section) => (
         <>
-          <h2 className="text-2xl font-bold mb-0 text-center">{section.ranking}</h2>
+          <h2 className="text-4xl font-bebas mb-0 text-center">{section.ranking}</h2>
           <div 
             className={`pt-8 pb-8 px-5 md:px-36 grid gap-8`}
             style={{
