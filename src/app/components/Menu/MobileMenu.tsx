@@ -12,7 +12,7 @@ const MobileMenuOverlay = (props: TMenu & { onMenuItemClick: () => void }) => {
 
   return (
     <nav className='fixed top-0 left-0 w-screen h-screen bg-black flex justify-center items-center'>
-      <ul className='flex gap-8 text-white flex-col text-center text-3xl'>
+      <ul className='flex gap-8 text-white flex-col text-center text-6xl'>
         {menuItems.map((item) => <MenuItem key={item.href} onClick={onMenuItemClick} {...item} />)}
       </ul>
     </nav>

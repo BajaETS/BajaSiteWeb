@@ -5,7 +5,7 @@ const Page = (props: TPage) => {
   const { children } = props
 
   return (
-    <main className="mt-nav">
+    <main className="mt-nav h-full">
       {children}
     </main>
   )

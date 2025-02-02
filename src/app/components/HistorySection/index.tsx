@@ -141,7 +141,7 @@ export default function HistorySection() {
 
   return (
     <>
-      <div ref={ref} className="overflow-x-auto no-scrollbar">
+      <div ref={ref} className="overflow-x-auto no-scrollbar h-full overflow-y-hidden">
         <div className="grid grid-flow-col auto-cols-max gap-10">
           {sections.map(({ image, year, text }) => (
             <HistoryYear key={year} image={image} year={year} text={text} />

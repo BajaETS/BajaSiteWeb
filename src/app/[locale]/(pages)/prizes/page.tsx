@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useTranslations } from "next-intl";
 import Page from "@/app/components/Page";
@@ -15,9 +16,9 @@ type PrizesProps = {
 
 const Prizes = ({ year, competitions }: PrizesProps) => (
   <section className="my-8 text-center">
-    <h2 className="text-2xl font-bold mb-4">{year} Competitions</h2>
+    <h2 className="text-4xl font-bebas mb-4">{year} Competitions</h2>
     {competitions.map((comp, index) => (
-      <div key={index} className="flex flex-col md:flex-row bg-stone-900 rounded-lg shadow-lg mb-6 items-center">
+      <div key={index} className="flex flex-col md:flex-row bg-neutral-900 rounded-lg shadow-lg mb-6 items-center">
         <div className="md:w-1/3 flex justify-center">
           <Image
             src={comp.imageUrl}
@@ -290,7 +291,7 @@ export default function PrizesPage() {
 
   return (
     <Page>
-      <h1 className="text-3xl font-bold text-center mb-8">{t('prizes.title')}</h1>
+      <h1 className="text-5xl font-bebas text-center mb-8">{t('prizes.title')}</h1>
       {data.map((entry, index) => (
         <Prizes key={index} year={entry.year} competitions={entry.competitions} />
       ))}

@@ -101,14 +101,6 @@ export default function Team() {
           linkedin: "https://www.linkedin.com/in/justin-desbois-043bb9293/"
         },
         {
-          image: "/Team/Nico.jpg",
-          name: "Nicolas Legault-Young",
-          program: t('programs.mechanical-engineering'),
-          roles: t('roles.differential-lead'),
-          nickname: "Nico",
-          linkedin: "https://www.linkedin.com/company/baja-ets/"
-        },
-        {
           image: "/Team/Leo.JPEG",
           name: "Léo Bazinet",
           program: t('programs.mechanical-engineering'),
@@ -121,26 +113,11 @@ export default function Team() {
       title: t('title.mechanics'),
       members: [
         {
-          image: "/Team/Titou.jpg",
-          name: "Titouan Moron",
-          program: t('programs.mechanical-engineering'),
-          roles: t('roles.sponsor-relations'),
-          nickname: "Titou",
-          linkedin: "https://www.linkedin.com/in/titouan-almeida-moron-9105b1206/"
-        },
-        {
           image: "/Team/Annabelle.jpeg",
           name: "Annabelle Gagnon",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.composite'),
           linkedin: "https://www.linkedin.com/in/annabelle-gagnon-ab8313311/"
-        },
-        {
-          image: "/Team/Charlotte.jpg",
-          name: "Charlotte St-Pierre",
-          program: t('programs.construction-engineering'),
-          roles: t('roles.project-manager'),
-          linkedin: "https://www.linkedin.com/in/charlotte-st-pierre-888327261/"
         },
         {
           image: "/Team/Steph.jpeg",
@@ -248,7 +225,7 @@ export default function Team() {
     <Page>
       {sections.map((section) => (
         <>
-          <h2 className="text-2xl font-bold mb-0 text-center">{section.title}</h2>
+          <h2 className="text-5xl font-bebas mb-0 text-center">{section.title}</h2>
           <div className="flex justify-center items-center">
             <div className="pt-8 pb-24 px-5 md:px-36 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8 h-auto overflow-y-auto max-w-screen-2xl">
               {section.members.map(member => (
