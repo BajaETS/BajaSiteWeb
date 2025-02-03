@@ -20,7 +20,249 @@
       "title": "Partenaires"
     },
     "prizes": {
-      "title": "Prix"
+      "title": "Prix",
+      "competition-years": [
+        {
+          "year": "2024",
+          "competitions": [
+          {
+        "title": "Baja SAE California",
+        "date": "4/25/2024",
+        "results": [
+        "2ème place au classement général 927.16 points",
+        "3ème place présentation commerciale",
+        "3ème place accélération",
+        "2ème place endurance",
+        "4ème place au classement dynamique",
+        "3ème place au classement statique"
+        ],
+        "image": "/Prizes/cali2024.jpeg"
+          },
+          {
+        "title": "Baja SAE Williamsport",
+        "date": "4/16/2024",
+        "results": [
+        "1ère place au classement général 915.06 points",
+        "2ème place présentation commerciale",
+        "2ème place accélération",
+        "3ème place maniabilité",
+        "3ème place endurance",
+        "2ème place au classement dynamique",
+        "4ème place au classement statique"
+        ],
+        "image": "/Prizes/penn2024.jpeg"
+          },
+          {
+        "title": "Baja SAE Michigan",
+        "date": "9/12/2024",
+        "results": [
+        "1ère place au classement général 983.89 points",
+        "2ème place présentation commerciale",
+        "2ème place épreuve de coût",
+        "1ère place conception",
+        "2ème place accélération",
+        "1ère place montée de colline",
+        "2ème place suspension et traction",
+        "1ère place endurance",
+        "1ère place au classement dynamique",
+        "1ère place au classement statique"
+        ],
+        "image": "/Prizes/mich2024.jpeg"
+          }
+          ]
+        },
+        {
+          "year": "2023",
+          "competitions": [
+          {
+        "title": "Baja SAE Oshkosh",
+        "date": "5/4/2023",
+        "results": [
+        "2ème place au classement général 874.12 points",
+        "2ème place présentation commerciale",
+        "1ère place conception",
+        "1ère place accélération",
+        "3ème place maniabilité",
+        "3ème place endurance",
+        "2ème place au classement dynamique",
+        "1ère place au classement statique"
+        ],
+        "image": ""
+          },
+          {
+        "title": "Baja SAE Oregon",
+        "date": "5/31/2023",
+        "results": [
+        "1ère place au classement général 952.87 points",
+        "1ère place conception",
+        "1ère place accélération",
+        "1ère place maniabilité",
+        "3ème place montée de colline",
+        "2ème place franchissement de rochers",
+        "3ème place endurance",
+        "2ème place au classement dynamique",
+        "1ère place au classement statique"
+        ],
+        "image": "/Prizes/oreg2023.jpg"
+          },
+          {
+        "title": "Baja SAE Ohio",
+        "date": "9/6/2023",
+        "results": [
+        "5ème place au classement général 782.34 points",
+        "3ème place épreuve de coût",
+        "1ère place conception",
+        "1ère place accélération",
+        "3ème place suspension",
+        "1ère place au classement statique"
+        ],
+        "image": "/Prizes/ohio2023.jpg"
+          }
+          ]
+        },
+        {
+          "year": "2022",
+          "competitions": [
+          {
+        "title": "Baja SAE Tennessee Tech",
+        "date": "5/12/2022",
+        "results": [
+        "2ème place au classement général 991.44 points",
+        "2ème place épreuve de coût",
+        "2ème place conception",
+        "1ère place maniabilité",
+        "2ème place au classement dynamique",
+        "2ème place au classement statique"
+        ],
+        "image": "/Prizes/tene2022.jpg"
+          },
+          {
+        "title": "Baja SAE Rochester",
+        "date": "6/2/2022",
+        "results": [
+        "3ème place au classement général 901.01 points",
+        "2ème place épreuve de coût",
+        "1ère place conception",
+        "2ème place maniabilité",
+        "2ème place au classement statique"
+        ],
+        "image": "/Prizes/roch2022.jpg"
+          },
+          {
+        "title": "Baja SAE Arizona",
+        "date": "9/29/2022",
+        "results": [
+        "2ème place au classement général 969.71 points",
+        "3ème place épreuve de coût",
+        "1ère place conception",
+        "1ère place maniabilité",
+        "2ème place endurance",
+        "2ème place au classement statique"
+        ],
+        "image": ""
+          }
+          ]
+        },
+        {
+          "year": "2021",
+          "competitions": [
+          {
+        "title": "Baja SAE Knowledge",
+        "date": "3/18/2021",
+        "results": ["9ème place au classement général"],
+        "image": ""
+          },
+          {
+        "title": "OktoBajaFest",
+        "date": "10/15/2021",
+        "results": [
+        "1ère place conception",
+        "1ère place Baja cross",
+        "2ème place accélération",
+        "2ème place montée de colline",
+        "1ère place endurance"
+        ],
+        "image": "/Prizes/okto2021.jpg"
+          }
+          ]
+        },
+        {
+          "year": "2020",
+          "competitions": [
+          {
+        "title": "Baja SAE Arizona",
+        "date": "4/16/2020",
+        "results": [
+        "9ème place au classement général",
+        "2ème place épreuve de coût",
+        "4ème place au classement dynamique"
+        ],
+        "image": ""
+          },
+          {
+        "title": "Baja SAE Louisville",
+        "date": "5/14/2020",
+        "results": [
+        "7ème place au classement général",
+        "2ème place épreuve de coût",
+        "3ème place au classement dynamique",
+        "3ème place au classement statique"
+        ],
+        "image": ""
+          },
+          {
+        "title": "Baja SAE Illinois",
+        "date": "6/3/2020",
+        "results": [],
+        "image": ""
+          }
+          ]
+        },
+        {
+          "year": "2019",
+          "competitions": [
+          {
+        "title": "Baja SAE Tennessee Tech",
+        "date": "4/11/2019",
+        "results": [
+        "3ème place au classement général 881.62 points",
+        "2ème place épreuve de coût",
+        "2ème place conception",
+        "2ème place maniabilité",
+        "3ème place endurance",
+        "1ère place au classement statique"
+        ],
+        "image": ""
+          },
+          {
+        "title": "Baja SAE California",
+        "date": "5/16/2019",
+        "results": [
+        "4ème place au classement général 830.74 points",
+        "1ère place présentation commerciale",
+        "1ère place épreuve de coût",
+        "3ème place conception",
+        "3ème place accélération",
+        "2ème place au classement dynamique",
+        "1ère place au classement statique"
+        ],
+        "image": ""
+          },
+          {
+        "title": "Baja SAE Rochester",
+        "date": "6/6/2019",
+        "results": [
+        "2ème place au classement général",
+        "1ère place épreuve de coût",
+        "1ère place conception",
+        "2ème place endurance",
+        "1ère place au classement statique"
+        ],
+        "image": ""
+          }
+          ]
+        }
+      ]
     },
     "team": {
       "title": "L'Équipe"
