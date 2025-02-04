@@ -1,114 +1,23 @@
-"use client"
-import React, { useState, useRef, useEffect } from 'react';
-import Timeline from '../Timeline';
-import HistoryYear from '../HistoryYear';
+"use client";
+import React, { useState, useRef, useEffect } from "react";
+import Timeline from "../Timeline";
+import HistoryYear from "../HistoryYear";
+import { useTranslations } from "next-intl";
 
 type HistoryYearProps = {
   image: string;
-  year: number;
+  year: string;
   text: string;
 };
 
 export default function HistorySection() {
   const [position, setPosition] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
+  const t = useTranslations("pages");
 
-  const sections: HistoryYearProps[] = [
-    {
-      image: '/History/1989.jpg',
-      year: 1989,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/1990.jpg',
-      year: 1990,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/1992.jpg',
-      year: 1992,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/1993.jpg',
-      year: 1993,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2001.png',
-      year: 2001,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2002.jpg',
-      year: 2002,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2003.jpg',
-      year: 2003,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2004.jpg',
-      year: 2004,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2005.jpg',
-      year: 2005,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2006.jpg',
-      year: 2006,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2008.jpg',
-      year: 2008,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2009.jpg',
-      year: 2009,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2010.jpg',
-      year: 2010,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2012.png',
-      year: 2012,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2013.jpg',
-      year: 2013,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2014.jpg',
-      year: 2014,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2015.jpg',
-      year: 2015,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2016.jpg',
-      year: 2016,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2017.jpg',
-      year: 2017,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2018.jpg',
-      year: 2018,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2019.jpg',
-      year: 2019,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2020.jpg',
-      year: 2020,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },{
-      image: '/History/2022.jpg',
-      year: 2022,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-
-  ];
+  // Extraire et trier les années de l'historique en ordre décroissant
+  const sections: HistoryYearProps[] = t.raw("history.years")
+    .sort((a: HistoryYearProps, b: HistoryYearProps) => parseInt(b.year) - parseInt(a.year));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,14 +36,14 @@ export default function HistorySection() {
     };
 
     if (ref.current) {
-      ref.current.addEventListener('scroll', handleScroll);
-      ref.current.addEventListener('wheel', handleWheel);
+      ref.current.addEventListener("scroll", handleScroll);
+      ref.current.addEventListener("wheel", handleWheel);
     }
 
     return () => {
       if (ref.current) {
-        ref.current.removeEventListener('scroll', handleScroll);
-        ref.current.removeEventListener('wheel', handleWheel);
+        ref.current.removeEventListener("scroll", handleScroll);
+        ref.current.removeEventListener("wheel", handleWheel);
       }
     };
   }, []);
@@ -142,9 +51,17 @@ export default function HistorySection() {
   return (
     <>
       <div ref={ref} className="overflow-x-auto no-scrollbar h-full overflow-y-hidden">
-        <div className="grid grid-flow-col auto-cols-max gap-10">
+        <div 
+          className="grid grid-flow-col gap-6 sm:gap-8 md:gap-12"
+          style={{ gridAutoColumns: "minmax(400px, 1fr)" }}
+        >
           {sections.map(({ image, year, text }) => (
-            <HistoryYear key={year} image={image} year={year} text={text} />
+            <div 
+              key={year} 
+              className={`flex flex-col w-full max-w-[600px] md:max-w-[700px] lg:max-w-[800px] mx-auto ${text === "" ? "justify-center items-center" : ""}`}
+            >
+              <HistoryYear image={image} year={year} text={text} />
+            </div>
           ))}
         </div>
       </div>
