@@ -49,8 +49,8 @@ export default function HistorySection() {
   }, []);
 
   return (
-    <>
-      <div ref={ref} className="overflow-x-auto no-scrollbar h-full overflow-y-hidden">
+    <div className="relative h-full">
+      <div ref={ref} className="overflow-x-auto no-scrollbar mb-[120px] h-full overflow-y-hidden">
         <div 
           className="grid grid-flow-col gap-6 sm:gap-8 md:gap-12"
           style={{ gridAutoColumns: "minmax(400px, 1fr)" }}
@@ -66,6 +66,6 @@ export default function HistorySection() {
         </div>
       </div>
       <Timeline position={position} />
-    </>
+    </div>
   );
 }
