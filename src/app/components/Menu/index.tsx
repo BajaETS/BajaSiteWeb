@@ -13,10 +13,6 @@ export function Menu() {
 
   const menuItems: TMenuItem[] = [
     {
-      href: "/whatwedo",
-      label: t('whatwedo.title')
-    },
-    {
       href: "/team",
       label: t('team.title')
     },
