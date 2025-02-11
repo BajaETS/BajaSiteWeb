@@ -42,6 +42,9 @@ export function VideoHome() {
           autoPlay
           muted
           loop
+          playsInline // Prevents fullscreen on iOS
+          webkit-playsinline // Older iOS versions
+          controls={false}
         />
       </div>
   );
