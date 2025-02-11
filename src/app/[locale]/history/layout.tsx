@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 import "../globals.css";
 import { MiniLogo } from "../../components/MiniLogo";
 import Footer from "../../components/Footer";
@@ -38,6 +39,7 @@ export default async function RootLayout(props: TRootLayoutProps) {
           <MiniLogo />
           <Menu />
           {children}
+          <Analytics/>
         </NextIntlClientProvider>
       </body>
     </html>
