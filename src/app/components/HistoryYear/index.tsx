@@ -4,7 +4,7 @@ import Image from "next/image";
 
 interface HistoryYearProps {
   image: string;
-  year: number;
+  year: string;
   text: string;
 }
 

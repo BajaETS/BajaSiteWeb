@@ -21,7 +21,7 @@ const socialLinks: TSocialLink[] = [
   },
   {
     href: "https://www.youtube.com/user/TheBajaETS",
-    image: "/Footer/youtubeLogoWhite.png",
+    image: "/Footer/youtubelogoWhite.png",
     alt: "Youtube"
   }
 ]

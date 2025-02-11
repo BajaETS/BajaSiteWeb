@@ -35,7 +35,7 @@ export function Menu() {
   ]
 
   return (
-    <div className='p-5 text-right w-auto flex justify-end items-end z-30 relative'>
+    <div className='p-5 text-right w-auto flex justify-end items-end z-30 fixed'>
       <DesktopMenu menuItems={menuItems} />
       <MobileMenu menuItems={menuItems} />
     </div>
