@@ -1,14 +1,17 @@
 "use client";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Page from "@/app/components/Page";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { TRankingProps } from "@/app/components/Ranking/interface";
+import Ranking from "@/app/components/Ranking";
+import clsx from "clsx";
 
 interface Competition {
   title: string;
   date: string;
-  results: string[];
+  results: TRankingProps[];
   image?: string;
 }
 
@@ -22,30 +25,35 @@ interface PrizesData {
 }
 
 const CompetitionCard: React.FC<{ competition: Competition }> = ({ competition }) => {
+  const locale = useLocale()
+  const localizedDate = (new Date(Date.parse(competition.date))).toLocaleDateString(locale, {day: "numeric", year: "numeric", month: "long"})
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-neutral-900 shadow-lg rounded-2xl p-4 mb-6 flex flex-col justify-start"
+      className="bg-neutral-900 shadow-lg rounded-2xl flex flex-col justify-start"
     >
-      <h3 className="text-2xl font-semibold mb-2 text-white text-center flex items-center justify-center">{competition.title}</h3>
-      <div className="flex flex-col items-start">
-        <p className="text-gray-300 mb-2">{competition.date}</p>
+      <div className="relative">
+        <div className="absolute top-0 right-0 left-0 h-full w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent" />
         {competition.image !== "" && (
           <Image
             src={competition.image || ""}
             alt={competition.title}
             width={600}
             height={400}
-            className="rounded-lg w-full object-cover mb-3"
+            className="rounded-t-lg w-full object-cover mb-3"
           />
         )}
-        <ul className="list-disc list-inside text-gray-300">
-          {competition.results.map((result, index) => (
-            <li key={index}>{result}</li>
-          ))}
+      </div>
+      <div className={clsx(competition.image && "-translate-y-20 -mb-12", "m-6")}>
+        <p className="text-gray-300 mb-2">{localizedDate}</p>
+        <h3 className="text-5xl font-bebas mb-2 text-white">{competition.title}</h3>
+        <ul className="flex flex-wrap gap-2">
+          {
+            competition.results.map((result, index) => <Ranking key={index} {...result} />)
+          }
         </ul>
       </div>
     </motion.div>
@@ -54,7 +62,7 @@ const CompetitionCard: React.FC<{ competition: Competition }> = ({ competition }
 
 const YearSection: React.FC<{ yearData: YearData }> = ({ yearData }) => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
