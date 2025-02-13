@@ -377,7 +377,7 @@ export default function Partners() {
       ]
     }
   ]
-
+ 
   return (
     <Page>
       <p className="text-center text-5xl font-bebas p-5">{t('title')}</p>
