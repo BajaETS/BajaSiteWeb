@@ -52,7 +52,7 @@ const CompetitionCard: React.FC<{ competition: Competition }> = ({ competition }
         <h3 className="text-5xl font-bebas mb-2 text-white">{competition.title}</h3>
         <ul className="flex flex-wrap gap-2">
           {
-            competition.results.map((result) => <Ranking {...result} />)
+            competition.results.map((result, index) => <Ranking key={index} {...result} />)
           }
         </ul>
       </div>

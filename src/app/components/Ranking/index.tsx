@@ -16,7 +16,7 @@ const Ranking = (props: TRankingProps) => {
 
     return (
         <Tooltip text={details}>
-            <div className="flex w-min font-bebas bg-black">
+            <div className="flex w-min font-bebas bg-black shadow-md">
                 <div className="flex flex-col p-2">
                     <p className="m-0 p-0 text ">
                         {category}
@@ -26,7 +26,7 @@ const Ranking = (props: TRankingProps) => {
                     </p>
                 </div>
                 {points && (
-                    <p className="m-0 p-0 text-xs text-nowrap w-4 text-orientation-mixed writing-mode-sideways-lr text-center">
+                    <p className="m-0 p-0 text-xs text-nowrap w-4 text-orientation-mixed writing-mode-vertical-lr -scale-y-[1] -scale-x-[1] text-center">
                         {points} pts
                     </p>
                 )}
