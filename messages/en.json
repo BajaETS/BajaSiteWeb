@@ -139,7 +139,7 @@
         {
           "year": "1989",
           "text": "",
-          "image": "/History/1989.jpg" 
+          "image": "/History/1989.jpg"
         }
       ]
     },
@@ -149,253 +149,668 @@
     "prizes": {
       "title": "Prizes",
       "competition-years": [
-      {
-        "year": "2024",
-        "competitions": [
         {
-          "title": "Baja SAE California",
-          "date": "4/25/2024",
-          "results": [
-          "2nd place overall 927.16 points",
-          "3rd place business",
-          "3rd place acceleration",
-          "2nd place endurance",
-          "4th place overall dynamic",
-          "3rd place overall static"
-          ],
-          "image": "/Prizes/cali2024.jpeg"
+          "year": "2024",
+          "competitions": [
+            {
+              "title": "Baja SAE California",
+              "date": "4/25/2024",
+              "results": [
+                {
+                  "ranking": "2nd",
+                  "category": "Overall",
+                  "details": "Overall ranking with 927.16 points",
+                  "points": 927.16,
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Business",
+                  "details": "Commercial presentation",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Acceleration",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Endurance",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "4th",
+                  "category": "Dynamic",
+                  "type": "other"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Static",
+                  "type": "bronze"
+                }
+              ],
+              "image": "/Prizes/cali2024.jpeg"
+            },
+            {
+              "title": "Baja SAE Williamsport",
+              "date": "4/16/2024",
+              "results": [
+                {
+                  "ranking": "1st",
+                  "category": "Overall",
+                  "details": "Overall ranking with 915.06 points",
+                  "points": 915.06,
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Business",
+                  "details": "Commercial presentation",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Acceleration",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Maneuverability",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Endurance",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Dynamic",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "4th",
+                  "category": "Static",
+                  "type": "other"
+                }
+              ],
+              "image": "/Prizes/penn2024.jpeg"
+            },
+            {
+              "title": "Baja SAE Michigan",
+              "date": "9/12/2024",
+              "results": [
+                {
+                  "ranking": "1st",
+                  "category": "Overall",
+                  "details": "Overall ranking with 983.89 points",
+                  "points": 983.89,
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Business",
+                  "details": "Commercial presentation",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Costs",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Design",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Acceleration",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Climb",
+                  "details": "Hill climb event",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Suspension",
+                  "details": "Suspension and traction",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Endurance",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Dynamic",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Static",
+                  "type": "gold"
+                }
+              ],
+              "image": "/Prizes/mich2024.jpeg"
+            }
+          ]
         },
         {
-          "title": "Baja SAE Williamsport",
-          "date": "4/16/2024",
-          "results": [
-          "1st place overall 915.06 points",
-          "2nd place business presentation",
-          "2nd place acceleration",
-          "3rd place maneuverability",
-          "3rd place endurance",
-          "2nd place overall dynamic",
-          "4th place overall static"
-          ],
-          "image": "/Prizes/penn2024.jpeg"
+          "year": "2023",
+          "competitions": [
+            {
+              "title": "Baja SAE Oshkosh",
+              "date": "5/4/2023",
+              "results": [
+                {
+                  "ranking": "2nd",
+                  "category": "Overall",
+                  "details": "Overall ranking with 874.12 points",
+                  "points": 874.12,
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Business",
+                  "details": "Commercial presentation",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Design",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Acceleration",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Maneuverability",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Endurance",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Dynamic",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Static",
+                  "type": "gold"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "title": "Baja SAE Oregon",
+              "date": "5/31/2023",
+              "results": [
+                {
+                  "ranking": "1st",
+                  "category": "Overall",
+                  "details": "Overall ranking with 952.87 points",
+                  "points": 952.87,
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Design",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Acceleration",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Maneuverability",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Climb",
+                  "details": "Hill climb event",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Rocks",
+                  "details": "Rock crawling",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Endurance",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Dynamic",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Static",
+                  "type": "gold"
+                }
+              ],
+              "image": "/Prizes/oreg2023.jpg"
+            },
+            {
+              "title": "Baja SAE Ohio",
+              "date": "9/6/2023",
+              "results": [
+                {
+                  "ranking": "5th",
+                  "category": "Overall",
+                  "details": "Overall ranking with 782.34 points",
+                  "points": 782.34,
+                  "type": "other"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Costs",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Design",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Acceleration",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Suspension",
+                  "details": "Suspension and traction",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Static",
+                  "type": "gold"
+                }
+              ],
+              "image": "/Prizes/ohio2023.jpg"
+            }
+          ]
         },
         {
-          "title": "Baja SAE Michigan",
-          "date": "9/12/2024",
-          "results": [
-          "1st place overall 983.89 points",
-          "2nd place business presentation",
-          "2nd place cost event",
-          "1st place design",
-          "2nd place acceleration",
-          "1st place hill climb",
-          "2nd place suspension & traction",
-          "1st place endurance",
-          "1st place overall dynamic",
-          "1st place overall static"
-          ],
-          "image": "/Prizes/mich2024.jpeg"
+          "year": "2022",
+          "competitions": [
+            {
+              "title": "Baja SAE Tennessee Tech",
+              "date": "5/12/2022",
+              "results": [
+                {
+                  "ranking": "2nd",
+                  "category": "Overall",
+                  "details": "Overall ranking with 991.44 points",
+                  "points": 991.44,
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Costs",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Design",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Maneuverability",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Dynamic",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Static",
+                  "type": "silver"
+                }
+              ],
+              "image": "/Prizes/tene2022.jpg"
+            },
+            {
+              "title": "Baja SAE Rochester",
+              "date": "6/2/2022",
+              "results": [
+                {
+                  "ranking": "3rd",
+                  "category": "Overall",
+                  "details": "Overall ranking with 901.01 points",
+                  "points": 901.01,
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Costs",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Design",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Maneuverability",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Static",
+                  "type": "silver"
+                }
+              ],
+              "image": "/Prizes/roch2022.jpg"
+            },
+            {
+              "title": "Baja SAE Arizona",
+              "date": "9/29/2022",
+              "results": [
+                {
+                  "ranking": "2nd",
+                  "category": "Overall",
+                  "details": "Overall ranking with 969.71 points",
+                  "points": 969.71,
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Costs",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Design",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Maneuverability",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Endurance",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Static",
+                  "type": "silver"
+                }
+              ],
+              "image": ""
+            }
+          ]
+        },
+        {
+          "year": "2021",
+          "competitions": [
+            {
+              "title": "Baja SAE Knowledge",
+              "date": "3/18/2021",
+              "results": [
+                {
+                  "ranking": "9th",
+                  "category": "Overall",
+                  "details": "Overall ranking",
+                  "type": "other"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "title": "OktoBajaFest",
+              "date": "10/15/2021",
+              "results": [
+                {
+                  "ranking": "1st",
+                  "category": "Design",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Cross",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Acceleration",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Climb",
+                  "details": "Hill climb",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Endurance",
+                  "type": "gold"
+                }
+              ],
+              "image": "/Prizes/okto2021.jpg"
+            }
+          ]
+        },
+        {
+          "year": "2020",
+          "competitions": [
+            {
+              "title": "Baja SAE Arizona",
+              "date": "4/16/2020",
+              "results": [
+                {
+                  "ranking": "9th",
+                  "category": "Overall",
+                  "details": "Overall ranking",
+                  "type": "other"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Cost",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "4th",
+                  "category": "Dynamic",
+                  "type": "other"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "title": "Baja SAE Louisville",
+              "date": "5/14/2020",
+              "results": [
+                {
+                  "ranking": "7th",
+                  "category": "Overall",
+                  "details": "Overall ranking",
+                  "type": "other"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Cost",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Dynamic",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Static",
+                  "type": "bronze"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "title": "Baja SAE Illinois",
+              "date": "6/3/2020",
+              "results": [],
+              "image": ""
+            }
+          ]
+        },
+        {
+          "year": "2019",
+          "competitions": [
+            {
+              "title": "Baja SAE Tennessee Tech",
+              "date": "4/11/2019",
+              "results": [
+                {
+                  "ranking": "3rd",
+                  "category": "Overall",
+                  "details": "Overall ranking with 881.62 points",
+                  "points": 881.62,
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Cost",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Design",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Maneuverability",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Endurance",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Static",
+                  "type": "gold"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "title": "Baja SAE California",
+              "date": "5/16/2019",
+              "results": [
+                {
+                  "ranking": "4th",
+                  "category": "Overall",
+                  "details": "Overall ranking with 830.74 points",
+                  "points": 830.74,
+                  "type": "other"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Business",
+                  "details": "Commercial presentation",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Cost",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Design",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Acceleration",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Dynamic",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Static",
+                  "type": "gold"
+                }
+              ],
+              "image": ""
+            },
+            {
+              "title": "Baja SAE Rochester",
+              "date": "6/6/2019",
+              "results": [
+                {
+                  "ranking": "2nd",
+                  "category": "Overall",
+                  "details": "Overall ranking",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Cost",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Design",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Endurance",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Static",
+                  "type": "gold"
+                }
+              ],
+              "image": ""
+            }
+          ]
         }
-        ]
-      },
-      {
-        "year": "2023",
-        "competitions": [
-        {
-          "title": "Baja SAE Oshkosh",
-          "date": "5/4/2023",
-          "results": [
-          "2nd place overall 874.12 points",
-          "2nd place business presentation",
-          "1st place design",
-          "1st place acceleration",
-          "3rd place maneuverability",
-          "3rd place endurance",
-          "2nd place overall dynamic",
-          "1st place overall static"
-          ],
-          "image": ""
-        },
-        {
-          "title": "Baja SAE Oregon",
-          "date": "5/31/2023",
-          "results": [
-          "1st place overall 952.87 points",
-          "1st place design",
-          "1st place acceleration",
-          "1st place maneuverability",
-          "3rd place hill climb",
-          "2nd place rock crawl",
-          "3rd place endurance",
-          "2nd place overall dynamic",
-          "1st place overall static"
-          ],
-          "image": "/Prizes/oreg2023.jpg"
-        },
-        {
-          "title": "Baja SAE Ohio",
-          "date": "9/6/2023",
-          "results": [
-          "5th place overall 782.34 points",
-          "3rd place cost event",
-          "1st place design",
-          "1st place acceleration",
-          "3rd place suspension",
-          "1st place overall static"
-          ],
-          "image": "/Prizes/ohio2023.jpg"
-        }
-        ]
-      },
-      {
-        "year": "2022",
-        "competitions": [
-        {
-          "title": "Baja SAE Tennessee Tech",
-          "date": "5/12/2022",
-          "results": [
-          "2nd place overall 991.44 points",
-          "2nd place cost event",
-          "2nd place design",
-          "1st place maneuverability",
-          "2nd place overall dynamic",
-          "2nd place overall static"
-          ],
-          "image": "/Prizes/tene2022.jpg"
-        },
-        {
-          "title": "Baja SAE Rochester",
-          "date": "6/2/2022",
-          "results": [
-          "3rd place overall 901.01 points",
-          "2nd place cost event",
-          "1st place design",
-          "2nd place maneuverability",
-          "2nd place overall static"
-          ],
-          "image": "/Prizes/roch2022.jpg"
-        },
-        {
-          "title": "Baja SAE Arizona",
-          "date": "9/29/2022",
-          "results": [
-          "2nd place overall 969.71 points",
-          "3rd place cost event",
-          "1st place design",
-          "1st place maneuverability",
-          "2nd place endurance",
-          "2nd place overall static"
-          ],
-          "image": ""
-        }
-        ]
-      },
-      {
-        "year": "2021",
-        "competitions": [
-        {
-          "title": "Baja SAE Knowledge",
-          "date": "3/18/2021",
-          "results": ["9th place overall"],
-          "image": ""
-        },
-        {
-          "title": "OktoBajaFest",
-          "date": "10/15/2021",
-          "results": [
-          "1st place design",
-          "1st place Baja cross",
-          "2nd place acceleration",
-          "2nd place hill climb",
-          "1st place endurance"
-          ],
-          "image": "/Prizes/okto2021.jpg"
-        }
-        ]
-      },
-      {
-        "year": "2020",
-        "competitions": [
-        {
-          "title": "Baja SAE Arizona",
-          "date": "4/16/2020",
-          "results": [
-          "9th place overall",
-          "2nd place cost event",
-          "4th place overall dynamic"
-          ],
-          "image": ""
-        },
-        {
-          "title": "Baja SAE Louisville",
-          "date": "5/14/2020",
-          "results": [
-          "7th place overall",
-          "2nd place cost event",
-          "3rd place overall dynamic",
-          "3rd place overall static"
-          ],
-          "image": ""
-        },
-        {
-          "title": "Baja SAE Illinois",
-          "date": "6/3/2020",
-          "results": [],
-          "image": ""
-        }
-        ]
-      },
-      {
-        "year": "2019",
-        "competitions": [
-        {
-          "title": "Baja SAE Tennessee Tech",
-          "date": "4/11/2019",
-          "results": [
-          "3rd place overall 881.62 points",
-          "2nd place cost event",
-          "2nd place design",
-          "2nd place maneuverability",
-          "3rd place endurance",
-          "1st place overall static"
-          ],
-          "image": ""
-        },
-        {
-          "title": "Baja SAE California",
-          "date": "5/16/2019",
-          "results": [
-          "4th place overall 830.74 points",
-          "1st place business presentation",
-          "1st place cost event",
-          "3rd place design",
-          "3rd place acceleration",
-          "2nd overall dynamic",
-          "1st overall static"
-          ],
-          "image": ""
-        },
-        {
-          "title": "Baja SAE Rochester",
-          "date": "6/6/2019",
-          "results": [
-          "2nd place overall",
-          "1st place cost event",
-          "1st place design",
-          "2nd place endurance",
-          "1st place overall static"
-          ],
-          "image": ""
-        }
-        ]
-      }
       ]
     },
     "team": {
       "title": "Team"
     },
     "whatwedo": {
-      "title":"What we do"
+      "title": "What we do"
     }
   },
   "team": {
@@ -442,21 +857,21 @@
       "marketing-lead": "Marketing Lead"
     }
   },
-  "partners":{
+  "partners": {
     "title": "Partners",
-    "ranking":{
-      "platinum":"Platinum",
-      "gold":"Gold",
+    "ranking": {
+      "platinum": "Platinum",
+      "gold": "Gold",
       "silver": "Silver",
-      "bronze":"Bronze"
+      "bronze": "Bronze"
     },
     "message": "We are deeply grateful to our sponsors for their unwavering support and partnership. Their contributions are vital to our success, empowering us to innovate and expand. We'd like to thank them for investing in our future and for being an essential part of our community.",
-    "platinum-messages":{
-      "Blaxes":"Blaxes Usinage CNC is a Sherbrooke-based company that specializes in the manufacturing of high-precision machined parts. This year, Baja ÉTS was able to count on the expertise of this small team for the manufacturing of complex 5-axis parts, allowing us to save precious grams on the vehicle. Passionate, the staff at Blaxes CNC Machining offers a human and pragmatic approach to each challenge encountered. Baja ÉTS thanks Blaxes CNC Machining deeply for their work!",
+    "platinum-messages": {
+      "Blaxes": "Blaxes Usinage CNC is a Sherbrooke-based company that specializes in the manufacturing of high-precision machined parts. This year, Baja ÉTS was able to count on the expertise of this small team for the manufacturing of complex 5-axis parts, allowing us to save precious grams on the vehicle. Passionate, the staff at Blaxes CNC Machining offers a human and pragmatic approach to each challenge encountered. Baja ÉTS thanks Blaxes CNC Machining deeply for their work!",
       "ETS": "Founded in 1974, the École de technologie supérieure stands out in its engineering training by its emphasis on practical experience. This philosophy drives the unparalleled support that the school provides to our club. Baja ÉTS could not be awarded the distinctions it received this year without the numerous services made available to us and the impeccable work of the members of the club management and student life bords.",
-      "SKF":"SKF is a renowned company in the field of bearings and associated technologies. It specializes in designing, manufacturing, and distributing high-quality bearing solutions for various industrial sectors, including automotive, aerospace, energy, and many others. SKF provides invaluable technical guidance, mechanical design advice, and material resources to support the students in creating innovative and competitive vehicles for national and international competitions",
-      "EngrenageLB":"Engrenage LB is a company specializing in the machining of custom-made parts tailored to the needs of its clients since 1996. Their outstanding reputation in the industry stems from their meticulous attention to detail and their relentless pursuit of excellence. Engrenage LB supplies Baja ETS with high-quality components, including gears and others. We are proud to be associated with such a reputable company and look forward to continuing our partnership for years to come.",
-      "Altium":"Altium Designer is a premier software suite dedicated to PCB design, offering engineers advanced tools for schematic capture, layout, and simulation since its founding. This powerful software supports Baja ETS by enabling the design of intricate and reliable PCBs that drive our innovative projects forward. We value our partnership with Altium Designer, as it empowers us to achieve excellence in every PCB design we undertake."
+      "SKF": "SKF is a renowned company in the field of bearings and associated technologies. It specializes in designing, manufacturing, and distributing high-quality bearing solutions for various industrial sectors, including automotive, aerospace, energy, and many others. SKF provides invaluable technical guidance, mechanical design advice, and material resources to support the students in creating innovative and competitive vehicles for national and international competitions",
+      "EngrenageLB": "Engrenage LB is a company specializing in the machining of custom-made parts tailored to the needs of its clients since 1996. Their outstanding reputation in the industry stems from their meticulous attention to detail and their relentless pursuit of excellence. Engrenage LB supplies Baja ETS with high-quality components, including gears and others. We are proud to be associated with such a reputable company and look forward to continuing our partnership for years to come.",
+      "Altium": "Altium Designer is a premier software suite dedicated to PCB design, offering engineers advanced tools for schematic capture, layout, and simulation since its founding. This powerful software supports Baja ETS by enabling the design of intricate and reliable PCBs that drive our innovative projects forward. We value our partnership with Altium Designer, as it empowers us to achieve excellence in every PCB design we undertake."
     }
   }
 }
