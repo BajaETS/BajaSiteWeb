@@ -49,7 +49,7 @@ const CompetitionCard: React.FC<{ competition: Competition }> = ({ competition }
       </div>
       <div className={clsx(competition.image && "-translate-y-20 -mb-12", "m-6")}>
         <p className="text-gray-300 mb-2">{localizedDate}</p>
-        <h3 className="text-2xl font-semibold mb-2 text-white">{competition.title}</h3>
+        <h3 className="text-5xl font-bebas mb-2 text-white">{competition.title}</h3>
         <ul className="flex flex-wrap gap-2">
           {
             competition.results.map((result) => <Ranking {...result} />)
