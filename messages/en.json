@@ -458,5 +458,8 @@
       "EngrenageLB":"Engrenage LB is a company specializing in the machining of custom-made parts tailored to the needs of its clients since 1996. Their outstanding reputation in the industry stems from their meticulous attention to detail and their relentless pursuit of excellence. Engrenage LB supplies Baja ETS with high-quality components, including gears and others. We are proud to be associated with such a reputable company and look forward to continuing our partnership for years to come.",
       "Altium":"Altium Designer is a premier software suite dedicated to PCB design, offering engineers advanced tools for schematic capture, layout, and simulation since its founding. This powerful software supports Baja ETS by enabling the design of intricate and reliable PCBs that drive our innovative projects forward. We value our partnership with Altium Designer, as it empowers us to achieve excellence in every PCB design we undertake."
     }
+  },
+  "nav": {
+    "donate": "Donate"
   }
 }
