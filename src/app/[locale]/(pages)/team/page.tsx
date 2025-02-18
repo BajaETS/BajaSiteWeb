@@ -147,7 +147,7 @@ export default function Team() {
         {
           image: "/Team/elie.JPG",
           name: "Élie Bazinet",
-          program: t('programs.mechanical-engineering'),
+          program: t('programs.construction-engineering'),
           roles: t('roles.mechanics'),
           linkedin: "https://www.linkedin.com/company/baja-ets/"
         },
