@@ -156,6 +156,7 @@ export default function Team() {
           name: "Danick Rouillier",
           program: t('programs.mechanical-engineering'),
           roles: t('roles.mechanics'),
+          nickname: "The Rock",
           linkedin: "https://www.linkedin.com/in/danick-rouillier-4805a1335/"
         },
         {
