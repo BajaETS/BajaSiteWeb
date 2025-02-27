@@ -32,7 +32,6 @@ export default function Footer() {
       <div className="flex items-center justify-center gap-12 m-3">
         {socialLinks.map((icon) => <SocialLink key={icon.href} {...icon} />)}
       </div>
-      <LocaleSwitcher />
       <p className="text-white text-sm font-hemi m-0 p-2 opacity-50">
         &copy; BajaÉTS - 2024
       </p>
