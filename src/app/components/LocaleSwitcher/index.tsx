@@ -21,13 +21,13 @@ export default function LocaleSwitcher() {
             key={cur}
             onClick={() => switchLocale(cur)}
             className={`p-2 rounded-md transition ${
-              locale === cur ? 'bg-stone-700 dark:bg-stone-700 bg-opacity-10' : ''
+              locale === cur ? 'bg-stone-700 dark:bg-stone-700 bg-opacity-70' : ''
             }`}
             >
             <img
               src={`/flags/${cur === 'fr' ? 'quebec' : 'uk'}.svg`}
               alt={cur === 'fr' ? 'FR' : 'EN'}
-              className="w-6 h-4"
+              className="w-8 h-6"
             />
             </button>
           {index < routing.locales.length - 1 && (
