@@ -31,7 +31,7 @@ export default function LocaleSwitcher() {
             />
             </button>
           {index < routing.locales.length - 1 && (
-            <span className="text-gray-500">|</span>
+            <span className="text-white">|</span>
           )}
         </>
       ))}
