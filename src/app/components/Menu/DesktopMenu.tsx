@@ -2,6 +2,7 @@ import { Link } from "@/i18n/routing"
 import { TMenu } from "./interface"
 import MenuItem from "./MenuItem"
 import { useTranslations } from "next-intl"
+import LocaleSwitcher from "../LocaleSwitcher"
 
 const DesktopMenu = (props: TMenu) => {
 
@@ -13,7 +14,8 @@ const DesktopMenu = (props: TMenu) => {
 
   return (
     <nav className='hidden md:block text-white fixed top-5 right-5'>
-      <ul className='flex gap-4 text-xl'>
+      <ul className='flex gap-4 text-xl items-center'>
+        <LocaleSwitcher />
         {menuItems.map((item) => <MenuItem key={item.href} {...item} />)}
         <li>
           <Link

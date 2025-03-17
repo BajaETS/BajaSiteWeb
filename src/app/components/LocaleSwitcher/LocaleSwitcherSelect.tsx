@@ -5,35 +5,33 @@ import { usePathname, useRouter } from '@/i18n/routing';
 import { TLocaleSwitcherSelect } from './interface';
 
 export default function LocaleSwitcherSelect(props: TLocaleSwitcherSelect) {
-
-  const { children, defaultValue, label } = props
-
+  const { children } = props;
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
 
-  function onSelectChange(event: any) {
+  function onButtonClick(event: any) {
     const nextLocale = event.target.value;
+    if (!nextLocale) return;
+
     startTransition(() => {
-      router.replace(
-        pathname,
-        { locale: nextLocale }
-      );
+      router.replace(pathname, { locale: nextLocale });
     });
   }
 
   return (
-    <label>
-      <p className="sr-only">{label}</p>
-      <select
-        className="inline-flex bg-transparent text-white py-3 pr-2 cursor-pointer"
-        defaultValue={defaultValue}
-        disabled={isPending}
-        onChange={onSelectChange}
-      >
-        {children}
-      </select>
-      <span className="pointer-events-none absolute right-2 top-[8px]">⌄</span>
-    </label>
+    <div className="flex gap-2">
+      {Array.isArray(children) && children.map((child) => (
+        <button
+          key={child.key}
+          value={child.props.value}
+          onClick={onButtonClick}
+          disabled={isPending}
+          className="p-2 text-lg rounded-md transition hover:bg-gray-200 dark:hover:bg-gray-600"
+        >
+          {child.props.children}
+        </button>
+      ))}
+    </div>
   );
 }

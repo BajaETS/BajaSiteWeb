@@ -48,6 +48,12 @@ export function HomePageScrollSection() {
         <SectionTitle text={t('home.content.research-and-innovation.title')}/>
         <SectionParagraph text={t('home.content.research-and-innovation.text')}/>
       </SectionWrapper>
+
+      {/* Hot fix for second paragraph not showing, empty wrapper to be used as spacing */}
+      <SectionWrapper>
+        <SectionTitle text=""/>
+        <SectionParagraph text=""/>
+      </SectionWrapper>
     </div>
   );
 };

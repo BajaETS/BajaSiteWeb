@@ -1,17 +1,40 @@
+'use client';
+
 import { useLocale } from 'next-intl';
-import LocaleSwitcherSelect from './LocaleSwitcherSelect';
 import { routing } from '@/i18n/routing';
+import { useRouter, usePathname } from '@/i18n/routing';
 
 export default function LocaleSwitcher() {
   const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  function switchLocale(newLocale: 'en' | 'fr') {
+    router.replace(pathname, { locale: newLocale });
+  }
 
   return (
-    <LocaleSwitcherSelect defaultValue={locale}>
-      {routing.locales.map((cur) => (
-        <option key={cur} value={cur}>
-          {cur.toUpperCase()}
-        </option>
+    <div className="flex items-center gap-2">
+      {routing.locales.map((cur, index) => (
+        <>
+            <button
+            key={cur}
+            onClick={() => switchLocale(cur)}
+            className={`p-2 rounded-md transition ${
+              locale === cur ? 'bg-stone-700 dark:bg-stone-700 bg-opacity-70' : ''
+            }`}
+            >
+            <img
+              src={`/flags/${cur === 'fr' ? 'quebec' : 'uk'}.svg`}
+              alt={cur === 'fr' ? 'FR' : 'EN'}
+              className="w-8 h-6"
+            />
+            </button>
+          {index < routing.locales.length - 1 && (
+            <span className="text-white">|</span>
+          )}
+        </>
       ))}
-    </LocaleSwitcherSelect>
+    </div>
   );
 }
