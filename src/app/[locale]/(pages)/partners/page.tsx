@@ -373,7 +373,12 @@ export default function Partners() {
           name: "Prismatic Powders",
           image: "/Partners/bronze/prismaticPowders.png",
           link: "https://www.prismaticpowders.com/"
-        }
+        },
+        {
+           name: "Groupe EP",
+           image: "/Partners/bronze/groupeep.png",
+           link: "https://www.groupeep.com/"
+        },
       ]
     }
   ]
