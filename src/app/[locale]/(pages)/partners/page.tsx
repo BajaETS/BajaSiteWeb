@@ -68,7 +68,7 @@ export default function Partners() {
         {
           name: "BRP",
           image: "/Partners/gold/BRP.png",
-          link: "www.brp.com/"
+          link: "https://www.brp.com/"
         },
         {
           name: "CNC Tracy",
