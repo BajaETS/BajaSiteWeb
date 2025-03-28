@@ -253,11 +253,6 @@ export default function Partners() {
         //   image: "/Partners/silver/prolab.png",
         //   link: "https://www.prolabtechnolub.com/"
         // },
-        // {
-        //   name: "Rousseau",
-        //   image: "/Partners/silver/rousseau.png",
-        //   link: "https://www.rousseau.com/"
-        // },
         {
           name: "Sodel",
           image: "/Partners/silver/Sodel.png",
@@ -400,6 +395,11 @@ export default function Partners() {
           image: "/Partners/bronze/elastoProxy.png",
           link: "https://www.elastoproxy.com/"
         },
+        {
+          name: "Rousseau",
+          image: "/Partners/bronze/rousseau.png",
+          link: "https://www.rousseau.com/"
+        },
         // {
         //   name: "Gates",
         //   image: "/Partners/bronze/gates.png",
@@ -414,6 +414,11 @@ export default function Partners() {
           name: "IFM",
           image: "/Partners/bronze/IFM.png",
           link: "https://www.ifm.com/ca/fr"
+        },
+        {
+          name: "VR3 Engineering",
+          image: "/Partners/bronze/vr3.png",
+          link: "https://vr3.ca/"
         },
         // {
         //   name: "JIT Laser",
