@@ -47,10 +47,16 @@ export default function Partners() {
           message: t("platinum-messages.SKF")
         },
         {
-          name: "Engrenage LB",
-          image: "/Partners/platinum/engrenagelb.png",
-          link: "https://www.engrenagelb.ca",
-          message: t("platinum-messages.EngrenageLB")
+          name: "OSG",
+          image: "/Partners/platinum/osg.png",
+          link: "https://osgcanada.com/osg/",
+          message: t("platinum-messages.OSG")
+        },
+        {
+          name: "Ressorts Liberté",
+          image: "/Partners/platinum/RessortsLiberte.png",
+          link: "https://www.libertyspring.com/?lang=fr",
+          message: t("platinum-messages.RessortsLiberte")
         },
         {
           name: "Altium",
@@ -86,11 +92,6 @@ export default function Partners() {
           link: "http://www.engrenage-esci.com/"
         },
         {
-          name: "Groupe Fusia",
-          image: "/Partners/gold/FusiaGroupe.png",
-          link: "https://www.fusia-groupe.com/"
-        },
-        {
           name: "GMN Bearing USA",
           image: "/Partners/gold/GMn.png",
           link: "https://www.gmnbt.com/"
@@ -101,14 +102,19 @@ export default function Partners() {
           link: "https://gmpfriction.com/"
         },
         {
-          name: "Hutchinson",
-          image: "/Partners/gold/hutchinson.png",
-          link: "https://www.hutchinsoninc.com/"
-        },
-        {
           name: "Industrie L",
           image: "/Partners/gold/IndustrieL.png",
           link: "https://www.industrie-l.ca/"
+        },
+        {
+          name: "Mesotec",
+          image:"/Partners/gold/mesotec.png",
+          link: "https://mesotec.ca/"
+        },
+        {
+          name: "Engrenages LB",
+          image: "/Partners/gold/engrenageslb.png",
+          link: "https://engrenagelb.ca/"
         },
         {
           name: "KISSsoft",
@@ -116,34 +122,14 @@ export default function Partners() {
           link: "https://www.kisssoft.com/en"
         },
         {
-          name: "MEGATECH",
-          image: "/Partners/gold/megatech.png",
-          link: "https://brpmegatech.com/en/"
-        },
-        {
-          name: "Métal CN",
-          image: "/Partners/gold/MetalCN.png",
-          link: "https://metalcn.ca/"
-        },
-        {
-          name: "Odessa",
-          image: "/Partners/gold/odessa.png",
-          link: "http://odessacanada.com/"
-        },
-        {
-          name: "Ressorts Liberté",
-          image: "/Partners/gold/RessortsLiberte.png",
-          link: "https://www.libertyspring.com/?lang=fr"
-        },
-        {
           name: "Solidworks",
           image: "/Partners/gold/Solidworks.png",
           link: "https://www.solidworks.com/"
         },
         {
-          name: "Soucy International",
-          image: "/Partners/gold/SoucyInter.png",
-          link: "https://www.soucy-group.com/"
+          name: "Lenovo Canada",
+          image: "/Partners/gold/lenovo.png",
+          link: "https://www.lenovo.com/ca/"
         }
       ]
     },
@@ -152,11 +138,6 @@ export default function Partners() {
       height:"150px",
       width:"150px",
       partners: [
-        {
-          name: "3M",
-          image: "/Partners/silver/3M.png",
-          link: "https://www.3mcanada.ca/3M/fr_CA/p/"
-        },
         {
           name: "Aciers Richelieu",
           image: "/Partners/silver/aciersRichelieu.png",
@@ -183,11 +164,6 @@ export default function Partners() {
           link: "https://www.cegepmontpetit.ca/cta"
         },
         {
-          name: "CVTech-IBC",
-          image: "/Partners/silver/CVTech-IBC.png",
-          link: "https://cvtech-ibc.com/home/"
-        },
-        {
           name: "Drill-O-Max",
           image: "/Partners/silver/DrillOMax.png",
           link: "http://drillomax.com/profil_fr.htm"
@@ -198,14 +174,14 @@ export default function Partners() {
           link: "https://www.extruflex.net/"
         },
         {
-          name: "Ferndale Safety",
-          image: "/Partners/silver/ferndale.png",
-          link: "https://www.ferndalesafety.com/"
-        },
-        {
           name: "Gene Haas Foundation",
           image: "/Partners/silver/haas.png",
           link: "https://ghaasfoundation.org/content/ghf/en/home.html"
+        },
+        {
+          name: "Hutchinson",
+          image: "/Partners/silver/hutchinson.png",
+          link: "https://www.hutchinsoninc.com/"
         },
         {
           name: "Igus",
@@ -213,55 +189,70 @@ export default function Partners() {
           link: "https://www.igus.com/"
         },
         {
-          name: "Les Joints Étanches R.B.",
-          image: "/Partners/silver/JointsEtanchesRB.png",
-          link: "https://www.sealsonline.com/rbqc/"
+          name: "Groupe Fusia",
+          image: "/Partners/silver/FusiaGroupe.png",
+          link: "https://www.fusia-groupe.com/"
         },
-        {
-          name: "Kimpex",
-          image: "/Partners/silver/kimpex.png",
-          link: "https://www.kimpex.com/fr-ca/accueil"
-        },
+        // {
+        //   name: "Kimpex",
+        //   image: "/Partners/silver/kimpex.png",
+        //   link: "https://www.kimpex.com/fr-ca/accueil"
+        // },
         {
           name: "Lamsi",
           image: "/Partners/silver/lamsi.png",
           link: "https://www.etsmtl.ca/laboratoires/lamsi"
         },
         {
+          name: "Soucy International",
+          image: "/Partners/gold/SoucyInter.png",
+          link: "https://www.soucy-group.com/"
+        },
+        {
           name: "Laser Amp",
           image: "/Partners/silver/LaserAMP.png",
           link: "https://www.laseramp.com/"
         },
+        // {
+        //   name: "Loctite",
+        //   image: "/Partners/silver/Loctite.png",
+        //   link: "https://www.loctiteproducts.com/"
+        // },
         {
-          name: "Loctite",
-          image: "/Partners/silver/Loctite.png",
-          link: "https://www.loctiteproducts.com/"
+          name: "MEGATECH",
+          image: "/Partners/silver/megatech.png",
+          link: "https://brpmegatech.com/en/"
         },
         {
-          name: "Mec-Tor",
-          image: "/Partners/silver/MECTOR.png",
-          link: "http://www.mector.ca/"
+          name: "Métal CN",
+          image: "/Partners/silver/MetalCN.png",
+          link: "https://metalcn.ca/"
         },
         {
-          name: "Nitrex",
-          image: "/Partners/silver/Nitrex.png",
-          link: "https://www.nitrex.com/fr/"
+          name: "Odessa",
+          image: "/Partners/silver/odessa.png",
+          link: "http://odessacanada.com/"
         },
-        {
-          name: "Outils Pierre Berger",
-          image: "/Partners/silver/OutilsPB.png",
-          link: "https://www.outilspierreberger.com/"
-        },
-        {
-          name: "Prolab Technolub",
-          image: "/Partners/silver/prolab.png",
-          link: "https://www.prolabtechnolub.com/"
-        },
-        {
-          name: "Rousseau",
-          image: "/Partners/silver/rousseau.png",
-          link: "https://www.rousseau.com/"
-        },
+        // {
+        //   name: "Mec-Tor",
+        //   image: "/Partners/silver/MECTOR.png",
+        //   link: "http://www.mector.ca/"
+        // },
+        // {
+        //   name: "Nitrex",
+        //   image: "/Partners/silver/Nitrex.png",
+        //   link: "https://www.nitrex.com/fr/"
+        // },
+        // {
+        //   name: "Outils Pierre Berger",
+        //   image: "/Partners/silver/OutilsPB.png",
+        //   link: "https://www.outilspierreberger.com/"
+        // },
+        // {
+        //   name: "Prolab Technolub",
+        //   image: "/Partners/silver/prolab.png",
+        //   link: "https://www.prolabtechnolub.com/"
+        // },
         {
           name: "Sodel",
           image: "/Partners/silver/Sodel.png",
@@ -272,11 +263,11 @@ export default function Partners() {
           image: "/Partners/silver/Solufab.png",
           link: "https://www.solufab.ca/"
         },
-        {
-          name: "Spaenaur",
-          image: "/Partners/silver/spaenaur.png",
-          link: "https://www.spaenaur.com/"
-        },
+        // {
+        //   name: "Spaenaur",
+        //   image: "/Partners/silver/spaenaur.png",
+        //   link: "https://www.spaenaur.com/"
+        // },
         {
           name: "Stageline",
           image: "/Partners/silver/stageline.png",
@@ -297,21 +288,56 @@ export default function Partners() {
           image: "/Partners/silver/TTFab3D.png",
           link: "https://www.facebook.com/TTFabrication3D/"
         },
-        {
-          name: "Usinage FB",
-          image: "/Partners/silver/usinageFB.png",
-          link: "https://www.usinagefb.com/"
-        },
-        {
-          name: "Vanguard Steel",
-          image: "/Partners/silver/vanguardSteel.png",
-          link: "https://vanguardsteel.com/"
-        },
+        // {
+        //   name: "Usinage FB",
+        //   image: "/Partners/silver/usinageFB.png",
+        //   link: "https://www.usinagefb.com/"
+        // },
         {
           name: "Walter",
           image: "/Partners/silver/Walter.png",
           link: "https://www.walter.com/fr_CA"
-        }
+        },
+        {
+          name: "Centric Iterations",
+          image: "/Partners/silver/centriciterations.png",
+          link: "https://www.centriciterations.com/"
+        }, 
+        {
+          name: "Avaled",
+          image: "/Partners/silver/avaled.png",
+          link: "http://www.avaled.com/"
+        }, 
+        {
+          name: "ODrive Robotics",
+          image: "/Partners/silver/odrive.png",
+          link: "https://odriverobotics.com/"
+        }, 
+        {
+          name: "Amcan Jumax",
+          image: "/Partners/silver/amcanjumax.png",
+          link: "http://amcanjumax.com/"
+        }, 
+        {
+          name: "Castrol",
+          image: "/Partners/silver/castrol.png",
+          link: "https://www.castrol.com/en_ca/canada/home.html"
+        },
+        {
+          name: "General Dynamics",
+          image: "/Partners/silver/generaldynamics.png",
+          link: "https://www.gd.com/"
+        }, 
+        {
+          name: "TS Innovation",
+          image: "/Partners/silver/tsinnovation.png",
+          link: "https://tsinnovation.ca/en/"
+        }, 
+        {
+          name: "CK Worldwide",
+          image: "/Partners/silver/CKworldwide.png",
+          link: "https://www.ckworldwide.com/"
+        },
       ]
     },
     {
@@ -320,64 +346,114 @@ export default function Partners() {
       width:"100px",
       partners: [
         {
-          name: "Aux petits moteurs Charette",
-          image: "/Partners/bronze/AuxPetitsMoteursCharette.png",
-          link: "https://pmcjoliette.ca/"
+          name: "3M",
+          image: "/Partners/bronze/3M.png",
+          link: "https://www.3mcanada.ca/3M/fr_CA/p/"
         },
         {
-          name: "Axis Prototypes",
-          image: "/Partners/bronze/AxisProto.png",
-          link: "https://www.axisproto.com/fr/nos-projets/"
+          name: "CVTech-IBC",
+          image: "/Partners/bronze/CVTech-IBC.png",
+          link: "https://cvtech-ibc.com/home/"
         },
+        {
+          name: "Ferndale Safety",
+          image: "/Partners/bronze/ferndale.png",
+          link: "https://www.ferndalesafety.com/"
+        },
+        {
+          name: "Les Joints Étanches R.B.",
+          image: "/Partners/bronze/JointsEtanchesRB.png",
+          link: "https://www.sealsonline.com/rbqc/"
+        },
+        {
+          name: "Vanguard Steel",
+          image: "/Partners/bronze/vanguardSteel.png",
+          link: "https://vanguardsteel.com/"
+        },
+        // {
+        //   name: "Aux petits moteurs Charette",
+        //   image: "/Partners/bronze/AuxPetitsMoteursCharette.png",
+        //   link: "https://pmcjoliette.ca/"
+        // },
+        // {
+        //   name: "Axis Prototypes",
+        //   image: "/Partners/bronze/AxisProto.png",
+        //   link: "https://www.axisproto.com/fr/nos-projets/"
+        // },
         {
           name: "Campagna Motors",
           image: "/Partners/bronze/campagna.png",
           link: "https://trex.campagnamotors.com/fr/"
         },
-        {
-          name: "Canevas Design",
-          image: "/Partners/bronze/canevasDesign.png",
-          link: "https://www.canevasdesign.ca/"
-        },
-        {
-          name: "CK Worldwide",
-          image: "/Partners/bronze/CKworldwide.png",
-          link: "https://www.ckworldwide.com/"
-        },
+        // {
+        //   name: "Canevas Design",
+        //   image: "/Partners/bronze/canevasDesign.png",
+        //   link: "https://www.canevasdesign.ca/"
+        // },
         {
           name: "Elasto Proxy",
           image: "/Partners/bronze/elastoProxy.png",
           link: "https://www.elastoproxy.com/"
         },
         {
-          name: "Gates",
-          image: "/Partners/bronze/gates.png",
-          link: "https://gates-ca.ptplace.com/home"
+          name: "Rousseau",
+          image: "/Partners/bronze/rousseau.png",
+          link: "https://www.rousseau.com/"
         },
-        {
-          name: "GGB Bearings",
-          image: "/Partners/bronze/GGBbearings.png",
-          link: "https://www.ggbearings.com/en"
-        },
+        // {
+        //   name: "Gates",
+        //   image: "/Partners/bronze/gates.png",
+        //   link: "https://gates-ca.ptplace.com/home"
+        // },
+        // {
+        //   name: "GGB Bearings",
+        //   image: "/Partners/bronze/GGBbearings.png",
+        //   link: "https://www.ggbearings.com/en"
+        // },
         {
           name: "IFM",
           image: "/Partners/bronze/IFM.png",
           link: "https://www.ifm.com/ca/fr"
         },
         {
-          name: "JIT Laser",
-          image: "/Partners/bronze/JITLaser.png",
-          link: "https://www.jitlaser.com/"
+          name: "VR3 Engineering",
+          image: "/Partners/bronze/vr3.png",
+          link: "https://vr3.ca/"
         },
+        // {
+        //   name: "JIT Laser",
+        //   image: "/Partners/bronze/JITLaser.png",
+        //   link: "https://www.jitlaser.com/"
+        // },
         {
           name: "Prismatic Powders",
           image: "/Partners/bronze/prismaticPowders.png",
           link: "https://www.prismaticpowders.com/"
         },
         {
-           name: "Groupe EP",
-           image: "/Partners/bronze/groupeep.png",
-           link: "https://www.groupeep.com/"
+          name: "Innovair Solutions",
+          image: "/Partners/bronze/innovair.png",
+          link: "https://www.innovairsolutions.com/en-ca/default.aspx"
+        },
+        {
+          name: "Groupe EP",
+          image: "/Partners/bronze/groupeep.png",
+          link: "https://www.groupeep.com/"
+        },
+        {
+          name: "AFCO",
+          image: "/Partners/bronze/afco.png",
+          link: "https://www.afcoracing.com/"
+        },
+        {
+          name: "SolidXperts",
+          image: "/Partners/bronze/solidxperts.png",
+          link: "https://www.solidxperts.com/"
+        },
+        {
+          name: "DamiFilms",
+          image: "/Partners/bronze/damifilms.png",
+          link: "https://instagram.com/dami.films/"
         },
       ]
     }
