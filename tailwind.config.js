@@ -43,7 +43,7 @@ module.exports = {
         nav: '115px',
       },
       colors: {
-        primary: '#652D91',
+        primary: '#089CE4',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -20,7 +20,7 @@ const DesktopMenu = (props: TMenu) => {
         <li>
           <Link
             target="_blank"
-            className="bg-primary px-4 py-2 rounded-full font-bebas hover:bg-purple-950 transition-all" 
+            className="bg-primary px-4 py-2 rounded-full font-bebas hover:bg-sky-700 transition-all" 
             href="https://www.jedonneenligne.org/fdets/campagne/ets/challenges/view/832ba095-53f5-11ee-ac26-001dd8b75df7"
           >
               {donateLabel}

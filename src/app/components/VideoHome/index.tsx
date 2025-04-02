@@ -38,7 +38,7 @@ export function VideoHome() {
             -translate-y-1/2
           '
           ref={videoRef}
-          src='/montageSansEVT.mp4'
+          src='/videoReveal2025.mp4'
           autoPlay
           muted
           loop
