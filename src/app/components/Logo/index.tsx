@@ -18,7 +18,7 @@ export function Logo() {
 
   return (
     <div className='p-4 fixed top-0 left-0 flex items-start justify-start h-auto w-auto transition-all z-20'>
-      <Image src='/logo.png' alt='LogoBaja' width={nativeWidth / (1.5 + 8.5 *scrollY) } height={nativeHeight / (1.5 + 8.5 *scrollY) } />
+      <Image src='/logo2025.png' alt='LogoBaja' width={nativeWidth / (1.5 + 8.5 *scrollY) } height={nativeHeight / (1.5 + 8.5 *scrollY) } />
     </div>
   );
 }
