@@ -155,6 +155,50 @@
       "title": "Prizes",
       "competition-years": [
         {
+          "year": "2025",
+          "competitions": [
+            {
+              "title": "Baja SAE Arizona",
+              "date": "5/1/2025",
+              "results": [
+                {
+                  "ranking": "2nd",
+                  "category": "Overall",
+                  "details": "Overall ranking with 918.63 points",
+                  "points": 918.63,
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Costs",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Acceleration",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Suspension",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Dynamic",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Static",
+                  "type": "bronze"
+                }
+              ],
+              "image": "/Prizes/arizona2025.jpg"
+            }
+          ]
+        },
+        {
           "year": "2024",
           "competitions": [
             {
