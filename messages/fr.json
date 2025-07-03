@@ -18,8 +18,8 @@
       "years": [
         {
           "year": "2025",
-          "text": "À venir",
-          "image": "/History/welding.gif"
+          "text": "En compétition",
+          "image": "/History/2025.JPG"
         },
         {
           "year": "2024",
@@ -195,6 +195,46 @@
                 }
               ],
               "image": "/Prizes/arizona2025.jpg"
+            },
+            {
+              "title":"Baja SAE Maryland",
+              "date": "6/12/2025",
+              "results": [
+                {
+                  "ranking": "5ème",
+                  "category": "Général",
+                  "details": "Classement général avec 912.64 points",
+                  "points": 912.64,
+                  "type": "other"
+                },
+                {
+                  "ranking": "1er",
+                  "category": "Accélération",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1er",
+                  "category": "affaires",
+                  "details": "Présentation commerciale",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2ème",
+                  "category": "Coûts",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3ème",
+                  "category": "conception",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "1er",
+                  "category": "statique",
+                  "type": "gold"
+                }
+              ],
+              "image": "/Prizes/maryland2025.jpg"              
             }
           ]
         },
