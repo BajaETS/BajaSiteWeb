@@ -22,7 +22,7 @@ type PartnerSection = {
 export default function Partners() {
   const t = useTranslations('partners')
 
-  const sections : PartnerSection[] = [
+  const sections: PartnerSection[] = [
     {
       ranking: t('ranking.platinum'),
       height: "auto",
@@ -108,7 +108,7 @@ export default function Partners() {
         },
         {
           name: "Mesotec",
-          image:"/Partners/gold/mesotec.png",
+          image: "/Partners/gold/mesotec.png",
           link: "https://mesotec.ca/"
         },
         {
@@ -135,8 +135,8 @@ export default function Partners() {
     },
     {
       ranking: t('ranking.silver'),
-      height:"150px",
-      width:"150px",
+      height: "150px",
+      width: "150px",
       partners: [
         {
           name: "Aciers Richelieu",
@@ -302,22 +302,22 @@ export default function Partners() {
           name: "Centric Iterations",
           image: "/Partners/silver/centriciterations.png",
           link: "https://www.centriciterations.com/"
-        }, 
+        },
         {
           name: "Avaled",
           image: "/Partners/silver/avaled.png",
           link: "http://www.avaled.com/"
-        }, 
+        },
         {
           name: "ODrive Robotics",
           image: "/Partners/silver/odrive.png",
           link: "https://odriverobotics.com/"
-        }, 
+        },
         {
           name: "Amcan Jumax",
           image: "/Partners/silver/amcanjumax.png",
           link: "http://amcanjumax.com/"
-        }, 
+        },
         {
           name: "Castrol",
           image: "/Partners/silver/castrol.png",
@@ -327,12 +327,12 @@ export default function Partners() {
           name: "General Dynamics",
           image: "/Partners/silver/generaldynamics.png",
           link: "https://www.gd.com/"
-        }, 
+        },
         {
           name: "TS Innovation",
           image: "/Partners/silver/tsinnovation.png",
           link: "https://tsinnovation.ca/en/"
-        }, 
+        },
         {
           name: "CK Worldwide",
           image: "/Partners/silver/CKworldwide.png",
@@ -342,8 +342,8 @@ export default function Partners() {
     },
     {
       ranking: t('ranking.bronze'),
-      height:"100px",
-      width:"100px",
+      height: "100px",
+      width: "100px",
       partners: [
         {
           name: "3M",
@@ -455,10 +455,15 @@ export default function Partners() {
           image: "/Partners/bronze/damifilms.png",
           link: "https://instagram.com/dami.films/"
         },
+        {
+          name: "Solaxis",
+          image: "/Partners/bronze/solaxis.png",
+          link: "https://solaxis.ca/"
+        }
       ]
     }
   ]
- 
+
   return (
     <Page>
       <p className="text-center text-5xl font-bebas p-5">{t('title')}</p>
@@ -466,7 +471,7 @@ export default function Partners() {
         <p className="text-center text-xl max-w-3xl pb-10">{t('message')}</p>
       </div>
       {sections.map((section, index) => (
-        <motion.div 
+        <motion.div
           key={index}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -475,12 +480,12 @@ export default function Partners() {
           className="mb-10"
         >
           <h2 className="text-4xl font-bebas mb-0 text-center">{section.ranking}</h2>
-          <div 
+          <div
             className={`pt-8 pb-8 px-5 md:px-36 grid gap-8`}
             style={{
               gridTemplateColumns: `repeat(auto-fill, minmax(${section.width}, 1fr))`,
               gridAutoRows: `${section.height}`,
-            }}          
+            }}
           >
             {section.partners.map((partner) => (
               <div key={partner.name} className="text-center h-auto">
