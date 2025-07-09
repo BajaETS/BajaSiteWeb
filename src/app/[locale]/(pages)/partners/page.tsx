@@ -130,6 +130,11 @@ export default function Partners() {
           name: "Lenovo Canada",
           image: "/Partners/gold/lenovo.png",
           link: "https://www.lenovo.com/ca/"
+        },
+        {
+          name: "SEGGER",
+          image: "/Partners/gold/segger.png",
+          link: "https://www.segger.com/"
         }
       ]
     },
