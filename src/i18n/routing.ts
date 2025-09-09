@@ -29,6 +29,10 @@ export const routing = defineRouting({
     '/whatwedo': {
       en: '/what-we-do',
       fr: '/notre-savoir-faire',
+    },
+    '/media': {
+      en: '/media',
+      fr: '/media',
     }
   }
 });

@@ -27,6 +27,10 @@ export function Menu() {
     {
       href: "/history",
       label: t('history.title')
+    },
+    {
+      href: "/media",
+      label: t('media.title')
     }
   ]
 
