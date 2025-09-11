@@ -16,7 +16,7 @@ export default function LocaleSwitcher() {
   return (
     <div className="flex items-center gap-2">
       {routing.locales.map((cur, index) => (
-        <>
+        <li key={cur}>
             <button
             key={cur}
             onClick={() => switchLocale(cur)}
@@ -33,7 +33,7 @@ export default function LocaleSwitcher() {
           {index < routing.locales.length - 1 && (
             <span className="text-white">|</span>
           )}
-        </>
+        </li>
       ))}
     </div>
   );
