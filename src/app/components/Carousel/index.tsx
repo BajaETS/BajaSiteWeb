@@ -15,7 +15,7 @@ export default function Carousel({ slides }: CarouselProps) {
   const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
   return (
-    <div className="relative">
+    <div className="relative h-1/2">
       {/* Viewport */}
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
@@ -27,7 +27,7 @@ export default function Carousel({ slides }: CarouselProps) {
               <img
                 src={src}
                 alt={`Slide ${index}`}
-                className="w-full h-auto rounded-xl"
+                className="w-full h-full rounded-xl"
               />
             </div>
           ))}
