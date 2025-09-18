@@ -25,7 +25,7 @@ export function VideoHome() {
 
   return (
       <div className="w-full h-full -z-[1]">
-        <div className='bg-gradient-to-t from-black from-10% absolute w-screen z-10 h-screen'></div>
+        <div className='bg-gradient-to-t from-black from-10% absolute w-full z-10 h-screen '></div>
         <video
           className='
             absolute
