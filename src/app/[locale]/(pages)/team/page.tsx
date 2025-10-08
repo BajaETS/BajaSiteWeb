@@ -149,6 +149,7 @@ export default function Team() {
           name: "Élie Bazinet",
           program: t('programs.construction-engineering'),
           roles: t('roles.mechanics'),
+          nickname: "Élie-coptère",
           linkedin: "https://www.linkedin.com/company/baja-ets/"
         },
         {
@@ -203,13 +204,6 @@ export default function Team() {
           nickname: "Baby Boss",
           linkedin: "https://www.linkedin.com/company/baja-ets/"
         },
-        {
-          image: "/Team/default1.jpeg",
-          name: "Philip Kilganon-Roy",
-          program: t('programs.mechanical-engineering'),
-          roles: t('roles.mechanics'),
-          linkedin: "https://www.linkedin.com/company/baja-ets/"
-        }
       ]
     },
     {
