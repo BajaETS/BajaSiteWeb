@@ -993,11 +993,16 @@
       "cooling-system-lead": "Cooling System Lead",
       "ergonomics-lead": "Ergonomics Lead",
       "data-analysis-lead": "Data Analysis Lead",
-      "marketing-lead": "Marketing Lead"
+      "marketing-lead": "Marketing Lead",
+      "wheels-lead": "Wheel Assembly Lead",
+      "reduction-lead": "Reduction Box Lead",
+      "clutch-lead": "Clutch Lead"
     }
   },
   "partners": {
     "title": "Partners",
+    "portfolio-button-text": "Partnership Portfolio Here!",
+    "portfolio": "/Partners/portfolio/EN_2026_Sponsorship_Portfolio.pdf",
     "ranking": {
       "platinum": "Platinum",
       "gold": "Gold",
