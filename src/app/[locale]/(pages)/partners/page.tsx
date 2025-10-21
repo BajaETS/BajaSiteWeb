@@ -22,6 +22,10 @@ type PartnerSection = {
 export default function Partners() {
   const t = useTranslations('partners')
 
+  const openPDF = (url: string) => {
+    window.open(url, '_blank');
+  }
+
   const sections: PartnerSection[] = [
     {
       ranking: t('ranking.platinum'),
@@ -474,6 +478,11 @@ export default function Partners() {
       <p className="text-center text-5xl font-bebas p-5">{t('title')}</p>
       <div className="flex justify-center">
         <p className="text-center text-xl max-w-3xl pb-10">{t('message')}</p>
+      </div>
+      <div className="flex justify-center pb-10">
+        <button onClick={openPDF.bind(null, t('portfolio'))} className="bg-primary px-10 py-2 rounded-full font-bebas hover:bg-sky-700 transition-all text-2xl">
+          {t('portfolio-button-text')}
+        </button>
       </div>
       {sections.map((section, index) => (
         <motion.div

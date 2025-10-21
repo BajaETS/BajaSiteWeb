@@ -993,11 +993,16 @@
       "cooling-system-lead": "Responsable système de refroidissement",
       "ergonomics-lead": "Responsable ergonomie",
       "data-analysis-lead": "Responsable analyse de données",
-      "marketing-lead": "Responsable marketing"
+      "marketing-lead": "Responsable marketing",
+      "wheels-lead": "Responsable assemblage de roues",
+      "reduction-lead": "Responsable boite de réduction",
+      "clutch-lead": "Responsable clutch"
     }
   },
   "partners": {
     "title": "Partenaires",
+    "portfolio-button-text": "Plan de partenariat ici!",
+    "portfolio": "/Partners/portfolio/FR_Plan_de_partenariat_2026.pdf",
     "ranking": {
       "platinum": "Platine",
       "gold": "Or",
