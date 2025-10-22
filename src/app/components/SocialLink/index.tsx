@@ -1,4 +1,5 @@
 import { TSocialLink } from "./interface"
+import Image from "next/image";
 
 const SocialLink = (props: TSocialLink) => {
 
@@ -6,7 +7,7 @@ const SocialLink = (props: TSocialLink) => {
 
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
-      <img className="w-7 opacity-50 h-auto" src={image} alt={alt} />
+      <Image className="opacity-50" src={image} alt={alt} width={30} height={30}/>
     </a>
   )
 }

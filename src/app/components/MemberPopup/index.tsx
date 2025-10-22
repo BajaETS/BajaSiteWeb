@@ -23,7 +23,7 @@ export default function MemberPopup(props: TMemberPopup) {
           className="absolute top-5 right-5 bg-none border-none text-base cursor-pointer text-white"
           onClick={onClose}
         >
-          <img src='/x-white.png' width='25' height='25'></img>
+          <Image src='/x-white.png' width='25' height='25' alt={''}/>
         </button>
         <div className="flex flex-col md:flex-row items-center h-full ">
           <Image

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import React from "react";
 import { useTranslations } from "next-intl";
@@ -16,9 +17,11 @@ export default function Partner(props: { name: any; image: any; link: any; heigh
       style={{ width: width, height: height }}        
       onClick={() => window.open(link, 'mywindow')}
       >
-        <img 
+        <Image
           src={image} 
           alt={name} 
+          height={300}
+          width={300}
           className="w-full h-full object-cover transition-transform hover:scale-110"
         />
       </div>
