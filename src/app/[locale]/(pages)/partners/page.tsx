@@ -347,6 +347,11 @@ export default function Partners() {
           image: "/Partners/silver/CKworldwide.png",
           link: "https://www.ckworldwide.com/"
         },
+        {
+          name: "Ferndale Safety",
+          image: "/Partners/bronze/ferndale.png",
+          link: "https://www.ferndalesafety.com/"
+        },
       ]
     },
     {
@@ -363,11 +368,6 @@ export default function Partners() {
           name: "CVTech-IBC",
           image: "/Partners/bronze/CVTech-IBC.png",
           link: "https://cvtech-ibc.com/home/"
-        },
-        {
-          name: "Ferndale Safety",
-          image: "/Partners/bronze/ferndale.png",
-          link: "https://www.ferndalesafety.com/"
         },
         {
           name: "Les Joints Étanches R.B.",
