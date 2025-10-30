@@ -1,73 +1,26 @@
-"use client"; // needed if you use Next.js App Router (app/)
+"use client";
+import React, { useState } from "react";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
-import React from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // optional icons
-
-type CarouselProps = {
-  slides: string[];
-};
-
-export default function Carousel({ slides }: CarouselProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel();
-
-  const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
-  const scrollNext = () => emblaApi && emblaApi.scrollNext();
-
-  return (
-    <div className="h-screen">
-      <div className="h-1/2 w-full bg-red-500 rounded-xl">
-        <div className="flex">
-          {slides.map((src, index) => (
-            <div
-              className=""
-              key={index}
-            >
-              <img
-                src={src}
-                alt={`Slide ${index}`}
-                className="w-full h-full rounded-xl"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-      
-
-
-      {/* <div className="h-1/2">
-        
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {slides.map((src, index) => (
-              <div
-                className="flex-[0_0_100%] min-w-0 px-2"
-                key={index}
-              >
-                <img
-                  src={src}
-                  alt={`Slide ${index}`}
-                  className="w-full h-full rounded-xl"
-                />
-              </div>
-            ))}
+export default function Carousel({ slides }: { slides: string[] }) {
+    const t = useTranslations('carousel');
+    const images = slides.map((slide) => `/Media/${slide}`);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    
+    return (
+      <>
+        <button onClick={() => setCurrentIndex((currentIndex - 1 + images.length) % images.length)}>
+          previous
+        </button>
+        <div className="relative w-full overflow-hidden">
+          <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+            <Image key={currentIndex} src={images[currentIndex]} alt={t('carousel image', { index: currentIndex })} width={500} height={300} />
           </div>
         </div>
-
-        
-        <button
-          onClick={scrollPrev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-2 shadow"
-        >
-          <ChevronLeft />
+        <button onClick={() => setCurrentIndex((currentIndex + 1) % images.length)}>
+          next
         </button>
-        <button
-          onClick={scrollNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-2 shadow"
-        >
-          <ChevronRight />
-        </button>
-      </div> */}
-    </div>
-  );
+      </>
+    );
 }
