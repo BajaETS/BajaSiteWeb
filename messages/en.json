@@ -17,8 +17,13 @@
       "title": "History",
       "years": [
         {
+          "year": "2026",
+          "text": "In design...",
+          "image": "/History/tony_stark.gif"
+        },
+        {
           "year": "2025",
-          "text": "In competition",
+          "text": "3rd place Mike Schmidt Memorial",
           "image": "/History/2025.JPG"
         },
         {
@@ -235,6 +240,51 @@
                 }
               ],
               "image": "/Prizes/maryland2025.jpg"              
+            },
+            {
+              "title":"Baja SAE Carolina",
+              "date": "10/2/2025",
+              "results": [
+                {
+                  "ranking": "3rd",
+                  "category": "Overall",
+                  "details": "Overall ranking with 955.37 points",
+                  "points": 955.37,
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Acceleration",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Costs",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Climb",
+                  "details": "Hill Climb event",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Static",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Dynamic",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Endurance",
+                  "type": "bronze"
+                }
+              ],
+              "image": "/Prizes/carolina2025.jpg"
             }
           ]
         },
@@ -946,11 +996,16 @@
       "cooling-system-lead": "Cooling System Lead",
       "ergonomics-lead": "Ergonomics Lead",
       "data-analysis-lead": "Data Analysis Lead",
-      "marketing-lead": "Marketing Lead"
+      "marketing-lead": "Marketing Lead",
+      "wheels-lead": "Wheel Assembly Lead",
+      "reduction-lead": "Reduction Box Lead",
+      "clutch-lead": "Clutch Lead"
     }
   },
   "partners": {
     "title": "Partners",
+    "portfolio-button-text": "Partnership Portfolio Here!",
+    "portfolio": "/Partners/portfolio/EN_2026_Sponsorship_Portfolio.pdf",
     "ranking": {
       "platinum": "Platinum",
       "gold": "Gold",

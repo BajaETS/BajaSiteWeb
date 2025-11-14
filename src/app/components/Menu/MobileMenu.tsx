@@ -5,6 +5,7 @@ import MenuItem from "./MenuItem";
 import { useScrollLock } from "usehooks-ts";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import LocaleSwitcher from "../LocaleSwitcher";
 
 const MobileMenuOverlay = (props: TMenu & { onMenuItemClick: () => void }) => {
@@ -48,7 +49,7 @@ const MobileMenu = (props: TMenu) => {
         <MobileMenuOverlay menuItems={menuItems} onMenuItemClick={() => setIsMenuOpen(false)} />
       )}
       <button className='md:hidden z-50 fixed top-5 right-5' onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        <img src="/hamburger.png" width="25" height="25"></img>
+        <Image src="/hamburger.png" width="25" height="25" alt="Menu"/>
       </button>
     </div>
   )

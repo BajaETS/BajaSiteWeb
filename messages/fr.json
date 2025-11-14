@@ -16,9 +16,14 @@
     "history": {
       "title": "Histoire",
       "years": [
+{
+          "year": "2026",
+          "text": "En conception...",
+          "image": "/History/tony_stark.gif"
+        },
         {
           "year": "2025",
-          "text": "En compétition",
+          "text": "3ème Mike Schmidt Memorial",
           "image": "/History/2025.JPG"
         },
         {
@@ -235,6 +240,51 @@
                 }
               ],
               "image": "/Prizes/maryland2025.jpg"              
+            },
+            {
+              "title":"Baja SAE Carolina",
+              "date": "10/2/2025",
+              "results": [
+                {
+                  "ranking": "3ème",
+                  "category": "Général",
+                  "details": "Classement général avec 955.37 points",
+                  "points": 955.37,
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "1er",
+                  "category": "accélération",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1er",
+                  "category": "Coûts",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2ème",
+                  "category": "montée",
+                  "details": "Montée de colline",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "2ème",
+                  "category": "statique",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3ème",
+                  "category": "dynamique",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3ème",
+                  "category": "endurance",
+                  "type": "bronze"
+                }
+              ],
+              "image": "/Prizes/carolina2025.jpg"
             }
           ]
         },
@@ -946,11 +996,16 @@
       "cooling-system-lead": "Responsable système de refroidissement",
       "ergonomics-lead": "Responsable ergonomie",
       "data-analysis-lead": "Responsable analyse de données",
-      "marketing-lead": "Responsable marketing"
+      "marketing-lead": "Responsable marketing",
+      "wheels-lead": "Responsable assemblage de roues",
+      "reduction-lead": "Responsable boite de réduction",
+      "clutch-lead": "Responsable clutch"
     }
   },
   "partners": {
     "title": "Partenaires",
+    "portfolio-button-text": "Plan de partenariat ici!",
+    "portfolio": "/Partners/portfolio/FR_Plan_de_partenariat_2026.pdf",
     "ranking": {
       "platinum": "Platine",
       "gold": "Or",
