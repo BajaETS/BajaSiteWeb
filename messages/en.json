@@ -965,7 +965,8 @@
       "mechanical-engineering": "Mechanical Engineering",
       "construction-engineering": "Construction Engineering",
       "software-engineering": "Software Engineering",
-      "electrical-engineering": "Electrical Engineering"
+      "electrical-engineering": "Electrical Engineering",
+      "automated-production-engineering": "Automated Production Engineering"
     },
     "roles": {
       "mechanics": "Mechanics",
@@ -1189,6 +1190,104 @@
             "roles": "roles.machining-lead",
             "nickname": "Xav",
             "linkedin": "https://www.linkedin.com/in/xavier-vaillancourt-8924a1242/"
+          },
+          {
+            "image": "/Team/default4.jpeg",
+            "name": "Julien Rhéaume",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Alexandre Gauthier",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Vincent Ducas",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Christophe Labrecque",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Fabrice Kwey-Du Sablon",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Kimi Sabourin",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Gabriel Houle",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Alec Germain",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Marcelo Costa",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "William Thibert",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Laurent Vanier",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Charles Forunier",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Thomas Lusignan",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+           {
+            "image": "/Team/default4.jpeg",
+            "name": "Louis-David Limoges-Plourde",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
           }
         ]
       },
@@ -1223,6 +1322,54 @@
             "program": "programs.software-engineering",
             "roles": "roles.electronics",
             "linkedin": "https://www.linkedin.com/in/jerometrottier/"
+          },
+          {
+            "image": "/Team/default4.jpeg",
+            "name": "Thomas Brunet",
+            "program": "programs.automated-production-engineering",
+            "roles": "roles.electronics",
+            "linkedin": ""
+          },
+          {
+            "image": "/Team/default4.jpeg",
+            "name": "Louis-Philippe Côté",
+            "program": "programs.automated-production-engineering",
+            "roles": "roles.electronics",
+            "linkedin": ""
+          },
+          {
+            "image": "/Team/default4.jpeg",
+            "name": "Philippe Johnston",
+            "program": "programs.automated-production-engineering",
+            "roles": "roles.electronics",
+            "linkedin": ""
+          },
+          {
+            "image": "/Team/default4.jpeg",
+            "name": "Raphaël Tazbaz",
+            "program": "programs.electrical-engineering",
+            "roles": "roles.electronics",
+            "linkedin": ""
+          },
+          {
+            "image": "/Team/default4.jpeg",
+            "name": "Jean-Nicolas de Broeck",
+            "program": "",
+            "roles": "roles.electronics",
+            "linkedin": ""
+          },
+          {
+            "image": "/Team/default4.jpeg",
+            "name": "Fabrice Lontsi Ngnoulaye",
+            "program": "",
+            "roles": "roles.electronics",
+            "linkedin": ""
+          },{
+            "image": "/Team/default4.jpeg",
+            "name": "Valentine Nneji",
+            "program": "programs.automated-production-engineering",
+            "roles": "roles.electronics",
+            "linkedin": ""
           }
         ]
       }
