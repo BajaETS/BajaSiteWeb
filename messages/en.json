@@ -1005,7 +1005,7 @@
         "title": "title.management",
         "members": [
           {
-            "image": "/Team/Lavigne.jpg",
+            "image": "/Team/Lavigne2.jpg",
             "name": "Samuel Lavigne-Cloutier",
             "program": "programs.mechanical-engineering",
             "roles": "roles.team-captain",
@@ -1021,7 +1021,7 @@
             "linkedin": "https://www.linkedin.com/in/antoine-proulx-884480231/"
           },
           {
-            "image": "/Team/berp.JPG",
+            "image": "/Team/berp2.jpg",
             "name": "Charles Grenier",
             "program": "programs.mechanical-engineering",
             "roles": "roles.technical-director",
@@ -1029,7 +1029,7 @@
             "linkedin": "https://www.linkedin.com/in/charles-grenier-b45627292/"
           },
           {
-            "image": "/Team/elie.JPG",
+            "image": "/Team/elie2.jpg",
             "name": "Élie Bazinet",
             "program": "programs.construction-engineering",
             "roles": "roles.treasurer",
@@ -1042,7 +1042,7 @@
         "title": "title.team-leads",
         "members": [
           {
-            "image": "/Team/PA.JPEG",
+            "image": "/Team/PA2.jpg",
             "name": "Pierre-Alexis Lachance",
             "program": "programs.mechanical-engineering",
             "roles": "roles.clutch-lead",
@@ -1050,14 +1050,14 @@
             "linkedin": "https://www.linkedin.com/in/pierre-alexis-lachance-360a51314/"
           },
           {
-            "image": "/Team/MIKA.JPEG",
+            "image": "/Team/MIKA2.jpg",
             "name": "Mika Loiselle",
             "program": "programs.mechanical-engineering",
             "roles": "roles.brakes-lead",
             "linkedin": "https://www.linkedin.com/in/mika-loiselle-ba010b231/"
           },
           {
-            "image": "/Team/Maxwell.jpg",
+            "image": "/Team/Maxwell2.jpg",
             "name": "Maxence Lafond",
             "program": "programs.software-engineering",
             "roles": "roles.electronics-lead",
@@ -1073,7 +1073,7 @@
             "linkedin": "https://www.linkedin.com/in/léo-bazinet-78165a232/"
           },
           {
-            "image": "/Team/Annabelle.jpeg",
+            "image": "/Team/Annabelle2.jpg",
             "name": "Annabelle Gagnon",
             "program": "programs.mechanical-engineering",
             "roles": "roles.wheels-lead",
@@ -1081,7 +1081,7 @@
             "linkedin": "https://www.linkedin.com/in/annabelle-gagnon-ab8313311/"
           },
           {
-            "image": "/Team/Kantin.jpeg",
+            "image": "/Team/Kantin2.jpg",
             "name": "Justin Desbois",
             "program": "programs.mechanical-engineering",
             "roles": "roles.driveline-lead",
@@ -1097,7 +1097,7 @@
             "linkedin": "https://www.linkedin.com/in/danick-rouillier-4805a1335/"
           },
           {
-            "image": "/Team/Aymerick.JPG",
+            "image": "/Team/Aymerick2.jpg",
             "name": "Aymeric Bellon",
             "program": "programs.mechanical-engineering",
             "roles": "roles.ergonomics-lead",
@@ -1112,7 +1112,7 @@
             "linkedin": "https://www.linkedin.com/company/baja-ets/"
           },
           {
-            "image": "/Team/babyboss.JPG",
+            "image": "/Team/babyboss2.jpg",
             "name": "Samuel Leblanc",
             "program": "programs.mechanical-engineering",
             "roles": "roles.reduction-lead",
@@ -1132,14 +1132,14 @@
             "linkedin": "https://www.linkedin.com/in/maorie-barbeau-b07292232/"
           },
           {
-            "image": "/Team/samViens.JPG",
+            "image": "/Team/samViens2.jpg",
             "name": "Samuel Viens",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
             "linkedin": "https://www.linkedin.com/company/baja-ets/"
           },
           {
-            "image": "/Team/Adrien.JPEG",
+            "image": "/Team/Adrien2.jpg",
             "name": "Adrean Domenko",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
@@ -1302,7 +1302,7 @@
             "linkedin": "https://www.linkedin.com/in/alex-maheu-6382752b5/"
           },
           {
-            "image": "/Team/oscar.JPG",
+            "image": "/Team/oscar2.jpg",
             "name": "Xavier Orsat-Parker",
             "program": "programs.software-engineering",
             "roles": "roles.electronics",
