@@ -1125,13 +1125,6 @@
         "title": "title.mechanics",
         "members": [
           {
-            "image": "/Team/Maorie.JPEG",
-            "name": "Maorie Barbeau",
-            "program": "programs.mechanical-engineering",
-            "roles": "roles.mechanics",
-            "linkedin": "https://www.linkedin.com/in/maorie-barbeau-b07292232/"
-          },
-          {
             "image": "/Team/samViens2.jpg",
             "name": "Samuel Viens",
             "program": "programs.mechanical-engineering",
@@ -1175,21 +1168,6 @@
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
             "linkedin": "https://www.linkedin.com/in/hubert-moisan-leduc-4ba002293/"
-          },
-          {
-            "image": "/Team/Steph.jpeg",
-            "name": "Steph Bienvenue",
-            "program": "programs.mechanical-engineering",
-            "roles": "roles.mechanics",
-            "linkedin": "https://www.linkedin.com/in/steph-bienvenue-22948b250/"
-          },
-          {
-            "image": "/Team/Xav.jpg",
-            "name": "Xavier Vaillancourt",
-            "program": "programs.mechanical-engineering",
-            "roles": "roles.machining-lead",
-            "nickname": "Xav",
-            "linkedin": "https://www.linkedin.com/in/xavier-vaillancourt-8924a1242/"
           },
           {
             "image": "/Team/JulienRheaume.jpg",
@@ -1270,7 +1248,7 @@
           },
            {
             "image": "/Team/CharlesForunier.jpg",
-            "name": "Charles Forunier",
+            "name": "Charles Fournier",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
             "linkedin": ""
