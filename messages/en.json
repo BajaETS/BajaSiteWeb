@@ -1170,6 +1170,13 @@
             "linkedin": "https://www.linkedin.com/in/hubert-moisan-leduc-4ba002293/"
           },
           {
+            "image": "/Team/leotremblay.jpg",
+            "name": "Léo Tremblay",
+            "program": "programs.mechanical-engineering",
+            "roles": "roles.mechanics",
+            "linkedin": ""
+          },
+          {
             "image": "/Team/JulienRheaume.jpg",
             "name": "Julien Rhéaume",
             "program": "programs.mechanical-engineering",
