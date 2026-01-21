@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { useRouter, usePathname } from '@/i18n/routing';
@@ -17,9 +18,8 @@ export default function LocaleSwitcher() {
   return (
     <div className="flex items-center gap-2">
       {routing.locales.map((cur, index) => (
-        <>
+        <React.Fragment key={cur}>
             <button
-            key={cur}
             onClick={() => switchLocale(cur)}
             className={`p-2 rounded-md transition ${
               locale === cur ? 'bg-stone-700 dark:bg-stone-700 bg-opacity-70' : ''
@@ -36,7 +36,7 @@ export default function LocaleSwitcher() {
           {index < routing.locales.length - 1 && (
             <span className="text-white">|</span>
           )}
-        </>
+        </React.Fragment>
       ))}
     </div>
   );

@@ -1,7 +1,6 @@
 "use client"
 import React from "react";
 import { useTranslations } from "next-intl";
-import Page from "@/app/components/Page";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -11,9 +10,9 @@ export default function Bajameister() {
   const joinLink = "https://www.zeffy.com/fr-CA/ticketing/bajameister";
 
   return (
-    <Page>
+    <main className="h-full">
       {/* Hero Section with Jagermeister theme */}
-      <div className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* Animated gradient background - Jagermeister colors */}
         <div className="absolute inset-0 bg-gradient-to-br from-green-950 via-black to-green-950">
           <motion.div
@@ -265,6 +264,23 @@ export default function Bajameister() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 to-transparent" />
           </motion.div>
+
+          {/* Full width landscape image */}
+          <motion.div
+            className="md:col-span-3 relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden group border border-green-800/30"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <Image
+              src="/bajameister/bajameister6.png"
+              alt="Bajameister event highlights"
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 to-transparent" />
+          </motion.div>
         </div>
       </div>
 
@@ -316,6 +332,6 @@ export default function Bajameister() {
           <span className="relative z-10">{t('cta')}</span>
         </motion.a>
       </motion.div>
-    </Page>
+    </main>
   );
 }
