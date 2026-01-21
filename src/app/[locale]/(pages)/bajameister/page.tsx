@@ -8,6 +8,7 @@ export default function Bajameister() {
   const t = useTranslations('pages.bajameister');
 
   const joinLink = "https://www.zeffy.com/fr-CA/ticketing/bajameister";
+  const googleMapsLink = "https://www.google.com/maps/search/?api=1&query=530+rue+Peel,+Montreal,+QC";
 
   return (
     <main className="h-full">
@@ -80,13 +81,38 @@ export default function Bajameister() {
             {t('subtitle')}
           </motion.p>
           <motion.p
-            className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10"
+            className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             {t('intro')}
           </motion.p>
+
+          {/* Event Details */}
+          <motion.div
+            className="flex flex-col items-center gap-3 mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-orange-100/90 text-lg md:text-xl font-bebas">
+              <span>{t('event-date')}</span>
+              <span className="hidden sm:inline text-orange-500">|</span>
+              <span>{t('event-time')}</span>
+            </div>
+            <a
+              href={googleMapsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors text-lg md:text-xl font-bebas"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              </svg>
+              {t('event-location')}
+            </a>
+          </motion.div>
 
           {/* CTA Button - Now in Hero */}
           <motion.a
