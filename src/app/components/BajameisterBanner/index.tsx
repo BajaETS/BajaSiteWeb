@@ -57,20 +57,9 @@ export function BajameisterBanner() {
 
             {/* Content */}
             <div className="relative z-10 flex items-center gap-4">
-              {/* Pulsing indicator */}
-              <div className="relative flex-shrink-0">
-                <motion.div
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <span className="text-2xl md:text-3xl">🎉</span>
-                </motion.div>
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-orange-500"
-                  animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                />
+              {/* Emoji indicator */}
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl md:text-3xl">🎉</span>
               </div>
 
               {/* Text content */}
