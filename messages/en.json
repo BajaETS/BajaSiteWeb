@@ -1,5 +1,14 @@
 {
   "pages": {
+    "bajameister": {
+      "title": "Bajameister",
+      "subtitle": "Where Engineering Meets the Party",
+      "intro": "BajaETS teams up with Jagermeister and Red Bull for an unforgettable night where off-road engineering meets epic celebrations.",
+      "description": "Experience the fusion of adrenaline and innovation as we showcase our student-built Baja off-road vehicle in a one-of-a-kind party atmosphere. Witness the machine that conquers any terrain while enjoying the ultimate party experience.",
+      "partners-title": "Powered By",
+      "event-highlight": "One Night. Two Legends. Unlimited Energy.",
+      "cta": "Join the Experience"
+    },
     "home": {
       "title": "Home",
       "content": {
