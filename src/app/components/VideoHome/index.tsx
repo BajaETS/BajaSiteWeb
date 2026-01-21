@@ -29,12 +29,12 @@ export function VideoHome() {
         <video
           className='
             absolute
-            top-[50%] 
-            left-[50%] 
-            min-w-full 
-            min-h-full 
-            object-cover 
-            -translate-x-1/2 
+            top-[50%]
+            left-[50%]
+            min-w-full
+            min-h-full
+            object-cover
+            -translate-x-1/2
             -translate-y-1/2
           '
           ref={videoRef}
@@ -42,8 +42,9 @@ export function VideoHome() {
           autoPlay
           muted
           loop
-          playsInline // Prevents fullscreen on iOS
-          webkit-playsinline // Older iOS versions
+          playsInline
+          // @ts-ignore - webkit-playsinline for older iOS versions
+          webkitPlaysInline=""
           controls={false}
         />
       </div>
