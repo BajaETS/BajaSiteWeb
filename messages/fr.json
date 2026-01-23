@@ -968,6 +968,13 @@
   "team": {
     "role": "Rôle(s)",
     "nickname": "Surnom",
+    "page-title": "Rencontrez",
+    "page-title-highlight": "L'Équipe",
+    "page-subtitle": "Les ingénieurs et innovateurs passionnés derrière Baja ETS",
+    "member-count": "{count, plural, =1 {# membre} other {# membres}}",
+    "click-to-learn-more": "Cliquez pour en savoir plus",
+    "connect-linkedin": "Connecter sur LinkedIn",
+    "join-cta": "Vous voulez rejoindre notre équipe? Contactez-nous!",
     "title": {
       "management": "Gestion",
       "team-leads": "Chefs d'équipe",
