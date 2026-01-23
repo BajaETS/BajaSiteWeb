@@ -28,6 +28,7 @@
     },
     "history": {
       "title": "Histoire",
+      "drag-hint": "glissez-moi",
       "years": [
         {
           "year": "2026",
