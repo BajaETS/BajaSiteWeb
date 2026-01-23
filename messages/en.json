@@ -1332,6 +1332,18 @@
       "OSG": "OSG is renowned for manufacturing high-performance cutting tools, including taps, drills, end mills, and indexable tools, designed for precision machining across industries such as aerospace, automotive, and medical. BajaÉTS is honored to count OSG among its top sponsors. The cutting-edge equipment provided by OSG enables BajaÉTS to precisely manufacture the essential components that contribute to the vehicle's high performance. Thanks to OSG, the team operates at an unprecedented standard of quality."
     }
   },
+  "footer": {
+    "title": "BAJA ÉTS",
+    "description": "Engineering excellence in off-road competition. Building innovation, one vehicle at a time.",
+    "quickLinks": "QUICK LINKS",
+    "home": "Home",
+    "team": "Team",
+    "partners": "Partners",
+    "prizes": "Prizes",
+    "connect": "CONNECT",
+    "copyright": "All rights reserved.",
+    "tagline": "Made with innovation and passion"
+  },
   "nav": {
     "donate": "Donate"
   }

@@ -1337,6 +1337,18 @@
       "OSG": "OSG est reconnu pour la fabrication d'outils de coupe haute performance, notamment des tarauds, des forets, des fraises et des outils indexables, conçus pour l’usinage de précision dans des secteurs tels que l’aérospatiale, l’automobile et le médical. BajaÉTS est honoré de compter OSG parmi ses principaux partenaires. L’équipement de pointe fourni par OSG permet à BajaÉTS de fabriquer avec précision les composants essentiels à la haute performance du véhicule. Grâce à OSG, l’équipe atteint un niveau de qualité sans précédent."
     }
   },
+  "footer": {
+    "title": "BAJA ÉTS",
+    "description": "Excellence en ingénierie en compétition tout-terrain. Construire l'innovation, un véhicule à la fois.",
+    "quickLinks": "LIENS RAPIDES",
+    "home": "Accueil",
+    "team": "Équipe",
+    "partners": "Partenaires",
+    "prizes": "Prix",
+    "connect": "CONNEXION",
+    "copyright": "Tous droits réservés.",
+    "tagline": "Créé avec innovation et passion"
+  },
   "nav": {
     "donate": "Donner"
   }
