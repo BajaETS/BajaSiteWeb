@@ -28,6 +28,7 @@
     },
     "history": {
       "title": "History",
+      "drag-hint": "drag me",
       "years": [
         {
           "year": "2026",
