@@ -32,11 +32,21 @@ module.exports = {
       },
       animation: {
         fadeIn: 'fadeIn 0.2s ease-in forwards',
+        'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+        'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: 0, transform: 'translate(-50%, 5px)' },
           '100%': { opacity: 1, transform: 'translate(-50%, 0px)' },
+        },
+        'glow-pulse': {
+          '0%, 100%': { boxShadow: '0 0 20px 0px rgba(8, 156, 228, 0.4)' },
+          '50%': { boxShadow: '0 0 30px 5px rgba(8, 156, 228, 0.6)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
       margin: {
