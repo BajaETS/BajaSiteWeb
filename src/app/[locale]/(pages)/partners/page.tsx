@@ -14,10 +14,34 @@ type PartnerProps = {
 
 type PartnerSection = {
   ranking: string
+  rankingKey: string
   height: string
   width: string
   partners: PartnerProps[]
 }
+
+const tierAccents: Record<string, { color: string; glow: string; badge: string }> = {
+  platinum: {
+    color: "text-gray-200",
+    glow: "rgba(229, 231, 235, 0.35)",
+    badge: "bg-gray-300/20 text-gray-200 border-gray-300/30",
+  },
+  gold: {
+    color: "text-amber-400",
+    glow: "rgba(251, 191, 36, 0.35)",
+    badge: "bg-amber-400/20 text-amber-300 border-amber-400/30",
+  },
+  silver: {
+    color: "text-gray-400",
+    glow: "rgba(156, 163, 175, 0.3)",
+    badge: "bg-gray-400/20 text-gray-300 border-gray-400/30",
+  },
+  bronze: {
+    color: "text-orange-400",
+    glow: "rgba(251, 146, 60, 0.3)",
+    badge: "bg-orange-400/20 text-orange-300 border-orange-400/30",
+  },
+};
 
 export default function Partners() {
   const t = useTranslations('partners')
@@ -29,13 +53,15 @@ export default function Partners() {
   const sections: PartnerSection[] = [
     {
       ranking: t('ranking.platinum'),
+      rankingKey: "platinum",
       height: "auto",
       width: "250px",
       partners: [
         {
           name: "BRP",
           image: "/Partners/platinum/BRP.png",
-          link: "https://www.brp.com/"
+          link: "https://www.brp.com/",
+          message: t("platinum-messages.BRP")
         },
         {
           name: "Blaxes",
@@ -77,6 +103,7 @@ export default function Partners() {
     },
     {
       ranking: t('ranking.gold'),
+      rankingKey: "gold",
       height: "180px",
       width: "180px",
       partners: [
@@ -164,6 +191,7 @@ export default function Partners() {
     },
     {
       ranking: t('ranking.silver'),
+      rankingKey: "silver",
       height: "150px",
       width: "150px",
       partners: [
@@ -356,6 +384,7 @@ export default function Partners() {
     },
     {
       ranking: t('ranking.bronze'),
+      rankingKey: "bronze",
       height: "100px",
       width: "100px",
       partners: [
@@ -439,6 +468,11 @@ export default function Partners() {
           image: "/Partners/bronze/vr3.png",
           link: "https://vr3.ca/"
         },
+        {
+          name: "Groupe EP",
+          image: "/Partners/bronze/groupeep.png",
+          link: "https://www.groupeep.com/"
+        },
         // {
         //   name: "CVTech-IBC",
         //   image: "/Partners/bronze/CVTech-IBC.png",
@@ -480,47 +514,181 @@ export default function Partners() {
 
   return (
     <Page>
-      <p className="text-center text-5xl font-bebas p-5">{t('title')}</p>
-      <div className="flex justify-center">
-        <p className="text-center text-xl max-w-3xl pb-10">{t('message')}</p>
-      </div>
-      <div className="flex justify-center pb-10">
-        <button onClick={openPDF.bind(null, t('portfolio'))} className="bg-primary px-10 py-2 rounded-full font-bebas hover:bg-sky-700 transition-all text-2xl">
-          {t('portfolio-button-text')}
-        </button>
-      </div>
-      {sections.map((section, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mb-10"
+      {/* Hero section with animated title */}
+      <motion.div
+        className="text-center pt-8 pb-6"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <motion.h1
+          className="text-6xl md:text-8xl font-bebas mb-4 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-4xl font-bebas mb-0 text-center">{section.ranking}</h2>
-          <div
-            className={`pt-8 pb-8 px-5 md:px-36 grid gap-8`}
-            style={{
-              gridTemplateColumns: `repeat(auto-fill, minmax(${section.width}, 1fr))`,
-              gridAutoRows: `${section.height}`,
-            }}
-          >
-            {section.partners.map((partner) => (
-              <div key={partner.name} className="text-center h-auto">
-                <Partner
-                  name={partner.name}
-                  image={partner.image}
-                  link={partner.link}
-                  height={section.height}
-                  width={section.width}
-                />
-                {partner.message && <p className="mt-2 text-sm">{partner.message}</p>}
+          {t('title')}
+        </motion.h1>
+        <motion.p
+          className="text-gray-400 text-lg max-w-2xl mx-auto px-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          {t('message')}
+        </motion.p>
+
+        {/* Animated decorative line */}
+        <motion.div
+          className="mt-6 mx-auto h-1 bg-gradient-to-r from-transparent via-primary to-transparent"
+          initial={{ width: 0 }}
+          animate={{ width: "200px" }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        />
+      </motion.div>
+
+      {/* Portfolio CTA button */}
+      <motion.div
+        className="flex justify-center pb-12 pt-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+        <motion.button
+          onClick={openPDF.bind(null, t('portfolio'))}
+          className="relative bg-primary/90 px-10 py-3 rounded-full font-bebas text-2xl text-white
+                     hover:bg-primary transition-all duration-300 shadow-lg shadow-primary/20
+                     hover:shadow-primary/40 hover:shadow-xl"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          {t('portfolio-button-text')}
+        </motion.button>
+      </motion.div>
+
+      {/* Partner sections */}
+      {sections.map((section, sectionIndex) => {
+        const tier = tierAccents[section.rankingKey] || tierAccents.bronze;
+        return (
+          <section key={sectionIndex} className="mb-12">
+            {/* Animated Section Header */}
+            <motion.div
+              className="relative mb-6"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              {/* Background glow */}
+              <motion.div
+                className="absolute left-1/2 -translate-x-1/2 w-[300px] h-[80px] blur-3xl rounded-full"
+                style={{ backgroundColor: tier.glow }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 0.6, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+
+              <h2 className="relative text-5xl md:text-6xl font-bebas text-center text-white">
+                {/* Decorative brackets */}
+                <motion.span
+                  className={`${tier.color} mr-4`}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  {"["}
+                </motion.span>
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                  {section.ranking}
+                </motion.span>
+                <motion.span
+                  className={`${tier.color} ml-4`}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  {"]"}
+                </motion.span>
+              </h2>
+
+              {/* Partner count badge */}
+              <motion.div
+                className="flex justify-center mt-3"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.5 }}
+              >
+                <span className={`px-4 py-1 text-sm rounded-full border ${tier.badge}`}>
+                  {section.partners.length} {section.partners.length === 1 ? 'partner' : 'partners'}
+                </span>
+              </motion.div>
+            </motion.div>
+
+            {/* Partners Grid */}
+            <div className="flex justify-center">
+              <div
+                className="pt-4 pb-8 px-5 md:px-12 lg:px-24 grid gap-5 max-w-screen-2xl w-full"
+                style={{
+                  gridTemplateColumns: `repeat(auto-fill, minmax(min(${
+                    parseInt(section.width) + 60
+                  }px, 100%), 1fr))`,
+                }}
+              >
+                {section.partners.map((partner, pIndex) => (
+                  <Partner
+                    key={partner.name}
+                    name={partner.name}
+                    image={partner.image}
+                    link={partner.link}
+                    height={section.height}
+                    width={section.width}
+                    index={pIndex}
+                    accentColor={tier.glow}
+                    message={partner.message}
+                  />
+                ))}
               </div>
-            ))}
-          </div>
-        </motion.div>
-      ))}
+            </div>
+
+            {/* Section divider (except for last) */}
+            {sectionIndex < sections.length - 1 && (
+              <motion.div
+                className="flex justify-center items-center gap-3 mt-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/20" />
+                <div className="w-2 h-2 rounded-full bg-primary/50" />
+                <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20" />
+              </motion.div>
+            )}
+          </section>
+        );
+      })}
+
+      {/* Footer decoration */}
+      <motion.div
+        className="text-center pb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <p className="text-gray-500 text-sm italic">
+          {t('message').split('.')[0]}.
+        </p>
+      </motion.div>
     </Page>
   );
 }
