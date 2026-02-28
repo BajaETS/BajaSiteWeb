@@ -14,10 +14,34 @@ type PartnerProps = {
 
 type PartnerSection = {
   ranking: string
+  rankingKey: string
   height: string
   width: string
   partners: PartnerProps[]
 }
+
+const tierAccents: Record<string, { color: string; glow: string; badge: string }> = {
+  platinum: {
+    color: "text-gray-200",
+    glow: "rgba(229, 231, 235, 0.35)",
+    badge: "bg-gray-300/20 text-gray-200 border-gray-300/30",
+  },
+  gold: {
+    color: "text-amber-400",
+    glow: "rgba(251, 191, 36, 0.35)",
+    badge: "bg-amber-400/20 text-amber-300 border-amber-400/30",
+  },
+  silver: {
+    color: "text-gray-400",
+    glow: "rgba(156, 163, 175, 0.3)",
+    badge: "bg-gray-400/20 text-gray-300 border-gray-400/30",
+  },
+  bronze: {
+    color: "text-orange-400",
+    glow: "rgba(251, 146, 60, 0.3)",
+    badge: "bg-orange-400/20 text-orange-300 border-orange-400/30",
+  },
+};
 
 export default function Partners() {
   const t = useTranslations('partners')
@@ -29,26 +53,21 @@ export default function Partners() {
   const sections: PartnerSection[] = [
     {
       ranking: t('ranking.platinum'),
+      rankingKey: "platinum",
       height: "auto",
       width: "250px",
       partners: [
+        {
+          name: "BRP",
+          image: "/Partners/platinum/BRP.png",
+          link: "https://www.brp.com/",
+          message: t("platinum-messages.BRP")
+        },
         {
           name: "Blaxes",
           image: "/Partners/platinum/Blaxes.png",
           link: "https://blaxes.com",
           message: t("platinum-messages.Blaxes")
-        },
-        {
-          name: "École de technologie supérieure",
-          image: "/Partners/platinum/ets.png",
-          link: "https://www.etsmtl.ca",
-          message: t("platinum-messages.ETS")
-        },
-        {
-          name: "SKF Bearings",
-          image: "/Partners/platinum/skf.png",
-          link: "https://www.skf.com/ca/en",
-          message: t("platinum-messages.SKF")
         },
         {
           name: "OSG",
@@ -57,29 +76,37 @@ export default function Partners() {
           message: t("platinum-messages.OSG")
         },
         {
-          name: "Ressorts Liberté",
-          image: "/Partners/platinum/RessortsLiberte.png",
-          link: "https://www.libertyspring.com/?lang=fr",
-          message: t("platinum-messages.RessortsLiberte")
+          name: "SKF Bearings",
+          image: "/Partners/platinum/skf.png",
+          link: "https://www.skf.com/ca/en",
+          message: t("platinum-messages.SKF")
         },
-        {
-          name: "Altium",
-          image: "/Partners/platinum/altium.png",
-          link: "https://www.altium.com",
-          message: t("platinum-messages.Altium")
-        }
+        // {
+        //   name: "École de technologie supérieure",
+        //   image: "/Partners/platinum/ets.png",
+        //   link: "https://www.etsmtl.ca",
+        //   message: t("platinum-messages.ETS")
+        // },
+        // {
+        //   name: "Ressorts Liberté",
+        //   image: "/Partners/platinum/RessortsLiberte.png",
+        //   link: "https://www.libertyspring.com/?lang=fr",
+        //   message: t("platinum-messages.RessortsLiberte")
+        // },
+        // {
+        //   name: "Altium",
+        //   image: "/Partners/platinum/altium.png",
+        //   link: "https://www.altium.com",
+        //   message: t("platinum-messages.Altium")
+        // }
       ]
     },
     {
       ranking: t('ranking.gold'),
+      rankingKey: "gold",
       height: "180px",
       width: "180px",
       partners: [
-        {
-          name: "BRP",
-          image: "/Partners/gold/BRP.png",
-          link: "https://www.brp.com/"
-        },
         {
           name: "CNC Tracy",
           image: "/Partners/gold/CNCtracy.png",
@@ -106,17 +133,7 @@ export default function Partners() {
           link: "https://gmpfriction.com/"
         },
         {
-          name: "Industrie L",
-          image: "/Partners/gold/IndustrieL.png",
-          link: "https://www.industrie-l.ca/"
-        },
-        {
-          name: "Mesotec",
-          image: "/Partners/gold/mesotec.png",
-          link: "https://mesotec.ca/"
-        },
-        {
-          name: "Engrenages LB",
+          name: "Engrenage LB",
           image: "/Partners/gold/engrenageslb.png",
           link: "https://engrenagelb.ca/"
         },
@@ -126,31 +143,67 @@ export default function Partners() {
           link: "https://www.kisssoft.com/en"
         },
         {
-          name: "Solidworks",
-          image: "/Partners/gold/Solidworks.png",
-          link: "https://www.solidworks.com/"
-        },
-        {
-          name: "Lenovo Canada",
-          image: "/Partners/gold/lenovo.png",
-          link: "https://www.lenovo.com/ca/"
-        },
-        {
           name: "SEGGER",
           image: "/Partners/gold/segger.png",
           link: "https://www.segger.com/"
-        }
+        },
+        {
+          name: "Cégep de Saint-Laurent",
+          image: "/Partners/gold/cstlaurent.png",
+          link: ""
+        },
+        {
+          name: "Lotus Design",
+          image: "/Partners/gold/lotusdesign.png",
+          link: ""
+        },
+        {
+          name: "Rapid Harness",
+          image: "/Partners/gold/rapidharness.png",
+          link: ""
+        },
+        // {
+        //   name: "BRP",
+        //   image: "/Partners/gold/BRP.png",
+        //   link: "https://www.brp.com/"
+        // },
+        // {
+        //   name: "Industrie L",
+        //   image: "/Partners/gold/IndustrieL.png",
+        //   link: "https://www.industrie-l.ca/"
+        // },
+        // {
+        //   name: "Mesotec",
+        //   image: "/Partners/gold/mesotec.png",
+        //   link: "https://mesotec.ca/"
+        // },
+        // {
+        //   name: "Solidworks",
+        //   image: "/Partners/gold/Solidworks.png",
+        //   link: "https://www.solidworks.com/"
+        // },
+        // {
+        //   name: "Lenovo Canada",
+        //   image: "/Partners/gold/lenovo.png",
+        //   link: "https://www.lenovo.com/ca/"
+        // }
       ]
     },
     {
       ranking: t('ranking.silver'),
+      rankingKey: "silver",
       height: "150px",
       width: "150px",
       partners: [
         {
-          name: "Aciers Richelieu",
+          name: "Acier Richelieu",
           image: "/Partners/silver/aciersRichelieu.png",
           link: "https://www.aciers-richelieu.com/"
+        },
+        {
+          name: "Amcan Jumax",
+          image: "/Partners/silver/amcanjumax.png",
+          link: "http://amcanjumax.com/"
         },
         {
           name: "Anodisation Expert",
@@ -158,9 +211,14 @@ export default function Partners() {
           link: "https://anodisationexpert.com/"
         },
         {
-          name: "Anodisation Québec",
-          image: "/Partners/silver/anodisationQuebec.png",
-          link: "https://www.anodisationquebec.com/"
+          name: "Applied Industrial Technologies",
+          image: "/Partners/silver/appliedindustrial.png",
+          link: ""
+        },
+        {
+          name: "Avaled",
+          image: "/Partners/silver/avaled.png",
+          link: "http://www.avaled.com/"
         },
         {
           name: "Canimex",
@@ -168,9 +226,24 @@ export default function Partners() {
           link: "https://www.groupecanimex.com/"
         },
         {
-          name: "CTA",
+          name: "Castrol",
+          image: "/Partners/silver/castrol.png",
+          link: "https://www.castrol.com/en_ca/canada/home.html"
+        },
+        {
+          name: "CK Worldwide",
+          image: "/Partners/silver/CKworldwide.png",
+          link: "https://www.ckworldwide.com/"
+        },
+        {
+          name: "CTA CNC",
           image: "/Partners/silver/CTA.png",
           link: "https://www.cegepmontpetit.ca/cta"
+        },
+        {
+          name: "CVTech-IBC",
+          image: "/Partners/silver/CVTech-IBC.png",
+          link: "https://cvtech-ibc.com/home/"
         },
         {
           name: "Drill-O-Max",
@@ -183,9 +256,24 @@ export default function Partners() {
           link: "https://www.extruflex.net/"
         },
         {
+          name: "Ferndale Safety",
+          image: "/Partners/silver/ferndale.png",
+          link: "https://www.ferndalesafety.com/"
+        },
+        {
           name: "Gene Haas Foundation",
           image: "/Partners/silver/haas.png",
           link: "https://ghaasfoundation.org/content/ghf/en/home.html"
+        },
+        {
+          name: "General Dynamics",
+          image: "/Partners/silver/generaldynamics.png",
+          link: "https://www.gd.com/"
+        },
+        {
+          name: "Groupe Fusia",
+          image: "/Partners/silver/FusiaGroupe.png",
+          link: "https://www.fusia-groupe.com/"
         },
         {
           name: "Hutchinson",
@@ -198,35 +286,15 @@ export default function Partners() {
           link: "https://www.igus.com/"
         },
         {
-          name: "Groupe Fusia",
-          image: "/Partners/silver/FusiaGroupe.png",
-          link: "https://www.fusia-groupe.com/"
+          name: "Kimpex",
+          image: "/Partners/silver/kimpex.png",
+          link: "https://www.kimpex.com/fr-ca/accueil"
         },
-        // {
-        //   name: "Kimpex",
-        //   image: "/Partners/silver/kimpex.png",
-        //   link: "https://www.kimpex.com/fr-ca/accueil"
-        // },
         {
-          name: "Lamsi",
+          name: "LAMSI",
           image: "/Partners/silver/lamsi.png",
           link: "https://www.etsmtl.ca/laboratoires/lamsi"
         },
-        {
-          name: "Soucy International",
-          image: "/Partners/gold/SoucyInter.png",
-          link: "https://www.soucy-group.com/"
-        },
-        {
-          name: "Laser Amp",
-          image: "/Partners/silver/LaserAMP.png",
-          link: "https://www.laseramp.com/"
-        },
-        // {
-        //   name: "Loctite",
-        //   image: "/Partners/silver/Loctite.png",
-        //   link: "https://www.loctiteproducts.com/"
-        // },
         {
           name: "MEGATECH",
           image: "/Partners/silver/megatech.png",
@@ -242,26 +310,16 @@ export default function Partners() {
           image: "/Partners/silver/odessa.png",
           link: "http://odessacanada.com/"
         },
-        // {
-        //   name: "Mec-Tor",
-        //   image: "/Partners/silver/MECTOR.png",
-        //   link: "http://www.mector.ca/"
-        // },
-        // {
-        //   name: "Nitrex",
-        //   image: "/Partners/silver/Nitrex.png",
-        //   link: "https://www.nitrex.com/fr/"
-        // },
-        // {
-        //   name: "Outils Pierre Berger",
-        //   image: "/Partners/silver/OutilsPB.png",
-        //   link: "https://www.outilspierreberger.com/"
-        // },
-        // {
-        //   name: "Prolab Technolub",
-        //   image: "/Partners/silver/prolab.png",
-        //   link: "https://www.prolabtechnolub.com/"
-        // },
+        {
+          name: "Odrive Robotics",
+          image: "/Partners/silver/odrive.png",
+          link: "https://odriverobotics.com/"
+        },
+        {
+          name: "Ressorts Liberté",
+          image: "/Partners/silver/RessortsLiberte.png",
+          link: "https://www.libertyspring.com/?lang=fr"
+        },
         {
           name: "Sodel",
           image: "/Partners/silver/Sodel.png",
@@ -272,18 +330,18 @@ export default function Partners() {
           image: "/Partners/silver/Solufab.png",
           link: "https://www.solufab.ca/"
         },
-        // {
-        //   name: "Spaenaur",
-        //   image: "/Partners/silver/spaenaur.png",
-        //   link: "https://www.spaenaur.com/"
-        // },
+        {
+          name: "Soucy International",
+          image: "/Partners/silver/SoucyInter.png",
+          link: "https://www.soucy-group.com/"
+        },
         {
           name: "Stageline",
           image: "/Partners/silver/stageline.png",
           link: "https://stageline.com/fr/"
         },
         {
-          name: "Tech 53",
+          name: "Tech-53",
           image: "/Partners/silver/Tech53.png",
           link: "https://tech-53.com/"
         },
@@ -293,49 +351,9 @@ export default function Partners() {
           link: "https://www.thermetco.com/fr/"
         },
         {
-          name: "TT Fab 3d",
+          name: "TT Fabrication 3D",
           image: "/Partners/silver/TTFab3D.png",
           link: "https://www.facebook.com/TTFabrication3D/"
-        },
-        // {
-        //   name: "Usinage FB",
-        //   image: "/Partners/silver/usinageFB.png",
-        //   link: "https://www.usinagefb.com/"
-        // },
-        {
-          name: "Walter",
-          image: "/Partners/silver/Walter.png",
-          link: "https://www.walter.com/fr_CA"
-        },
-        {
-          name: "Centric Iterations",
-          image: "/Partners/silver/centriciterations.png",
-          link: "https://www.centriciterations.com/"
-        },
-        {
-          name: "Avaled",
-          image: "/Partners/silver/avaled.png",
-          link: "http://www.avaled.com/"
-        },
-        {
-          name: "ODrive Robotics",
-          image: "/Partners/silver/odrive.png",
-          link: "https://odriverobotics.com/"
-        },
-        {
-          name: "Amcan Jumax",
-          image: "/Partners/silver/amcanjumax.png",
-          link: "http://amcanjumax.com/"
-        },
-        {
-          name: "Castrol",
-          image: "/Partners/silver/castrol.png",
-          link: "https://www.castrol.com/en_ca/canada/home.html"
-        },
-        {
-          name: "General Dynamics",
-          image: "/Partners/silver/generaldynamics.png",
-          link: "https://www.gd.com/"
         },
         {
           name: "TS Innovation",
@@ -343,19 +361,30 @@ export default function Partners() {
           link: "https://tsinnovation.ca/en/"
         },
         {
-          name: "CK Worldwide",
-          image: "/Partners/silver/CKworldwide.png",
-          link: "https://www.ckworldwide.com/"
+          name: "Walter",
+          image: "/Partners/silver/Walter.png",
+          link: "https://www.walter.com/fr_CA"
         },
-        {
-          name: "Ferndale Safety",
-          image: "/Partners/bronze/ferndale.png",
-          link: "https://www.ferndalesafety.com/"
-        },
+        // {
+        //   name: "Anodisation Québec",
+        //   image: "/Partners/silver/anodisationQuebec.png",
+        //   link: "https://www.anodisationquebec.com/"
+        // },
+        // {
+        //   name: "Centric Iterations",
+        //   image: "/Partners/silver/centriciterations.png",
+        //   link: "https://www.centriciterations.com/"
+        // },
+        // {
+        //   name: "Laser Amp",
+        //   image: "/Partners/silver/LaserAMP.png",
+        //   link: "https://www.laseramp.com/"
+        // }
       ]
     },
     {
       ranking: t('ranking.bronze'),
+      rankingKey: "bronze",
       height: "100px",
       width: "100px",
       partners: [
@@ -365,157 +394,301 @@ export default function Partners() {
           link: "https://www.3mcanada.ca/3M/fr_CA/p/"
         },
         {
-          name: "CVTech-IBC",
-          image: "/Partners/bronze/CVTech-IBC.png",
-          link: "https://cvtech-ibc.com/home/"
+          name: "AFCO",
+          image: "/Partners/bronze/afco.png",
+          link: "https://www.afcoracing.com/"
         },
         {
-          name: "Les Joints Étanches R.B.",
-          image: "/Partners/bronze/JointsEtanchesRB.png",
-          link: "https://www.sealsonline.com/rbqc/"
+          name: "Anodisation Québec",
+          image: "/Partners/bronze/anodisationQuebec.png",
+          link: "https://www.anodisationquebec.com/"
         },
         {
-          name: "Vanguard Steel",
-          image: "/Partners/bronze/vanguardSteel.png",
-          link: "https://vanguardsteel.com/"
+          name: "Apaulo",
+          image: "/Partners/bronze/apaulo.png",
+          link: ""
         },
-        // {
-        //   name: "Aux petits moteurs Charette",
-        //   image: "/Partners/bronze/AuxPetitsMoteursCharette.png",
-        //   link: "https://pmcjoliette.ca/"
-        // },
-        // {
-        //   name: "Axis Prototypes",
-        //   image: "/Partners/bronze/AxisProto.png",
-        //   link: "https://www.axisproto.com/fr/nos-projets/"
-        // },
         {
-          name: "Campagna Motors",
-          image: "/Partners/bronze/campagna.png",
-          link: "https://trex.campagnamotors.com/fr/"
+          name: "CTA",
+          image: "/Partners/bronze/cta.png",
+          link: "https://www.cegepmontpetit.ca/cta"
         },
-        // {
-        //   name: "Canevas Design",
-        //   image: "/Partners/bronze/canevasDesign.png",
-        //   link: "https://www.canevasdesign.ca/"
-        // },
         {
-          name: "Elasto Proxy",
+          name: "Élasto Proxy",
           image: "/Partners/bronze/elastoProxy.png",
           link: "https://www.elastoproxy.com/"
         },
-        {
-          name: "Rousseau",
-          image: "/Partners/bronze/rousseau.png",
-          link: "https://www.rousseau.com/"
-        },
-        // {
-        //   name: "Gates",
-        //   image: "/Partners/bronze/gates.png",
-        //   link: "https://gates-ca.ptplace.com/home"
-        // },
-        // {
-        //   name: "GGB Bearings",
-        //   image: "/Partners/bronze/GGBbearings.png",
-        //   link: "https://www.ggbearings.com/en"
-        // },
         {
           name: "IFM",
           image: "/Partners/bronze/IFM.png",
           link: "https://www.ifm.com/ca/fr"
         },
         {
-          name: "VR3 Engineering",
-          image: "/Partners/bronze/vr3.png",
-          link: "https://vr3.ca/"
+          name: "Joints Étanches RB",
+          image: "/Partners/bronze/JointsEtanchesRB.png",
+          link: "https://www.sealsonline.com/rbqc/"
         },
-        // {
-        //   name: "JIT Laser",
-        //   image: "/Partners/bronze/JITLaser.png",
-        //   link: "https://www.jitlaser.com/"
-        // },
+        {
+          name: "Marmen Inc.",
+          image: "/Partners/bronze/marmen.png",
+          link: ""
+        },
+        {
+          name: "Outils Pierre Berger",
+          image: "/Partners/bronze/OutilsPB.png",
+          link: "https://www.outilspierreberger.com/"
+        },
         {
           name: "Prismatic Powders",
           image: "/Partners/bronze/prismaticPowders.png",
           link: "https://www.prismaticpowders.com/"
         },
         {
-          name: "Innovair Solutions",
-          image: "/Partners/bronze/innovair.png",
-          link: "https://www.innovairsolutions.com/en-ca/default.aspx"
+          name: "Prolab",
+          image: "/Partners/bronze/prolab.png",
+          link: "https://www.prolabtechnolub.com/"
+        },
+        {
+          name: "SAMTEC",
+          image: "/Partners/bronze/samtec.png",
+          link: ""
+        },
+        {
+          name: "Solaxis",
+          image: "/Partners/bronze/solaxis.png",
+          link: "https://solaxis.ca/"
+        },
+        {
+          name: "Vanguard Steel",
+          image: "/Partners/bronze/vanguardSteel.png",
+          link: "https://vanguardsteel.com/"
+        },
+        {
+          name: "VR3 Engineering",
+          image: "/Partners/bronze/vr3.png",
+          link: "https://vr3.ca/"
         },
         {
           name: "Groupe EP",
           image: "/Partners/bronze/groupeep.png",
           link: "https://www.groupeep.com/"
         },
-        {
-          name: "AFCO",
-          image: "/Partners/bronze/afco.png",
-          link: "https://www.afcoracing.com/"
-        },
-        {
-          name: "SolidXperts",
-          image: "/Partners/bronze/solidxperts.png",
-          link: "https://www.solidxperts.com/"
-        },
-        {
-          name: "DamiFilms",
-          image: "/Partners/bronze/damifilms.png",
-          link: "https://instagram.com/dami.films/"
-        },
-        {
-          name: "Solaxis",
-          image: "/Partners/bronze/solaxis.png",
-          link: "https://solaxis.ca/"
-        }
+        // {
+        //   name: "CVTech-IBC",
+        //   image: "/Partners/bronze/CVTech-IBC.png",
+        //   link: "https://cvtech-ibc.com/home/"
+        // },
+        // {
+        //   name: "Campagna Motors",
+        //   image: "/Partners/bronze/campagna.png",
+        //   link: "https://trex.campagnamotors.com/fr/"
+        // },
+        // {
+        //   name: "Rousseau",
+        //   image: "/Partners/bronze/rousseau.png",
+        //   link: "https://www.rousseau.com/"
+        // },
+        // {
+        //   name: "Innovair Solutions",
+        //   image: "/Partners/bronze/innovair.png",
+        //   link: "https://www.innovairsolutions.com/en-ca/default.aspx"
+        // },
+        // {
+        //   name: "Groupe EP",
+        //   image: "/Partners/bronze/groupeep.png",
+        //   link: "https://www.groupeep.com/"
+        // },
+        // {
+        //   name: "SolidXperts",
+        //   image: "/Partners/bronze/solidxperts.png",
+        //   link: "https://www.solidxperts.com/"
+        // },
+        // {
+        //   name: "DamiFilms",
+        //   image: "/Partners/bronze/damifilms.png",
+        //   link: "https://instagram.com/dami.films/"
+        // }
       ]
     }
   ]
 
   return (
     <Page>
-      <p className="text-center text-5xl font-bebas p-5">{t('title')}</p>
-      <div className="flex justify-center">
-        <p className="text-center text-xl max-w-3xl pb-10">{t('message')}</p>
-      </div>
-      <div className="flex justify-center pb-10">
-        <button onClick={openPDF.bind(null, t('portfolio'))} className="bg-primary px-10 py-2 rounded-full font-bebas hover:bg-sky-700 transition-all text-2xl">
-          {t('portfolio-button-text')}
-        </button>
-      </div>
-      {sections.map((section, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mb-10"
+      {/* Hero section with animated title */}
+      <motion.div
+        className="text-center pt-8 pb-6"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <motion.h1
+          className="text-6xl md:text-8xl font-bebas mb-4 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-4xl font-bebas mb-0 text-center">{section.ranking}</h2>
-          <div
-            className={`pt-8 pb-8 px-5 md:px-36 grid gap-8`}
-            style={{
-              gridTemplateColumns: `repeat(auto-fill, minmax(${section.width}, 1fr))`,
-              gridAutoRows: `${section.height}`,
-            }}
-          >
-            {section.partners.map((partner) => (
-              <div key={partner.name} className="text-center h-auto">
-                <Partner
-                  name={partner.name}
-                  image={partner.image}
-                  link={partner.link}
-                  height={section.height}
-                  width={section.width}
-                />
-                {partner.message && <p className="mt-2 text-sm">{partner.message}</p>}
+          {t('title')}
+        </motion.h1>
+        <motion.p
+          className="text-gray-400 text-lg max-w-2xl mx-auto px-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          {t('message')}
+        </motion.p>
+
+        {/* Animated decorative line */}
+        <motion.div
+          className="mt-6 mx-auto h-1 bg-gradient-to-r from-transparent via-primary to-transparent"
+          initial={{ width: 0 }}
+          animate={{ width: "200px" }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        />
+      </motion.div>
+
+      {/* Portfolio CTA button */}
+      <motion.div
+        className="flex justify-center pb-12 pt-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+        <motion.button
+          onClick={openPDF.bind(null, t('portfolio'))}
+          className="relative bg-primary/90 px-10 py-3 rounded-full font-bebas text-2xl text-white
+                     hover:bg-primary transition-all duration-300 shadow-lg shadow-primary/20
+                     hover:shadow-primary/40 hover:shadow-xl"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          {t('portfolio-button-text')}
+        </motion.button>
+      </motion.div>
+
+      {/* Partner sections */}
+      {sections.map((section, sectionIndex) => {
+        const tier = tierAccents[section.rankingKey] || tierAccents.bronze;
+        return (
+          <section key={sectionIndex} className="mb-12">
+            {/* Animated Section Header */}
+            <motion.div
+              className="relative mb-6"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              {/* Background glow */}
+              <motion.div
+                className="absolute left-1/2 -translate-x-1/2 w-[300px] h-[80px] blur-3xl rounded-full"
+                style={{ backgroundColor: tier.glow }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 0.6, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+
+              <h2 className="relative text-5xl md:text-6xl font-bebas text-center text-white">
+                {/* Decorative brackets */}
+                <motion.span
+                  className={`${tier.color} mr-4`}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  {"["}
+                </motion.span>
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                  {section.ranking}
+                </motion.span>
+                <motion.span
+                  className={`${tier.color} ml-4`}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  {"]"}
+                </motion.span>
+              </h2>
+
+              {/* Partner count badge */}
+              <motion.div
+                className="flex justify-center mt-3"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.5 }}
+              >
+                <span className={`px-4 py-1 text-sm rounded-full border ${tier.badge}`}>
+                  {section.partners.length} {section.partners.length === 1 ? 'partner' : 'partners'}
+                </span>
+              </motion.div>
+            </motion.div>
+
+            {/* Partners Grid */}
+            <div className="flex justify-center">
+              <div
+                className="pt-4 pb-8 px-5 md:px-12 lg:px-24 grid gap-5 max-w-screen-2xl w-full"
+                style={{
+                  gridTemplateColumns: `repeat(auto-fill, minmax(min(${
+                    parseInt(section.width) + 60
+                  }px, 100%), 1fr))`,
+                }}
+              >
+                {section.partners.map((partner, pIndex) => (
+                  <Partner
+                    key={partner.name}
+                    name={partner.name}
+                    image={partner.image}
+                    link={partner.link}
+                    height={section.height}
+                    width={section.width}
+                    index={pIndex}
+                    accentColor={tier.glow}
+                    message={partner.message}
+                  />
+                ))}
               </div>
-            ))}
-          </div>
-        </motion.div>
-      ))}
+            </div>
+
+            {/* Section divider (except for last) */}
+            {sectionIndex < sections.length - 1 && (
+              <motion.div
+                className="flex justify-center items-center gap-3 mt-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/20" />
+                <div className="w-2 h-2 rounded-full bg-primary/50" />
+                <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20" />
+              </motion.div>
+            )}
+          </section>
+        );
+      })}
+
+      {/* Footer decoration */}
+      <motion.div
+        className="text-center pb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <p className="text-gray-500 text-sm italic">
+          {t('message').split('.')[0]}.
+        </p>
+      </motion.div>
     </Page>
   );
 }
