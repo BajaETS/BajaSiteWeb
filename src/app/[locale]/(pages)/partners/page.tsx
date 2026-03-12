@@ -43,6 +43,15 @@ const tierAccents: Record<string, { color: string; glow: string; badge: string }
   },
 };
 
+function getBalancedColumns(count: number, maxCols: number): number {
+  if (count <= maxCols) return count;
+  for (let cols = maxCols; cols >= 2; cols--) {
+    const remainder = count % cols;
+    if (remainder === 0 || remainder >= Math.ceil(cols / 2)) return cols;
+  }
+  return maxCols;
+}
+
 export default function Partners() {
   const t = useTranslations('partners')
 
@@ -80,6 +89,12 @@ export default function Partners() {
           image: "/Partners/platinum/skf.png",
           link: "https://www.skf.com/ca/en",
           message: t("platinum-messages.SKF")
+        },
+        {
+          name: "AEETS",
+          image: "/Partners/platinum/AEETS.png",
+          link: "https://aeets.com",
+          message: t("platinum-messages.AEETS")
         },
         // {
         //   name: "École de technologie supérieure",
@@ -569,6 +584,11 @@ export default function Partners() {
       {/* Partner sections */}
       {sections.map((section, sectionIndex) => {
         const tier = tierAccents[section.rankingKey] || tierAccents.bronze;
+        const itemWidth = parseInt(section.width) + 60;
+        const gap = 20;
+        const estimatedMaxCols = Math.floor((1300 + gap) / (itemWidth + gap));
+        const balancedCols = getBalancedColumns(section.partners.length, estimatedMaxCols);
+        const gridMaxWidth = balancedCols * itemWidth + (balancedCols - 1) * gap;
         return (
           <section key={sectionIndex} className="mb-12">
             {/* Animated Section Header */}
@@ -636,25 +656,24 @@ export default function Partners() {
             {/* Partners Grid */}
             <div className="flex justify-center">
               <div
-                className="pt-4 pb-8 px-5 md:px-12 lg:px-24 grid gap-5 max-w-screen-2xl w-full"
+                className="pt-4 pb-8 px-5 md:px-12 lg:px-24 flex flex-wrap justify-center gap-5 w-full"
                 style={{
-                  gridTemplateColumns: `repeat(auto-fill, minmax(min(${
-                    parseInt(section.width) + 60
-                  }px, 100%), 1fr))`,
+                  maxWidth: `${gridMaxWidth}px`,
                 }}
               >
                 {section.partners.map((partner, pIndex) => (
-                  <Partner
-                    key={partner.name}
-                    name={partner.name}
-                    image={partner.image}
-                    link={partner.link}
-                    height={section.height}
-                    width={section.width}
-                    index={pIndex}
-                    accentColor={tier.glow}
-                    message={partner.message}
-                  />
+                  <div key={partner.name} style={{ width: `${itemWidth}px`, maxWidth: '100%' }}>
+                    <Partner
+                      name={partner.name}
+                      image={partner.image}
+                      link={partner.link}
+                      height={section.height}
+                      width={section.width}
+                      index={pIndex}
+                      accentColor={tier.glow}
+                      message={partner.message}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
