@@ -1048,7 +1048,7 @@
             "program": "programs.construction-engineering",
             "roles": "roles.treasurer",
             "nickname": "Élie-coptère",
-            "linkedin": "https://www.linkedin.com/company/baja-ets/"
+            "linkedin": "https://www.linkedin.com/in/%C3%A9lie-bazinet-ab2777368/"
           }
         ]
       },
@@ -1103,14 +1103,6 @@
             "linkedin": "https://www.linkedin.com/in/justin-desbois-043bb9293/"
           },
           {
-            "image": "/Team/dannick.JPEG",
-            "name": "Danick Rouillier",
-            "program": "programs.mechanical-engineering",
-            "roles": "roles.direction-lead",
-            "nickname": "The Rock",
-            "linkedin": "https://www.linkedin.com/in/danick-rouillier-4805a1335/"
-          },
-          {
             "image": "/Team/Aymerick2.jpg",
             "name": "Aymeric Bellon",
             "program": "programs.mechanical-engineering",
@@ -1123,14 +1115,6 @@
             "program": "programs.mechanical-engineering",
             "roles": "roles.driveline-lead",
             "nickname": "J D O M E",
-            "linkedin": "https://www.linkedin.com/company/baja-ets/"
-          },
-          {
-            "image": "/Team/babyboss2.jpg",
-            "name": "Samuel Leblanc",
-            "program": "programs.mechanical-engineering",
-            "roles": "roles.reduction-lead",
-            "nickname": "Baby Boss",
             "linkedin": "https://www.linkedin.com/company/baja-ets/"
           }
         ]
@@ -1151,7 +1135,7 @@
             "name": "Samuel Viens",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": "https://www.linkedin.com/company/baja-ets/"
+            "linkedin": "https://www.linkedin.com/in/samuel-viens-6ba976309/"
           },
           {
             "image": "/Team/Adrien2.jpg",
@@ -1159,14 +1143,6 @@
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
             "linkedin": "https://www.linkedin.com/in/adrean-domenko-aa63562b3/"
-          },
-          {
-            "image": "/Team/BlasterSquare.jpg",
-            "name": "Samuel Leblanc",
-            "program": "programs.mechanical-engineering",
-            "roles": "roles.mechanics",
-            "nickname": "Blaster",
-            "linkedin": "https://www.linkedin.com/in/samuel-leblanc-bmw/"
           },
           {
             "image": "/Team/Hubert.jpeg",
@@ -1180,7 +1156,7 @@
             "name": "Léo Tremblay",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/l%C3%A9o-tremblay-aa88703a7/"
           },
           {
             "image": "/Team/JulienRheaume.jpg",
@@ -1194,56 +1170,49 @@
             "name": "Alexandre Gauthier",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": ""
-          },
-           {
-            "image": "/Team/VincentDucas.jpg",
-            "name": "Vincent Ducas",
-            "program": "programs.mechanical-engineering",
-            "roles": "roles.mechanics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/alexandregauthier7/"
           },
            {
             "image": "/Team/ChristopheLabrecque.jpg",
             "name": "Christophe Labrecque",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/christophe-labrecque-8bb7b238b/"
           },
            {
             "image": "/Team/FabriceKwey-DuSablon.jpg",
             "name": "Fabrice Kwey-Du Sablon",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/fabrice-kwey-du-sablon-aa8363273/"
           },
            {
             "image": "/Team/kimi.jpg",
             "name": "Kimi Sabourin",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/kimi-sabourin-222a3b220/"
           },
            {
             "image": "/Team/GabrielHoule.jpg",
             "name": "Gabriel Houle",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/gabriel-houle2/"
           },
            {
             "image": "/Team/MarceloCosta.jpg",
             "name": "Marcelo Costa",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/marcelo-costa-377657247/"
           },
            {
             "image": "/Team/LaurentVanier.jpg",
             "name": "Laurent Vanier",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/laurent-vanier-490766329/"
           },
            {
             "image": "/Team/default1.jpeg",
@@ -1273,18 +1242,11 @@
             "linkedin": "https://www.linkedin.com/in/xavier-orsat-parker-0b6697251/"
           },
           {
-            "image": "/Team/ThomasBrunet.jpg",
-            "name": "Thomas Brunet",
-            "program": "programs.automated-production-engineering",
-            "roles": "roles.electronics",
-            "linkedin": "https://www.linkedin.com/in/t-brunet/"
-          },
-          {
             "image": "/Team/Louis-PhilippeCote.jpg",
             "name": "Louis-Philippe Côté",
             "program": "programs.automated-production-engineering",
             "roles": "roles.electronics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/louis-philippe-c%C3%B4t%C3%A9-373b953a6/"
           },
           {
             "image": "/Team/PhilippeJohnston.jpg",
@@ -1298,14 +1260,14 @@
             "name": "Jean-Nicolas de Broeck",
             "program": "",
             "roles": "roles.electronics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/jean-nicolas-de-broeck-189975256/"
           },
           {
             "image": "/Team/default3.jpeg",
             "name": "Maxime Poitras Cardinal",
             "program": "programs.automated-production-engineering",
             "roles": "roles.electronics",
-            "linkedin": ""
+            "linkedin": "https://www.linkedin.com/in/maxime-poitras-cardinal-67b49530b/"
           }
         ]
       }

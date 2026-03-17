@@ -177,6 +177,11 @@ export default function Partners() {
           image: "/Partners/gold/rapidharness.png",
           link: ""
         },
+        {
+          name: "CVTech-IBC",
+          image: "/Partners/silver/CVTech-IBC.png",
+          link: "https://cvtech-ibc.com/home/"
+        },
         // {
         //   name: "BRP",
         //   image: "/Partners/gold/BRP.png",
@@ -254,11 +259,6 @@ export default function Partners() {
           name: "CTA CNC",
           image: "/Partners/silver/CTA.png",
           link: "https://www.cegepmontpetit.ca/cta"
-        },
-        {
-          name: "CVTech-IBC",
-          image: "/Partners/silver/CVTech-IBC.png",
-          link: "https://cvtech-ibc.com/home/"
         },
         {
           name: "Drill-O-Max",
