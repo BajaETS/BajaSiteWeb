@@ -30,6 +30,7 @@ export default function Team() {
 
   return (
     <Page>
+      <div className="overflow-x-hidden">
       {/* Hero section with animated title */}
       <motion.div
         className="text-center pt-8 pb-12"
@@ -176,6 +177,7 @@ export default function Team() {
           {t("join-cta")}
         </p>
       </motion.div>
+      </div>
     </Page>
   );
 }

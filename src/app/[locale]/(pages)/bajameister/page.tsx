@@ -11,7 +11,7 @@ export default function Bajameister() {
   const googleMapsLink = "https://www.google.com/maps/search/?api=1&query=530+rue+Peel,+Montreal,+QC";
 
   return (
-    <main className="h-full">
+    <main className="h-full overflow-x-hidden">
       {/* Hero Section with Jagermeister theme */}
       <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* Animated gradient background - Jagermeister colors */}

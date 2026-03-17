@@ -27,10 +27,6 @@ export function Menu() {
     {
       href: "/history",
       label: t('history.title')
-    },
-    {
-      href: "/bajameister",
-      label: t('bajameister.title')
     }
   ]
 

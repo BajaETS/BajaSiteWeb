@@ -19,7 +19,7 @@ const MobileMenuOverlay = (props: TMenu & { onMenuItemClick: () => void }) => {
     const donateLabel = t('donate')
 
   return (
-    <nav className='fixed top-0 left-0 w-screen h-screen bg-black flex justify-center items-center'>
+    <nav className='fixed inset-0 bg-black flex justify-center items-center'>
       <ul className="flex flex-col gap-8 text-white text-center text-6xl items-center">
         {menuItems.map((item) => <MenuItem key={item.href} onClick={onMenuItemClick} {...item} />)}
         <li>
@@ -48,7 +48,7 @@ const MobileMenu = (props: TMenu) => {
       {isMenuOpen && (
         <MobileMenuOverlay menuItems={menuItems} onMenuItemClick={() => setIsMenuOpen(false)} />
       )}
-      <button className='md:hidden z-50 fixed top-5 right-5' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      <button className='md:hidden z-50 fixed top-5 right-4' onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <Image src="/hamburger.png" width="25" height="25" alt="Menu"/>
       </button>
     </div>

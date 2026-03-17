@@ -529,6 +529,7 @@ export default function Partners() {
 
   return (
     <Page>
+      <div className="overflow-x-hidden">
       {/* Hero section with animated title */}
       <motion.div
         className="text-center pt-8 pb-6"
@@ -708,6 +709,7 @@ export default function Partners() {
           {t('message').split('.')[0]}.
         </p>
       </motion.div>
+      </div>
     </Page>
   );
 }
