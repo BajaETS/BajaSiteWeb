@@ -33,8 +33,8 @@ export default async function RootLayout(props: TRootLayoutProps) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="bg-black m-0 p-0 h-full overflow-x-hidden overflow-y-visible text-white">
-      <body className={clsx(inter.className, 'bg-black m-0 p-0 h-full overflow-x-hidden overflow-y-visible text-white')}>
+    <html lang={locale} className="bg-black m-0 p-0 text-white">
+      <body className={clsx(inter.className, 'bg-black m-0 p-0 text-white')}>
         <NextIntlClientProvider messages={messages}>
           <Logo />
           <Menu />

@@ -529,7 +529,7 @@ export default function Partners() {
 
   return (
     <Page>
-      <div className="overflow-x-hidden">
+      <div>
       {/* Hero section with animated title */}
       <motion.div
         className="text-center pt-8 pb-6"

@@ -21,10 +21,10 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: black;
+  overflow-x: clip;
 }
 
-html,
-body {
+html {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;

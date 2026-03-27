@@ -34,7 +34,7 @@ export default async function RootLayout(props: TRootLayoutProps) {
 
   return (
     <html lang={locale} className="bg-black m-0 p-0 h-full overflow-hidden text-white no-scrollbar">
-      <body className={clsx(inter.className, 'bg-black m-0 p-0 h-full text-white')}>
+      <body className={clsx(inter.className, 'bg-black m-0 p-0 h-full overflow-hidden text-white')}>
         <NextIntlClientProvider messages={messages}>
           <MiniLogo />
           <Menu />

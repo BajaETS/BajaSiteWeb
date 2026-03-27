@@ -110,7 +110,7 @@ export default function Timeline({
 
         {/* Car indicator - simplified, no framer motion for positioning */}
         <div
-          className={`absolute top-[-70px] 2xl:top-[-90px] cursor-grab active:cursor-grabbing select-none transition-transform duration-100 ${
+          className={`absolute top-[-70px] 2xl:top-[-90px] w-max cursor-grab active:cursor-grabbing select-none transition-transform duration-100 ${
             isDragging ? 'scale-110' : 'scale-100'
           }`}
           style={{
