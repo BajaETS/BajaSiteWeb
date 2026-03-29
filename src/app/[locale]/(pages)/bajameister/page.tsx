@@ -20,10 +20,10 @@ export default function Bajameister() {
             className="absolute inset-0 opacity-40"
             animate={{
               background: [
-                "radial-gradient(circle at 20% 50%, #FF6B00 0%, transparent 50%)",
+                "radial-gradient(circle at 20% 50%, #ff0200 0%, transparent 50%)",
                 "radial-gradient(circle at 80% 50%, #1a472a 0%, transparent 50%)",
-                "radial-gradient(circle at 50% 80%, #FF6B00 0%, transparent 50%)",
-                "radial-gradient(circle at 20% 50%, #FF6B00 0%, transparent 50%)",
+                "radial-gradient(circle at 50% 80%, #ff0200 0%, transparent 50%)",
+                "radial-gradient(circle at 20% 50%, #ff0200 0%, transparent 50%)",
               ],
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
@@ -37,7 +37,7 @@ export default function Bajameister() {
               key={i}
               className="absolute w-2 h-2 rounded-full"
               style={{
-                background: i % 2 === 0 ? "#FF6B00" : "#2d5a3d",
+                background: i % 2 === 0 ? "#ff0200" : "#2d5a3d",
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
@@ -63,7 +63,7 @@ export default function Bajameister() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-7xl md:text-9xl font-bebas mb-4 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-500 bg-clip-text text-transparent"
+            className="text-7xl md:text-9xl font-bebas mb-4 bg-gradient-to-r from-[#ff0200] via-[#ff4040] to-[#ff0200] bg-clip-text text-transparent"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
@@ -73,7 +73,7 @@ export default function Bajameister() {
             {t('title')}
           </motion.h1>
           <motion.p
-            className="text-2xl md:text-3xl font-bebas text-orange-100/90 mb-6"
+            className="text-2xl md:text-3xl font-bebas text-red-100/90 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -96,16 +96,16 @@ export default function Bajameister() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-orange-100/90 text-lg md:text-xl font-bebas">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-red-100/90 text-lg md:text-xl font-bebas">
               <span>{t('event-date')}</span>
-              <span className="hidden sm:inline text-orange-500">|</span>
+              <span className="hidden sm:inline text-[#ff0200]">|</span>
               <span>{t('event-time')}</span>
             </div>
             <a
               href={googleMapsLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors text-lg md:text-xl font-bebas"
+              className="flex items-center gap-2 text-[#ff0200] hover:text-[#f79900] transition-colors text-lg md:text-xl font-bebas"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -126,14 +126,14 @@ export default function Bajameister() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600" />
+            <span className="absolute inset-0 bg-gradient-to-r from-[#cc0200] via-[#ff0200] to-[#cc0200]" />
             <motion.span
-              className="absolute inset-0 bg-gradient-to-r from-orange-600 via-orange-400 to-orange-600"
+              className="absolute inset-0 bg-gradient-to-r from-[#cc0200] via-[#ff4040] to-[#cc0200]"
               animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
               transition={{ duration: 2, repeat: Infinity }}
               style={{ backgroundSize: "200% 100%" }}
             />
-            <span className="absolute inset-0 border-2 border-orange-400/50 rounded-full" />
+            <span className="absolute inset-0 border-2 border-[#ff0200]/50 rounded-full" />
             <span className="relative z-10">{t('cta')}</span>
           </motion.a>
         </motion.div>
@@ -146,7 +146,7 @@ export default function Bajameister() {
         >
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
             <motion.div
-              className="w-1.5 h-3 bg-orange-500 rounded-full"
+              className="w-1.5 h-3 bg-[#ff0200] rounded-full"
               animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             />
@@ -157,7 +157,7 @@ export default function Bajameister() {
       {/* Partners Section - Moved up */}
       <div className="py-20 px-4">
         <motion.h3
-          className="text-4xl md:text-5xl font-bebas text-center mb-16 text-orange-100"
+          className="text-4xl md:text-5xl font-bebas text-center mb-16 text-red-100"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -176,7 +176,7 @@ export default function Bajameister() {
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.1 }}
           >
-            <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-green-900 to-green-950 flex items-center justify-center shadow-lg shadow-green-900/30 group-hover:shadow-orange-500/30 transition-all duration-300 p-4">
+            <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-green-900 to-green-950 flex items-center justify-center shadow-lg shadow-green-900/30 group-hover:shadow-[#f79900]/30 transition-all duration-300 p-4">
               <Image
                 src="/bajameister/jager_logo.png"
                 alt="Jagermeister"
@@ -196,7 +196,7 @@ export default function Bajameister() {
             transition={{ duration: 0.5, delay: 0.2 }}
             whileHover={{ scale: 1.1 }}
           >
-            <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-green-900 to-green-950 flex items-center justify-center shadow-lg shadow-green-900/30 group-hover:shadow-orange-500/30 transition-all duration-300 p-4">
+            <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-green-900 to-green-950 flex items-center justify-center shadow-lg shadow-green-900/30 group-hover:shadow-[#f79900]/30 transition-all duration-300 p-4">
               <Image
                 src="/bajameister/redbull_logo.png"
                 alt="Red Bull"
@@ -212,7 +212,7 @@ export default function Bajameister() {
       {/* Image Gallery Section */}
       <div className="py-20 px-4 md:px-10">
         <motion.h2
-          className="text-5xl md:text-6xl font-bebas text-center mb-16 text-orange-100"
+          className="text-5xl md:text-6xl font-bebas text-center mb-16 text-red-100"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -347,14 +347,14 @@ export default function Bajameister() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600" />
+          <span className="absolute inset-0 bg-gradient-to-r from-[#cc0200] via-[#ff0200] to-[#cc0200]" />
           <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-orange-600 via-orange-400 to-orange-600"
+            className="absolute inset-0 bg-gradient-to-r from-[#cc0200] via-[#ff4040] to-[#cc0200]"
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
             transition={{ duration: 2, repeat: Infinity }}
             style={{ backgroundSize: "200% 100%" }}
           />
-          <span className="absolute inset-0 border-2 border-orange-400/50 rounded-full" />
+          <span className="absolute inset-0 border-2 border-[#ff0200]/50 rounded-full" />
           <span className="relative z-10">{t('cta')}</span>
         </motion.a>
       </motion.div>

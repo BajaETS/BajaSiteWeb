@@ -98,7 +98,7 @@ export default function Timeline({
 
         {/* Progress fill */}
         <div
-          className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-gradient-to-r from-primary to-blue-400 rounded-full"
+          className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-gradient-to-r from-primary to-[#ff4040] rounded-full"
           style={{ width: `${position}%` }}
         />
 
@@ -126,7 +126,7 @@ export default function Timeline({
           }`} />
 
           <Image
-            src="/History/RightSide.png"
+            src="/History/RightSide2026.png"
             alt="Timeline car"
             height={200}
             width={200}

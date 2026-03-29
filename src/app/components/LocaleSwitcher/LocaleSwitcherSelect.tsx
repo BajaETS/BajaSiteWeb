@@ -27,7 +27,7 @@ export default function LocaleSwitcherSelect(props: TLocaleSwitcherSelect) {
           value={child.props.value}
           onClick={onButtonClick}
           disabled={isPending}
-          className="p-2 text-lg rounded-md transition hover:bg-gray-200 dark:hover:bg-gray-600"
+          className="p-2 text-lg rounded-md transition hover:bg-[#f79900]/20 dark:hover:bg-[#f79900]/30"
         >
           {child.props.children}
         </button>

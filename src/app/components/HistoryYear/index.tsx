@@ -60,7 +60,7 @@ export default function HistoryYear({ image, year, text, index = 0 }: HistoryYea
       {/* Image Container */}
       <div
         className={`relative w-full h-40 sm:h-48 lg:h-56 2xl:h-64 rounded-xl overflow-hidden transition-all duration-300 ${
-          isHovered ? "ring-2 ring-primary/60" : ""
+          isHovered ? "ring-2 ring-[#f79900]/60" : ""
         }`}
       >
         {/* Gradient overlay */}

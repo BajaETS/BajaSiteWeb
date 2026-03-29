@@ -45,7 +45,7 @@ export default function Team() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {t("page-title")}{" "}
-          <span className="text-primary bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-primary to-[#ff4040] bg-clip-text text-transparent [-webkit-background-clip:text]">
             {t("page-title-highlight")}
           </span>
         </motion.h1>

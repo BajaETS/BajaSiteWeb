@@ -24,7 +24,7 @@ export function Logo() {
 
   return (
     <div className='p-4 fixed top-0 left-0 flex items-start justify-start h-auto w-auto transition-all z-20'>
-      <Image src='/logo2025.png' alt='LogoBaja' width={nativeWidth / divisor} height={nativeHeight / divisor} />
+      <Image src='/logo2026.png' alt='LogoBaja' width={nativeWidth / divisor} height={nativeHeight / divisor} />
     </div>
   );
 }

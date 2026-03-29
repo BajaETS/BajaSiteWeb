@@ -10,10 +10,10 @@ const SocialLink = (props: TSocialLink) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative p-2 rounded-full transition-all duration-300 hover:bg-white/10"
+      className="group relative p-2 rounded-full transition-all duration-300 hover:bg-[#f79900]/10"
     >
       {/* Glow effect on hover */}
-      <div className="absolute inset-0 rounded-full bg-primary/0 group-hover:bg-primary/20 blur-lg transition-all duration-300" />
+      <div className="absolute inset-0 rounded-full bg-[#f79900]/0 group-hover:bg-[#f79900]/20 blur-lg transition-all duration-300" />
 
       <Image
         className="relative opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"

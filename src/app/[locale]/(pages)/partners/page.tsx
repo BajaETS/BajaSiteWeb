@@ -37,9 +37,9 @@ const tierAccents: Record<string, { color: string; glow: string; badge: string }
     badge: "bg-gray-400/20 text-gray-300 border-gray-400/30",
   },
   bronze: {
-    color: "text-orange-400",
-    glow: "rgba(251, 146, 60, 0.3)",
-    badge: "bg-orange-400/20 text-orange-300 border-orange-400/30",
+    color: "text-[#f79900]",
+    glow: "rgba(247, 153, 0, 0.3)",
+    badge: "bg-[#f79900]/20 text-[#f79900] border-[#f79900]/30",
   },
 };
 
@@ -538,7 +538,7 @@ export default function Partners() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <motion.h1
-          className="text-6xl md:text-8xl font-bebas mb-4 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent"
+          className="text-6xl md:text-8xl font-bebas mb-4 bg-gradient-to-r from-primary to-[#ff4040] bg-clip-text text-transparent [-webkit-background-clip:text]"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -573,8 +573,8 @@ export default function Partners() {
         <motion.button
           onClick={openPDF.bind(null, t('portfolio'))}
           className="relative bg-primary/90 px-10 py-3 rounded-full font-bebas text-2xl text-white
-                     hover:bg-primary transition-all duration-300 shadow-lg shadow-primary/20
-                     hover:shadow-primary/40 hover:shadow-xl"
+                     hover:bg-[#f79900] transition-all duration-300 shadow-lg shadow-primary/20
+                     hover:shadow-[#f79900]/40 hover:shadow-xl"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
         >
