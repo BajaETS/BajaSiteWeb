@@ -15,7 +15,7 @@ type PartnerProps = {
 };
 
 export default function Partner(props: PartnerProps) {
-  const { name, image, link, height, width, index = 0, accentColor = "rgba(8, 156, 228, 0.4)", message } = props;
+  const { name, image, link, height, width, index = 0, accentColor = "rgba(247, 153, 0, 0.4)", message } = props;
 
   return (
     <motion.div
@@ -33,7 +33,7 @@ export default function Partner(props: PartnerProps) {
       }}
       className="group relative flex flex-col items-center gap-3 p-4 rounded-xl
                  bg-neutral-900/60 backdrop-blur-sm border border-white/5
-                 hover:border-white/15 transition-all duration-300 cursor-pointer"
+                 hover:border-[#f79900]/30 transition-all duration-300 cursor-pointer"
       style={{
         boxShadow: `0 0 0px ${accentColor}`,
       }}

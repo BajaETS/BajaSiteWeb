@@ -7,7 +7,7 @@ export function MiniLogo() {
     <div className='fixed top-0 left-0 p-4 z-20 w-auto'>
       <button>
         <Link href="/">
-          <Image src='/logo2025.png' alt='LogoBaja' height="174" width="174" />
+          <Image src='/logo2026.png' alt='LogoBaja' height="174" width="174" />
         </Link>
       </button>
     </div>

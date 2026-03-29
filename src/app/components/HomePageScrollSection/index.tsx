@@ -39,7 +39,7 @@ export function HomePageScrollSection() {
   const t = useTranslations('pages')
 
   return (
-    <div className="text-white bg-black text-center">
+    <div className="text-white bg-black text-center -mt-1">
       <SectionWrapper>
         <SectionTitle text={t('home.content.who-we-are.title')} />
         <SectionParagraph text={t('home.content.who-we-are.text')}/>

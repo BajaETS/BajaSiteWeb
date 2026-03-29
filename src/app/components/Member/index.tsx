@@ -40,7 +40,7 @@ export default function Member(props: MemberWithAnimationProps) {
         >
           {/* Glow Ring Effect - separate from the clipping container */}
           <div
-            className={`absolute -inset-3 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary blur-md transition-opacity duration-300 pointer-events-none ${
+            className={`absolute -inset-3 rounded-full bg-gradient-to-r from-[#f79900] via-[#ffb340] to-[#f79900] blur-md transition-opacity duration-300 pointer-events-none ${
               isHovered ? "opacity-60" : "opacity-0"
             }`}
           />
@@ -48,7 +48,7 @@ export default function Member(props: MemberWithAnimationProps) {
           {/* Circular Image Container - NO transforms on this element */}
           <div
             className={`relative w-[200px] h-[200px] md:w-[250px] md:h-[250px] rounded-full overflow-hidden transition-shadow duration-300 ${
-              isHovered ? "ring-4 ring-primary/80" : ""
+              isHovered ? "ring-4 ring-[#f79900]/80" : ""
             }`}
           >
             {/* Image - scale happens ONLY here */}
@@ -125,7 +125,7 @@ export default function Member(props: MemberWithAnimationProps) {
           {/* LinkedIn Logo */}
           {linkedin && (
             <a
-              className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full hover:bg-primary/40 transition-all"
+              className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full hover:bg-[#f79900]/40 transition-all"
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"

@@ -41,8 +41,8 @@ module.exports = {
           '100%': { opacity: 1, transform: 'translate(-50%, 0px)' },
         },
         'glow-pulse': {
-          '0%, 100%': { boxShadow: '0 0 20px 0px rgba(8, 156, 228, 0.4)' },
-          '50%': { boxShadow: '0 0 30px 5px rgba(8, 156, 228, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px 0px rgba(247, 153, 0, 0.4)' },
+          '50%': { boxShadow: '0 0 30px 5px rgba(247, 153, 0, 0.6)' },
         },
         'float': {
           '0%, 100%': { transform: 'translateY(0px)' },
@@ -53,7 +53,7 @@ module.exports = {
         nav: '115px',
       },
       colors: {
-        primary: '#089CE4',
+        primary: '#ff0200',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

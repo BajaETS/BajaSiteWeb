@@ -24,8 +24,8 @@ export function VideoHome() {
   }, []);
 
   return (
-      <div className="w-full h-full -z-[1]">
-        <div className='bg-gradient-to-t from-black from-10% absolute w-screen z-10 h-screen'></div>
+      <div className="relative w-full h-screen z-0 overflow-hidden">
+        <div className='bg-gradient-to-t from-black from-10% absolute bottom-0 w-screen z-10 h-[105%]'></div>
         <video
           className='
             absolute
@@ -38,7 +38,7 @@ export function VideoHome() {
             -translate-y-1/2
           '
           ref={videoRef}
-          src='/videoReveal2025.mp4'
+          src='/videoReveal2026.mp4'
           autoPlay
           muted
           loop
