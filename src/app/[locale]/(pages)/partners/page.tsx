@@ -178,6 +178,16 @@ export default function Partners() {
           link: ""
         },
         {
+          name: "ELKA",
+          image: "/Partners/gold/ELKA.png",
+          link: ""
+        },
+        {
+          name: "Iscar",
+          image: "/Partners/gold/iscar.png",
+          link: ""
+        },
+        {
           name: "CVTech-IBC",
           image: "/Partners/silver/CVTech-IBC.png",
           link: "https://cvtech-ibc.com/home/"
