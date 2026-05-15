@@ -165,27 +165,27 @@ export default function Partners() {
         {
           name: "Cégep de Saint-Laurent",
           image: "/Partners/gold/cstlaurent.png",
-          link: ""
+          link: "https://www.cegepsl.qc.ca/"
         },
         {
           name: "Lotus Design",
           image: "/Partners/gold/lotusdesign.png",
-          link: ""
+          link: "https://www.lotus-design.ca/"
         },
         {
           name: "Rapid Harness",
           image: "/Partners/gold/rapidharness.png",
-          link: ""
+          link: "https://rapidharness.com/"
         },
         {
           name: "ELKA",
           image: "/Partners/gold/ELKA.png",
-          link: ""
+          link: "https://www.elkasuspension.com/"
         },
         {
           name: "Iscar",
           image: "/Partners/gold/iscar.png",
-          link: ""
+          link: "https://www.iscar.com/"
         },
         {
           name: "CVTech-IBC",
@@ -243,7 +243,7 @@ export default function Partners() {
         {
           name: "Applied Industrial Technologies",
           image: "/Partners/silver/appliedindustrial.png",
-          link: ""
+          link: "https://www.applied.com/"
         },
         {
           name: "Avaled",
@@ -418,11 +418,11 @@ export default function Partners() {
           image: "/Partners/bronze/3M.png",
           link: "https://www.3mcanada.ca/3M/fr_CA/p/"
         },
-        {
-          name: "AFCO",
-          image: "/Partners/bronze/afco.png",
-          link: "https://www.afcoracing.com/"
-        },
+        // {
+        //   name: "AFCO",
+        //   image: "/Partners/bronze/afco.png",
+        //   link: "https://www.afcoracing.com/"
+        // },
         {
           name: "Anodisation Québec",
           image: "/Partners/bronze/anodisationQuebec.png",
@@ -431,7 +431,12 @@ export default function Partners() {
         {
           name: "Apaulo",
           image: "/Partners/bronze/apaulo.png",
-          link: ""
+          link: "https://apaulo.ca/"
+        },
+        {
+          name: "Cleio",
+          image: "/Partners/bronze/cleio.png",
+          link: "https://www.cleio.com/"
         },
         {
           name: "CTA",
@@ -456,7 +461,7 @@ export default function Partners() {
         {
           name: "Marmen Inc.",
           image: "/Partners/bronze/marmen.png",
-          link: ""
+          link: "https://marmeninc.com/"
         },
         {
           name: "Outils Pierre Berger",
@@ -476,7 +481,7 @@ export default function Partners() {
         {
           name: "SAMTEC",
           image: "/Partners/bronze/samtec.png",
-          link: ""
+          link: "https://www.samtec.com/"
         },
         {
           name: "Solaxis",
