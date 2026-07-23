@@ -20,7 +20,21 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: black;
+  /* Contain child margins (e.g. the nav offset) so they don't collapse through
+     to <html> and expose an untextured strip at the top of the page. */
+  display: flow-root;
+  background-color: black;
+  /* Offroad-terrain backdrop: a subtle topographic contour texture over the
+     black base, with faint warm/red "dust" glows in opposite corners.
+     The texture tiles and scrolls; the glows stay pinned to the viewport. */
+  background-image:
+    radial-gradient(60% 55% at 12% 8%, rgba(247, 153, 0, 0.06), transparent 60%),
+    radial-gradient(55% 55% at 88% 92%, rgba(255, 2, 0, 0.05), transparent 60%),
+    url("/topography.svg");
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: top left, bottom right, center;
+  background-size: auto, auto, 600px 600px;
+  background-attachment: scroll;
   overflow-x: clip;
 }
 

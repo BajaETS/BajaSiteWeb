@@ -32,7 +32,7 @@
       "years": [
         {
           "year": "2026",
-          "text": "In testing",
+          "text": "Racing",
           "image": "/History/2026.jpg"
         },
         {
@@ -171,8 +171,87 @@
       "title": "Partners"
     },
     "prizes": {
-      "title": "Prizes",
+      "title": "Results",
       "competition-years": [
+        {
+          "year": "2026",
+          "competitions": [
+            {
+              "title": "Baja SAE Oregon",
+              "date": "5/7/2026",
+              "results": [
+                {
+                  "ranking": "1st",
+                  "category": "Acceleration",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Costs",
+                  "type": "silver"
+                }
+              ],
+              "image": "/Prizes/oregon2026.jpeg"
+            },
+            {
+              "title": "Baja SAE New York",
+              "date": "6/11/2026",
+              "results": [
+                {
+                  "ranking": "3rd",
+                  "category": "Overall",
+                  "details": "Overall ranking with 919.16 points",
+                  "points": 919.16,
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Business",
+                  "details": "Commercial presentation",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Suspension",
+                  "details": "Suspension and traction",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "1st",
+                  "category": "Dynamic",
+                  "type": "gold"
+                },
+                {
+                  "ranking": "2nd",
+                  "category": "Static",
+                  "type": "silver"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Acceleration",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Costs",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Design",
+                  "type": "bronze"
+                },
+                {
+                  "ranking": "3rd",
+                  "category": "Climb",
+                  "details": "Hill climb event",
+                  "type": "bronze"
+                }
+              ],
+              "image": "/Prizes/newyork2026.jpeg"
+            }
+          ]
+        },
         {
           "year": "2025",
           "competitions": [
@@ -216,7 +295,7 @@
               "image": "/Prizes/arizona2025.jpg"
             },
             {
-              "title":"Baja SAE Maryland",
+              "title": "Baja SAE Maryland",
               "date": "6/12/2025",
               "results": [
                 {
@@ -253,10 +332,10 @@
                   "type": "gold"
                 }
               ],
-              "image": "/Prizes/maryland2025.jpg"              
+              "image": "/Prizes/maryland2025.jpg"
             },
             {
-              "title":"Baja SAE Carolina",
+              "title": "Baja SAE Carolina",
               "date": "10/2/2025",
               "results": [
                 {
@@ -1019,20 +1098,18 @@
       "wheels-lead": "Wheel Assembly Lead",
       "reduction-lead": "Reduction Box Lead",
       "clutch-lead": "Clutch Lead"
-    }
-    ,
+    },
     "sections": [
       {
         "title": "title.management",
         "members": [
-          
           {
-            "image": "/Team/Antoine.jpg",
-            "name": "Antoine Proulx",
+            "image": "/Team/Annabelle2.jpg",
+            "name": "Annabelle Gagnon",
             "program": "programs.mechanical-engineering",
             "roles": "roles.team-captain",
-            "nickname": "Tony (BDT)",
-            "linkedin": "https://www.linkedin.com/in/antoine-proulx-884480231/"
+            "nickname": "Annacool",
+            "linkedin": "https://www.linkedin.com/in/annabelle-gagnon-ab8313311/"
           },
           {
             "image": "/Team/berp2.jpg",
@@ -1071,12 +1148,11 @@
             "linkedin": "https://www.linkedin.com/in/mika-loiselle-ba010b231/"
           },
           {
-            "image": "/Team/Maxwell2.jpg",
-            "name": "Maxence Lafond",
-            "program": "programs.software-engineering",
+            "image": "/Team/Alex.jpeg",
+            "name": "Alex Maheu",
+            "program": "programs.electrical-engineering",
             "roles": "roles.electronics-lead",
-            "nickname": "Maxwell",
-            "linkedin": "https://www.linkedin.com/in/maxence-lafond-b211a5218/"
+            "linkedin": "https://www.linkedin.com/in/alex-maheu-6382752b5/"
           },
           {
             "image": "/Team/Leo.JPEG",
@@ -1087,12 +1163,12 @@
             "linkedin": "https://www.linkedin.com/in/léo-bazinet-78165a232/"
           },
           {
-            "image": "/Team/Annabelle2.jpg",
-            "name": "Annabelle Gagnon",
+            "image": "/Team/Antoine.jpg",
+            "name": "Antoine Proulx",
             "program": "programs.mechanical-engineering",
-            "roles": "roles.wheels-lead",
-            "nickname": "Annacool",
-            "linkedin": "https://www.linkedin.com/in/annabelle-gagnon-ab8313311/"
+            "roles": "roles.direction-lead",
+            "nickname": "Tony (BDT)",
+            "linkedin": "https://www.linkedin.com/in/antoine-proulx-884480231/"
           },
           {
             "image": "/Team/kantin2.jpg",
@@ -1135,14 +1211,16 @@
             "name": "Samuel Viens",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": "https://www.linkedin.com/in/samuel-viens-6ba976309/"
+            "linkedin": "https://www.linkedin.com/in/samuel-viens-6ba976309/",
+            "nickname": "Sam"
           },
           {
             "image": "/Team/Adrien2.jpg",
             "name": "Adrean Domenko",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": "https://www.linkedin.com/in/adrean-domenko-aa63562b3/"
+            "linkedin": "https://www.linkedin.com/in/adrean-domenko-aa63562b3/",
+            "nickname": "AD Laurent"
           },
           {
             "image": "/Team/Hubert.jpeg",
@@ -1165,61 +1243,66 @@
             "roles": "roles.mechanics",
             "linkedin": ""
           },
-           {
+          {
             "image": "/Team/AlexandreGauthier.jpg",
             "name": "Alexandre Gauthier",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": "https://www.linkedin.com/in/alexandregauthier7/"
+            "linkedin": "https://www.linkedin.com/in/alexandregauthier7/",
+            "nickname": "Goat"
           },
-           {
+          {
             "image": "/Team/ChristopheLabrecque.jpg",
             "name": "Christophe Labrecque",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": "https://www.linkedin.com/in/christophe-labrecque-8bb7b238b/"
+            "linkedin": "https://www.linkedin.com/in/christophe-labrecque-8bb7b238b/",
+            "nickname": "Christo"
           },
-           {
+          {
             "image": "/Team/FabriceKwey-DuSablon.jpg",
             "name": "Fabrice Kwey-Du Sablon",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": "https://www.linkedin.com/in/fabrice-kwey-du-sablon-aa8363273/"
+            "linkedin": "https://www.linkedin.com/in/fabrice-kwey-du-sablon-aa8363273/",
+            "nickname": "Ki-wey"
           },
-           {
+          {
             "image": "/Team/kimi.jpg",
             "name": "Kimi Sabourin",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
             "linkedin": "https://www.linkedin.com/in/kimi-sabourin-222a3b220/"
           },
-           {
+          {
             "image": "/Team/GabrielHoule.jpg",
             "name": "Gabriel Houle",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": "https://www.linkedin.com/in/gabriel-houle2/"
+            "linkedin": "https://www.linkedin.com/in/gabriel-houle2/",
+            "nickname": "Gab"
           },
-           {
+          {
             "image": "/Team/MarceloCosta.jpg",
             "name": "Marcelo Costa",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
             "linkedin": "https://www.linkedin.com/in/marcelo-costa-377657247/"
           },
-           {
+          {
             "image": "/Team/LaurentVanier.jpg",
             "name": "Laurent Vanier",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
             "linkedin": "https://www.linkedin.com/in/laurent-vanier-490766329/"
           },
-           {
+          {
             "image": "/Team/default1.jpeg",
             "name": "Thomas Lusignan",
             "program": "programs.mechanical-engineering",
             "roles": "roles.mechanics",
-            "linkedin": ""
+            "linkedin": "",
+            "nickname": "toussaignant"
           }
         ]
       },
@@ -1227,26 +1310,19 @@
         "title": "title.electronics",
         "members": [
           {
-            "image": "/Team/Alex.jpeg",
-            "name": "Alex Maheu",
-            "program": "programs.electrical-engineering",
-            "roles": "roles.electronics",
-            "linkedin": "https://www.linkedin.com/in/alex-maheu-6382752b5/"
-          },
-          {
-            "image": "/Team/oscar2.jpg",
-            "name": "Xavier Orsat-Parker",
+            "image": "/Team/Maxwell2.jpg",
+            "name": "Maxence Lafond",
             "program": "programs.software-engineering",
             "roles": "roles.electronics",
-            "nickname": "Oscar",
-            "linkedin": "https://www.linkedin.com/in/xavier-orsat-parker-0b6697251/"
+            "nickname": "Maxwell",
+            "linkedin": "https://www.linkedin.com/in/maxence-lafond-b211a5218/"
           },
           {
-            "image": "/Team/Louis-PhilippeCote.jpg",
-            "name": "Louis-Philippe Côté",
+            "image": "/Team/default3.jpeg",
+            "name": "Maxime Poitras Cardinal",
             "program": "programs.automated-production-engineering",
             "roles": "roles.electronics",
-            "linkedin": "https://www.linkedin.com/in/louis-philippe-c%C3%B4t%C3%A9-373b953a6/"
+            "linkedin": "https://www.linkedin.com/in/maxime-poitras-cardinal-67b49530b/"
           },
           {
             "image": "/Team/PhilippeJohnston.jpg",
@@ -1263,11 +1339,11 @@
             "linkedin": "https://www.linkedin.com/in/jean-nicolas-de-broeck-189975256/"
           },
           {
-            "image": "/Team/default3.jpeg",
-            "name": "Maxime Poitras Cardinal",
+            "image": "/Team/Louis-PhilippeCote.jpg",
+            "name": "Louis-Philippe Côté",
             "program": "programs.automated-production-engineering",
             "roles": "roles.electronics",
-            "linkedin": "https://www.linkedin.com/in/maxime-poitras-cardinal-67b49530b/"
+            "linkedin": "https://www.linkedin.com/in/louis-philippe-c%C3%B4t%C3%A9-373b953a6/"
           }
         ]
       }
@@ -1303,7 +1379,7 @@
     "home": "Home",
     "team": "Team",
     "partners": "Partners",
-    "prizes": "Prizes",
+    "prizes": "Results",
     "connect": "CONNECT",
     "copyright": "All rights reserved.",
     "tagline": "Made with innovation and passion"

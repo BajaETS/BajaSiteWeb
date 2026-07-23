@@ -103,7 +103,7 @@ export default function HistorySection() {
         >
           {sections.map(({ image, year, text }, index) => (
             <div
-              key={year}
+              key={`${year}-${index}`}
               className="flex flex-col w-full mx-auto"
             >
               <HistoryYear
