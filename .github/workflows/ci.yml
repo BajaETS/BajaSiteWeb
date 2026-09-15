@@ -1,0 +1,41 @@
+name: Check
+
+# Runs on every push and pull request. If this fails, do not merge:
+# the same failure would have broken the live site.
+#
+# Vercel deploys on its own when master changes. To stop a failing build from ever
+# reaching the live site, turn this job into a required status check:
+#   GitHub > Settings > Branches > Add branch protection rule for `master`
+#   > Require status checks to pass before merging > select "Check"
+# That blocks the merge rather than the deploy, which is the earlier and better place
+# to catch it.
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # Content first: it gives friendlier errors than the build does.
+      - name: Check site content
+        run: npm run check
+
+      - name: Lint
+        run: npm run lint
+
+      # Note: this runs on Linux, which is case-sensitive about file names.
+      # A path that works on a Windows laptop can fail here. That is the point.
+      - name: Build
+        run: npm run build

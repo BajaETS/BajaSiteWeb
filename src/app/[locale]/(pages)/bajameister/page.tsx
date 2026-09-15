@@ -3,6 +3,29 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { COLORS } from "@/theme/tokens.mjs";
+
+/**
+ * Oktoberfest greens, used only on this page's decorative background.
+ * They are not brand colours, so they are not in src/theme/tokens.mjs.
+ */
+const EVENT_GREEN = "#1a472a";
+const EVENT_GREEN_LIGHT = "#2d5a3d";
+
+/**
+ * Positions and timings for the 20 decorative floating particles.
+ *
+ * These are fixed values rather than Math.random(). The page is rendered once on the
+ * server and again in the browser; random values differ between the two, so React
+ * reported a hydration mismatch in the console on every visit. Fixed numbers look the
+ * same and render identically in both places.
+ */
+const PARTICLES = Array.from({ length: 20 }, (_, i) => ({
+  left: ((i * 37) % 100) + (i % 3),
+  top: ((i * 61) % 100) + (i % 5),
+  duration: 3 + ((i * 7) % 20) / 10,
+  delay: ((i * 13) % 20) / 10,
+}));
 
 export default function Bajameister() {
   const t = useTranslations('pages.bajameister');
@@ -20,10 +43,10 @@ export default function Bajameister() {
             className="absolute inset-0 opacity-40"
             animate={{
               background: [
-                "radial-gradient(circle at 20% 50%, #ff0200 0%, transparent 50%)",
-                "radial-gradient(circle at 80% 50%, #1a472a 0%, transparent 50%)",
-                "radial-gradient(circle at 50% 80%, #ff0200 0%, transparent 50%)",
-                "radial-gradient(circle at 20% 50%, #ff0200 0%, transparent 50%)",
+                `radial-gradient(circle at 20% 50%, ${COLORS.red} 0%, transparent 50%)`,
+                `radial-gradient(circle at 80% 50%, ${EVENT_GREEN} 0%, transparent 50%)`,
+                `radial-gradient(circle at 50% 80%, ${COLORS.red} 0%, transparent 50%)`,
+                `radial-gradient(circle at 20% 50%, ${COLORS.red} 0%, transparent 50%)`,
               ],
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
@@ -32,14 +55,14 @@ export default function Bajameister() {
 
         {/* Floating particles effect - Orange and Green */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(20)].map((_, i) => (
+          {PARTICLES.map((particle, i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 rounded-full"
               style={{
-                background: i % 2 === 0 ? "#ff0200" : "#2d5a3d",
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                background: i % 2 === 0 ? COLORS.red : EVENT_GREEN_LIGHT,
+                left: `${particle.left}%`,
+                top: `${particle.top}%`,
               }}
               animate={{
                 y: [0, -100, 0],
@@ -47,9 +70,9 @@ export default function Bajameister() {
                 scale: [0, 1.5, 0],
               }}
               transition={{
-                duration: 3 + Math.random() * 2,
+                duration: particle.duration,
                 repeat: Infinity,
-                delay: Math.random() * 2,
+                delay: particle.delay,
               }}
             />
           ))}
@@ -63,7 +86,7 @@ export default function Bajameister() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-7xl md:text-9xl font-bebas mb-4 bg-gradient-to-r from-[#ff0200] via-[#ff4040] to-[#ff0200] bg-clip-text text-transparent"
+            className="text-7xl md:text-9xl font-bebas mb-4 bg-gradient-to-r from-brand-red via-brand-red-light to-brand-red bg-clip-text text-transparent"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
@@ -98,14 +121,14 @@ export default function Bajameister() {
           >
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-red-100/90 text-lg md:text-xl font-bebas">
               <span>{t('event-date')}</span>
-              <span className="hidden sm:inline text-[#ff0200]">|</span>
+              <span className="hidden sm:inline text-brand-red">|</span>
               <span>{t('event-time')}</span>
             </div>
             <a
               href={googleMapsLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#ff0200] hover:text-[#f79900] transition-colors text-lg md:text-xl font-bebas"
+              className="flex items-center gap-2 text-brand-red hover:text-brand-orange transition-colors text-lg md:text-xl font-bebas"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -126,14 +149,14 @@ export default function Bajameister() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-[#cc0200] via-[#ff0200] to-[#cc0200]" />
+            <span className="absolute inset-0 bg-gradient-to-r from-brand-red-dark via-brand-red to-brand-red-dark" />
             <motion.span
-              className="absolute inset-0 bg-gradient-to-r from-[#cc0200] via-[#ff4040] to-[#cc0200]"
+              className="absolute inset-0 bg-gradient-to-r from-brand-red-dark via-brand-red-light to-brand-red-dark"
               animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
               transition={{ duration: 2, repeat: Infinity }}
               style={{ backgroundSize: "200% 100%" }}
             />
-            <span className="absolute inset-0 border-2 border-[#ff0200]/50 rounded-full" />
+            <span className="absolute inset-0 border-2 border-brand-red/50 rounded-full" />
             <span className="relative z-10">{t('cta')}</span>
           </motion.a>
         </motion.div>
@@ -146,7 +169,7 @@ export default function Bajameister() {
         >
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
             <motion.div
-              className="w-1.5 h-3 bg-[#ff0200] rounded-full"
+              className="w-1.5 h-3 bg-brand-red rounded-full"
               animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             />
@@ -176,7 +199,7 @@ export default function Bajameister() {
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.1 }}
           >
-            <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-green-900 to-green-950 flex items-center justify-center shadow-lg shadow-green-900/30 group-hover:shadow-[#f79900]/30 transition-all duration-300 p-4">
+            <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-green-900 to-green-950 flex items-center justify-center shadow-lg shadow-green-900/30 group-hover:shadow-brand-orange/30 transition-all duration-300 p-4">
               <Image
                 src="/bajameister/jager_logo.png"
                 alt="Jagermeister"
@@ -196,7 +219,7 @@ export default function Bajameister() {
             transition={{ duration: 0.5, delay: 0.2 }}
             whileHover={{ scale: 1.1 }}
           >
-            <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-green-900 to-green-950 flex items-center justify-center shadow-lg shadow-green-900/30 group-hover:shadow-[#f79900]/30 transition-all duration-300 p-4">
+            <div className="w-40 h-40 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-green-900 to-green-950 flex items-center justify-center shadow-lg shadow-green-900/30 group-hover:shadow-brand-orange/30 transition-all duration-300 p-4">
               <Image
                 src="/bajameister/redbull_logo.png"
                 alt="Red Bull"
@@ -235,6 +258,7 @@ export default function Bajameister() {
               src="/bajameister/bajameister2.png"
               alt="Bajameister event"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 to-transparent" />
@@ -252,6 +276,7 @@ export default function Bajameister() {
               src="/bajameister/bajameister1.jpg"
               alt="Bajameister party"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 to-transparent" />
@@ -269,6 +294,7 @@ export default function Bajameister() {
               src="/bajameister/bajameister3.jpg"
               alt="Baja vehicle showcase"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 to-transparent" />
@@ -286,6 +312,7 @@ export default function Bajameister() {
               src="/bajameister/bajameister4.jpg"
               alt="Bajameister celebration"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 to-transparent" />
@@ -303,6 +330,7 @@ export default function Bajameister() {
               src="/bajameister/bajameister6.png"
               alt="Bajameister event highlights"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 to-transparent" />
@@ -347,14 +375,14 @@ export default function Bajameister() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-[#cc0200] via-[#ff0200] to-[#cc0200]" />
+          <span className="absolute inset-0 bg-gradient-to-r from-brand-red-dark via-brand-red to-brand-red-dark" />
           <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-[#cc0200] via-[#ff4040] to-[#cc0200]"
+            className="absolute inset-0 bg-gradient-to-r from-brand-red-dark via-brand-red-light to-brand-red-dark"
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
             transition={{ duration: 2, repeat: Infinity }}
             style={{ backgroundSize: "200% 100%" }}
           />
-          <span className="absolute inset-0 border-2 border-[#ff0200]/50 rounded-full" />
+          <span className="absolute inset-0 border-2 border-brand-red/50 rounded-full" />
           <span className="relative z-10">{t('cta')}</span>
         </motion.a>
       </motion.div>

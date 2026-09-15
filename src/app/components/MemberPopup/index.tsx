@@ -38,7 +38,7 @@ export default function MemberPopup(props: TMemberPopup) {
 
           {/* Close button */}
           <motion.button
-            className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#f79900]/30 transition-colors"
+            className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-brand-orange/30 transition-colors"
             onClick={onClose}
             whileHover={{ scale: 1.1, rotate: 90 }}
             whileTap={{ scale: 0.9 }}
@@ -56,7 +56,7 @@ export default function MemberPopup(props: TMemberPopup) {
             >
               {/* Glow effect behind image */}
               <div className="absolute inset-0 bg-primary/40 rounded-full blur-xl scale-90" />
-              <div className="relative w-[200px] h-[200px] md:w-[280px] md:h-[280px] rounded-full overflow-hidden ring-4 ring-[#f79900]/50">
+              <div className="relative w-[200px] h-[200px] md:w-[280px] md:h-[280px] rounded-full overflow-hidden ring-4 ring-brand-orange/50">
                 <Image
                   src={image}
                   alt="Member"

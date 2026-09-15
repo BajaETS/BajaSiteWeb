@@ -4,33 +4,29 @@ import { useLocale, useTranslations } from "next-intl";
 import Page from "@/app/components/Page";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { TRankingProps } from "@/app/components/Ranking/interface";
 import Ranking from "@/app/components/Ranking";
-
-interface Competition {
-  title: string;
-  date: string;
-  results: TRankingProps[];
-  image?: string;
-}
-
-interface YearData {
-  year: string;
-  competitions: Competition[];
-}
-
-interface PrizesData {
-  "competition-years": YearData[];
-}
+import { COMPETITION_YEARS } from "@/content/results";
+import type { Competition, CompetitionYear } from "@/content/types";
 
 const EASE = [0.25, 0.46, 0.45, 0.94] as const;
+
+/**
+ * Parse a YYYY-MM-DD date as a LOCAL date.
+ * `new Date("2026-05-07")` is parsed as UTC midnight, which displays as the previous
+ * day for anyone west of Greenwich, including Montreal. Building it from parts avoids that.
+ */
+function parseLocalDate(iso: string): Date {
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(y, m - 1, d);
+}
 
 const CompetitionCard: React.FC<{ competition: Competition; index: number }> = ({
   competition,
   index,
 }) => {
   const locale = useLocale();
-  const localizedDate = new Date(Date.parse(competition.date)).toLocaleDateString(locale, {
+  const t = useTranslations();
+  const localizedDate = parseLocalDate(competition.date).toLocaleDateString(locale, {
     day: "numeric",
     year: "numeric",
     month: "long",
@@ -46,10 +42,10 @@ const CompetitionCard: React.FC<{ competition: Competition; index: number }> = (
       whileHover={{ y: -6 }}
       className="group relative isolate flex flex-col overflow-hidden rounded-2xl border border-white/5
                  bg-neutral-900 shadow-lg transition-colors duration-300 [will-change:transform]
-                 hover:border-[#f79900]/40 hover:shadow-2xl hover:shadow-primary/10"
+                 hover:border-brand-orange/40 hover:shadow-2xl hover:shadow-primary/10"
     >
       {/* Top accent bar that sweeps in on hover */}
-      <div className="absolute inset-x-0 top-0 z-20 h-1 origin-left scale-x-0 bg-gradient-to-r from-primary to-[#f79900] transition-transform duration-500 group-hover:scale-x-100" />
+      <div className="absolute inset-x-0 top-0 z-20 h-1 origin-left scale-x-0 bg-gradient-to-r from-primary to-brand-orange transition-transform duration-500 group-hover:scale-x-100" />
 
       {hasImage && (
         <div className="relative h-44 w-full overflow-hidden rounded-t-2xl sm:h-52">
@@ -70,13 +66,20 @@ const CompetitionCard: React.FC<{ competition: Competition; index: number }> = (
       {/* Title + results always sit on the solid card body, never over the photo */}
       <div className="p-5 sm:p-6">
         <p className="text-xs uppercase tracking-wider text-gray-400 sm:text-sm">{localizedDate}</p>
-        <h3 className="mb-4 font-bebas text-4xl leading-none text-white transition-colors duration-300 group-hover:text-[#ffcf99] sm:text-5xl">
+        <h3 className="mb-4 font-bebas text-4xl leading-none text-white transition-colors duration-300 group-hover:text-brand-orange-pale sm:text-5xl">
           {competition.title}
         </h3>
         <ul className="flex flex-wrap gap-2">
           {competition.results.map((result, i) => (
             <li key={i} className="transition-transform duration-200 hover:-translate-y-0.5">
-              <Ranking {...result} />
+              <Ranking
+                place={result.place}
+                placeLabel={t("pages.prizes.ordinal", { place: result.place })}
+                category={t(`pages.prizes.categories.${result.category}` as never)}
+                medal={result.medal}
+                points={result.points}
+                details={result.detailsKey ? t(result.detailsKey as never) : undefined}
+              />
             </li>
           ))}
         </ul>
@@ -85,7 +88,7 @@ const CompetitionCard: React.FC<{ competition: Competition; index: number }> = (
   );
 };
 
-const YearSection: React.FC<{ yearData: YearData; index: number }> = ({ yearData, index }) => {
+const YearSection: React.FC<{ yearData: CompetitionYear; index: number }> = ({ yearData, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -111,13 +114,10 @@ const YearSection: React.FC<{ yearData: YearData; index: number }> = ({ yearData
 };
 
 const PrizesSection: React.FC = () => {
-  const t = useTranslations("pages");
-  const prizesData: PrizesData = t.raw("prizes");
-
   return (
     <section className="container mx-auto px-4 pb-16">
-      {prizesData["competition-years"].map((yearData, index) => (
-        <YearSection key={index} yearData={yearData} index={index} />
+      {COMPETITION_YEARS.map((yearData, index) => (
+        <YearSection key={yearData.year} yearData={yearData} index={index} />
       ))}
     </section>
   );
@@ -145,7 +145,7 @@ const PrizesPage: React.FC = () => {
           <span className="relative">{t("prizes.title")}</span>
         </motion.h1>
         <motion.div
-          className="mx-auto mt-3 h-1 rounded-full bg-gradient-to-r from-transparent via-primary to-[#f79900]"
+          className="mx-auto mt-3 h-1 rounded-full bg-gradient-to-r from-transparent via-primary to-brand-orange"
           initial={{ width: 0 }}
           animate={{ width: "180px" }}
           transition={{ duration: 0.7, delay: 0.3 }}

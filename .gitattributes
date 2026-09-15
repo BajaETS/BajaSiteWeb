@@ -1,0 +1,19 @@
+# Keep line endings consistent between Windows and the Linux build server.
+* text=auto eol=lf
+
+# Binary assets: never touch these, never try to diff them.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.avif  binary
+*.gif   binary
+*.ico   binary
+*.svg   text eol=lf
+*.mp4   binary
+*.webm  binary
+*.pdf   binary
+*.otf   binary
+*.ttf   binary
+*.woff  binary
+*.woff2 binary

@@ -6,17 +6,16 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check": "node scripts/check-content.mjs",
+    "prebuild": "npm run check"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.18.0",
-    "motion": "^11.18.0",
     "next": "14.2.3",
     "next-intl": "^3.20.0",
-    "phaser": "^3.85.2",
-    "poly-decomp": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sharp": "^0.34.5",
@@ -25,6 +24,9 @@
   "devDependencies": {
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.6.3"

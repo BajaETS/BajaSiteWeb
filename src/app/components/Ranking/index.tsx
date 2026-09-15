@@ -1,18 +1,20 @@
 import clsx from "clsx"
 import { TRankingProps } from "./interface"
 import Tooltip from "../Tooltip"
+import { MEDALS } from "@/theme/tokens.mjs"
+import type { MedalType } from "@/content/types"
 
-
+/**
+ * One result chip: category, placing, optional points, and a coloured medal bar.
+ * The medal colours come from src/theme/tokens.mjs. Do not hardcode them here.
+ */
 const Ranking = (props: TRankingProps) => {
 
-    const { ranking, points, type, category, details } = props
+    const { placeLabel, points, medal, category, details } = props
 
-    const gradients: Record<TRankingProps['type'], string> = {
-        gold: "from-[#EBB512] to-[#FFE39B]",
-        silver: "from-[#D9D9D9] to-[#E8E8E8]",
-        bronze: "from-[#EB8612] to-[#FFCD95]",
-        other: "from-[#9747FF] to-[#CDA6FF]"
-    }
+    // Typed as a full Record, so a medal colour can never be silently missing.
+    const stops: Record<MedalType, readonly [string, string]> = MEDALS
+    const [from, to] = stops[medal]
 
     return (
         <Tooltip text={details}>
@@ -22,7 +24,7 @@ const Ranking = (props: TRankingProps) => {
                         {category}
                     </p>
                     <p className="m-0 p-0 text-2xl">
-                        {ranking}
+                        {placeLabel}
                     </p>
                 </div>
                 {points && (
@@ -30,7 +32,10 @@ const Ranking = (props: TRankingProps) => {
                         {points} pts
                     </p>
                 )}
-                <div className={clsx("ml-1 w-2 min-h-full bg-gradient-to-b", gradients[type])} />
+                <div
+                    className={clsx("ml-1 w-2 min-h-full")}
+                    style={{ backgroundImage: `linear-gradient(to bottom, ${from}, ${to})` }}
+                />
             </div>
         </Tooltip>
 

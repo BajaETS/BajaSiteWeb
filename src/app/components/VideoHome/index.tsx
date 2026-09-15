@@ -1,6 +1,7 @@
 "use client";
 
 import React, { ElementRef, useEffect, useRef } from 'react';
+import { SEASON } from '@/content/season';
 
 export function VideoHome() {
   const videoRef = useRef<ElementRef<'video'>>(null);
@@ -38,13 +39,15 @@ export function VideoHome() {
             -translate-y-1/2
           '
           ref={videoRef}
-          src='/videoReveal2026.mp4'
+          src={SEASON.heroVideo}
           autoPlay
           muted
           loop
           playsInline
-          // @ts-ignore - webkit-playsinline for older iOS versions
-          webkitPlaysInline=""
+          // Older iOS needs the vendor-prefixed attribute. It has to be spread with its
+          // real lower-case name: React rejects a camelCase `webkitPlaysInline` prop and
+          // logs a console warning instead of rendering it.
+          {...{ 'webkit-playsinline': 'true' }}
           controls={false}
         />
       </div>
