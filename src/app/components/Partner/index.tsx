@@ -33,7 +33,7 @@ export default function Partner(props: PartnerProps) {
       }}
       className="group relative flex flex-col items-center gap-3 p-4 rounded-xl
                  bg-neutral-900/60 backdrop-blur-sm border border-white/5
-                 hover:border-[#f79900]/30 transition-all duration-300 cursor-pointer"
+                 hover:border-brand-orange/30 transition-all duration-300 cursor-pointer"
       style={{
         boxShadow: `0 0 0px ${accentColor}`,
       }}

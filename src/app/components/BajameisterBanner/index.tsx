@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { COLORS } from "@/theme/tokens.mjs";
 
 export function BajameisterBanner() {
   const [isVisible, setIsVisible] = useState(true);
@@ -47,9 +48,9 @@ export function BajameisterBanner() {
               className="absolute inset-0 opacity-30"
               animate={{
                 background: [
-                  "radial-gradient(circle at 0% 50%, #ff0200 0%, transparent 50%)",
-                  "radial-gradient(circle at 100% 50%, #ff0200 0%, transparent 50%)",
-                  "radial-gradient(circle at 0% 50%, #ff0200 0%, transparent 50%)",
+                  `radial-gradient(circle at 0% 50%, ${COLORS.red} 0%, transparent 50%)`,
+                  `radial-gradient(circle at 100% 50%, ${COLORS.red} 0%, transparent 50%)`,
+                  `radial-gradient(circle at 0% 50%, ${COLORS.red} 0%, transparent 50%)`,
                 ],
               }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
@@ -58,19 +59,19 @@ export function BajameisterBanner() {
             {/* Content */}
             <div className="relative z-10 flex items-center gap-4">
               {/* Emoji indicator */}
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-[#ff0200] to-[#cc0200] flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-brand-red to-brand-red-dark flex items-center justify-center flex-shrink-0">
                 <span className="text-2xl md:text-3xl">🎉</span>
               </div>
 
               {/* Text content */}
               <div className="flex-1 min-w-0 pr-4">
-                <h4 className="font-bebas text-xl md:text-2xl text-[#ff0200] leading-tight">
+                <h4 className="font-bebas text-xl md:text-2xl text-brand-red leading-tight">
                   {t('title')}
                 </h4>
                 <p className="text-white/70 text-sm md:text-base truncate">
                   {t('subtitle')}
                 </p>
-                <span className="inline-flex items-center text-[#f79900] text-sm font-medium mt-1 group-hover:text-[#ffb340] transition-colors">
+                <span className="inline-flex items-center text-brand-orange text-sm font-medium mt-1 group-hover:text-brand-orange-light transition-colors">
                   {t('cta')}
                   <motion.svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -2,31 +2,14 @@
 
 import React from "react";
 import Member from "../../../components/Member";
-import { useTranslations, useMessages } from "next-intl";
+import { useTranslations } from "next-intl";
 import Page from "@/app/components/Page";
-import { TMemberProps } from "@/app/components/Member/inteface";
 import { motion } from "framer-motion";
-
-type TMemberSection = {
-  title: string;
-  members: TMemberProps[];
-};
+import { TEAM_SECTIONS } from "@/content/team";
 
 export default function Team() {
-  const t = useTranslations("team");
-  // Load sections from the translation messages (structured data)
-  const messages = useMessages() as any;
-  const sections = (messages?.team?.sections ?? []) as Array<{
-    title: string;
-    members: Array<{
-      image?: string;
-      name: string;
-      program?: string;
-      roles?: string;
-      nickname?: string;
-      linkedin?: string;
-    }>;
-  }>;
+  const t = useTranslations();
+  const sections = TEAM_SECTIONS;
 
   return (
     <Page>
@@ -44,9 +27,9 @@ export default function Team() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {t("page-title")}{" "}
-          <span className="bg-gradient-to-r from-primary to-[#ff4040] bg-clip-text text-transparent [-webkit-background-clip:text]">
-            {t("page-title-highlight")}
+          {t("team.page-title")}{" "}
+          <span className="bg-gradient-to-r from-primary to-brand-red-light bg-clip-text text-transparent [-webkit-background-clip:text]">
+            {t("team.page-title-highlight")}
           </span>
         </motion.h1>
         <motion.p
@@ -55,7 +38,7 @@ export default function Team() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          {t("page-subtitle")}
+          {t("team.page-subtitle")}
         </motion.p>
 
         {/* Animated decorative line */}
@@ -103,7 +86,7 @@ export default function Team() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                {t(section.title)}
+                {t(section.titleKey as never)}
               </motion.span>
               <motion.span
                 className="text-primary ml-4"
@@ -125,7 +108,7 @@ export default function Team() {
               transition={{ duration: 0.4, delay: 0.5 }}
             >
               <span className="px-4 py-1 bg-primary/20 text-primary text-sm rounded-full border border-primary/30">
-                {t("member-count", { count: section.members.length })}
+                {t("team.member-count", { count: section.members.length })}
               </span>
             </motion.div>
           </motion.div>
@@ -137,10 +120,10 @@ export default function Team() {
                 <Member
                   key={midx}
                   index={midx}
-                  image={member.image ?? ""}
+                  image={member.image}
                   name={member.name}
-                  program={member.program ? t(member.program) : ""}
-                  roles={member.roles ? t(member.roles) : ""}
+                  program={member.programKey ? t(member.programKey as never) : ""}
+                  roles={member.roleKeys.map((key) => t(key as never)).join(", ")}
                   nickname={member.nickname ?? ""}
                   linkedin={member.linkedin ?? ""}
                 />
@@ -174,7 +157,7 @@ export default function Team() {
         transition={{ duration: 0.6 }}
       >
         <p className="text-gray-500 text-sm">
-          {t("join-cta")}
+          {t("team.join-cta")}
         </p>
       </motion.div>
       </div>

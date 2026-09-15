@@ -1,44 +1,21 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import { TSocialLink } from "../SocialLink/interface";
 import SocialLink from "../SocialLink";
+import { HOME_NAV_ITEM, NAV_ITEMS, SOCIAL_LINKS } from "@/content/navigation";
 
-const socialLinks: TSocialLink[] = [
-  {
-    href: "https://www.facebook.com/BajaETS",
-    image: "/Footer/facebookLogoWhite.png",
-    alt: "Facebook"
-  },
-  {
-    href: "https://www.instagram.com/baja_ets/",
-    image: "/Footer/instagramLogoWhite.png",
-    alt: "Instagram"
-  },
-  {
-    href: "https://www.linkedin.com/company/baja-ets/",
-    image: "/Footer/linkedInLogoWhite.png",
-    alt: "LinkedIn"
-  },
-  {
-    href: "https://www.youtube.com/user/TheBajaETS",
-    image: "/Footer/youtubelogoWhite.png",
-    alt: "Youtube"
-  }
-]
-
+/**
+ * The site footer.
+ * Its link list and social icons come from src/content/navigation.ts, the same
+ * file the header menu uses, so the two can never drift apart.
+ */
 export default function Footer() {
-  const t = useTranslations("footer");
+  const t = useTranslations();
   const currentYear = new Date().getFullYear();
 
-  const quickLinks = [
-    { href: "/", label: t("home") },
-    { href: "/team", label: t("team") },
-    { href: "/partners", label: t("partners") },
-    { href: "/prizes", label: t("prizes") }
-  ];
+  const quickLinks = [HOME_NAV_ITEM, ...NAV_ITEMS];
 
   return (
     <footer className="relative w-full bg-gradient-to-t from-black via-black to-transparent border-t border-white/10">
@@ -54,23 +31,23 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-white font-bebas text-lg tracking-wide">{t("title")}</h3>
+            <h3 className="text-white font-bebas text-lg tracking-wide">{t("footer.title")}</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              {t("description")}
+              {t("footer.description")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-white font-bebas text-lg tracking-wide">{t("quickLinks")}</h3>
+            <h3 className="text-white font-bebas text-lg tracking-wide">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 text-sm hover:text-[#f79900] transition-colors duration-300"
+                    className="text-gray-400 text-sm hover:text-brand-orange transition-colors duration-300"
                   >
-                    {link.label}
+                    {t(link.labelKey as never)}
                   </Link>
                 </li>
               ))}
@@ -79,9 +56,9 @@ export default function Footer() {
 
           {/* Contact & Social */}
           <div className="space-y-4">
-            <h3 className="text-white font-bebas text-lg tracking-wide">{t("connect")}</h3>
+            <h3 className="text-white font-bebas text-lg tracking-wide">{t("footer.connect")}</h3>
             <div className="flex items-center justify-start md:justify-start gap-4">
-              {socialLinks.map((icon) => (
+              {SOCIAL_LINKS.map((icon) => (
                 <SocialLink key={icon.href} {...icon} />
               ))}
             </div>
@@ -94,10 +71,10 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-xs font-hemi">
-            &copy; {currentYear} {t("title")} {t("copyright")}
+            &copy; {currentYear} {t("footer.title")} {t("footer.copyright")}
           </p>
           <p className="text-gray-600 text-xs">
-            {t("tagline")}
+            {t("footer.tagline")}
           </p>
         </div>
       </div>

@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { SEASON } from "@/content/season";
 
 interface TimelineProps {
   position: number;
@@ -9,6 +10,10 @@ interface TimelineProps {
   totalYears?: number;
   onPositionChange?: (newPosition: number) => void;
   dragHint?: string;
+  /** Year shown at the left end of the track (the most recent). */
+  newestYear: number;
+  /** Year shown at the right end of the track (the oldest). */
+  oldestYear: number;
 }
 
 export default function Timeline({
@@ -16,7 +21,9 @@ export default function Timeline({
   isScrolling = false,
   totalYears = 1,
   onPositionChange,
-  dragHint = "drag me"
+  dragHint = "drag me",
+  newestYear,
+  oldestYear
 }: TimelineProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -98,7 +105,7 @@ export default function Timeline({
 
         {/* Progress fill */}
         <div
-          className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-gradient-to-r from-primary to-[#ff4040] rounded-full"
+          className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-gradient-to-r from-primary to-brand-red-light rounded-full"
           style={{ width: `${position}%` }}
         />
 
@@ -126,7 +133,7 @@ export default function Timeline({
           }`} />
 
           <Image
-            src="/History/RightSide2026.png"
+            src={SEASON.timelineCar}
             alt="Timeline car"
             height={200}
             width={200}
@@ -144,10 +151,10 @@ export default function Timeline({
 
         {/* Year markers */}
         <div className="absolute -bottom-6 left-0 text-xs 2xl:text-sm text-white/50 font-bebas">
-          2026
+          {newestYear}
         </div>
         <div className="absolute -bottom-6 right-0 text-xs 2xl:text-sm text-white/50 font-bebas">
-          1989
+          {oldestYear}
         </div>
       </div>
     </motion.div>

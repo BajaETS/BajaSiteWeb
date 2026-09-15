@@ -4,22 +4,19 @@ import Timeline from "../Timeline";
 import HistoryYear from "../HistoryYear";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-
-type HistoryYearProps = {
-  image: string;
-  year: string;
-  text: string;
-};
+import { HISTORY } from "@/content/history";
 
 export default function HistorySection() {
   const [position, setPosition] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const t = useTranslations("pages");
+  const t = useTranslations();
 
-  // Extract and sort history years in descending order
-  const sections: HistoryYearProps[] = t.raw("history.years")
-    .sort((a: HistoryYearProps, b: HistoryYearProps) => parseInt(b.year) - parseInt(a.year));
+  // HISTORY is already newest-first (see src/content/history.ts). Do not sort in
+  // place here: the array is shared module state, and mutating it would reorder
+  // the timeline for every later render.
+  const sections = HISTORY;
+  const years = sections.map((entry) => entry.year);
 
   // Handle scroll position change from Timeline drag
   const handlePositionChange = useCallback((newPosition: number) => {
@@ -32,12 +29,17 @@ export default function HistorySection() {
   }, []);
 
   useEffect(() => {
+    // Copy the node into a local so the cleanup below removes the listeners from the
+    // same element the effect added them to, even if the ref has moved on by then.
+    const node = ref.current;
+    if (!node) return;
+
     let scrollTimeout: NodeJS.Timeout;
 
     const handleScroll = () => {
-      if (ref.current) {
-        const scrollLeft = ref.current.scrollLeft;
-        const scrollWidth = ref.current.scrollWidth - ref.current.clientWidth;
+      {
+        const scrollLeft = node.scrollLeft;
+        const scrollWidth = node.scrollWidth - node.clientWidth;
         const scrollPercentage = (scrollLeft / scrollWidth) * 100;
         setPosition(scrollPercentage);
         setIsScrolling(true);
@@ -49,22 +51,16 @@ export default function HistorySection() {
     };
 
     const handleWheel = (event: WheelEvent) => {
-      if (ref.current) {
-        event.preventDefault();
-        ref.current.scrollLeft += event.deltaY;
-      }
+      event.preventDefault();
+      node.scrollLeft += event.deltaY;
     };
 
-    if (ref.current) {
-      ref.current.addEventListener("scroll", handleScroll);
-      ref.current.addEventListener("wheel", handleWheel, { passive: false });
-    }
+    node.addEventListener("scroll", handleScroll);
+    node.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      if (ref.current) {
-        ref.current.removeEventListener("scroll", handleScroll);
-        ref.current.removeEventListener("wheel", handleWheel);
-      }
+      node.removeEventListener("scroll", handleScroll);
+      node.removeEventListener("wheel", handleWheel);
       clearTimeout(scrollTimeout);
     };
   }, []);
@@ -101,15 +97,15 @@ export default function HistorySection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          {sections.map(({ image, year, text }, index) => (
+          {sections.map(({ image, year, textKey }, index) => (
             <div
-              key={`${year}-${index}`}
+              key={year}
               className="flex flex-col w-full mx-auto"
             >
               <HistoryYear
                 image={image}
-                year={year}
-                text={text}
+                year={String(year)}
+                text={t(textKey as never)}
                 index={index}
               />
             </div>
@@ -123,7 +119,9 @@ export default function HistorySection() {
         isScrolling={isScrolling}
         totalYears={sections.length}
         onPositionChange={handlePositionChange}
-        dragHint={t("history.drag-hint")}
+        dragHint={t("pages.history.drag-hint")}
+        newestYear={Math.max(...years)}
+        oldestYear={Math.min(...years)}
       />
     </div>
   );
