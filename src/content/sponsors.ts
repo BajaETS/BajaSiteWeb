@@ -230,6 +230,13 @@ export const SPONSORS: Sponsor[] = [
     link: 'https://cvtech-ibc.com/home/',
     active: true,
   },
+  {
+    name: 'Groupe Pro-B',
+    tier: 'gold',
+    logo: '/Partners/gold/GroupeProB.png',
+    link: 'https://groupepro-b.com/',
+    active: true,
+  },
   // NOTE: logo file is missing from public/ - restore it before setting active: true
   {
     name: 'BRP',
@@ -266,7 +273,7 @@ export const SPONSORS: Sponsor[] = [
     link: 'https://www.lenovo.com/ca/',
     active: false,
   },
-  // ---- silver (33 active, 3 past) ----
+  // ---- silver (34 active, 3 past) ----
   {
     name: 'Acier Richelieu',
     tier: 'silver',
