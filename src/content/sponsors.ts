@@ -519,6 +519,13 @@ export const SPONSORS: Sponsor[] = [
     link: 'https://www.laseramp.com/',
     active: false,
   },
+    {
+    name: 'Lily Cattel',
+    tier: 'silver',
+    logo: '/Partners/silver/CattelLily.png',
+    link: 'https://lilycattel.com/',
+    active: true,
+  },
   // ---- bronze (17 active, 8 past) ----
   {
     name: '3M',
