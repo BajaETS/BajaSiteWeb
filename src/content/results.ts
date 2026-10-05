@@ -57,6 +57,19 @@ export const COMPETITION_YEARS: CompetitionYear[] = [
           { place: 3, category: 'climb', medal: 'bronze', detailsKey: 'pages.prizes.details.2026-baja-sae-new-york-climb' },
         ],
       },
+      {
+        title: 'Baja SAE Ohio',
+        date: '2026-06-11',
+        image: '/Prizes/ohio2026.jpg',
+        results: [
+          { place: 3, category: 'overall', medal: 'bronze', points: 	906.03, detailsKey: 'pages.prizes.details.2026-baja-sae-ohio-overall' },
+          { place: 2, category: 'business', medal: 'silver', detailsKey: 'pages.prizes.details.2026-baja-sae-ohio-business' },
+          { place: 3, category: 'dynamic', medal: 'bronze' },
+          { place: 7, category: 'static', medal: 'other' },
+          { place: 2, category: 'acceleration', medal: 'silver' },
+          { place: 3, category: 'cost', medal: 'bronze' },
+        ],
+      },
     ],
   },
   {

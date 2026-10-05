@@ -169,6 +169,8 @@ export type ResultCategory =
   | 'rocks'
   | 'static'
   | 'suspension'
+  | 'sled pull'
+
 
 /** Which medal colour the placement earns. */
 export type MedalType = 'gold' | 'silver' | 'bronze' | 'other'
