@@ -1,9 +1,12 @@
 "use client"
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { COLORS } from "@/theme/tokens.mjs";
+import { BAJAMEISTER } from "@/content/bajameister";
+import { parseLocalDate } from "@/content/dates";
+import TicketWidget from "@/app/components/TicketWidget";
 
 /**
  * Oktoberfest greens, used only on this page's decorative background.
@@ -29,9 +32,18 @@ const PARTICLES = Array.from({ length: 20 }, (_, i) => ({
 
 export default function Bajameister() {
   const t = useTranslations('pages.bajameister');
+  const locale = useLocale();
 
-  const joinLink = "https://www.zeffy.com/fr-CA/ticketing/bajameister";
-  const googleMapsLink = "https://www.google.com/maps/search/?api=1&query=530+rue+Peel,+Montreal,+QC";
+  // Every fact about the event comes from src/content/bajameister.ts, so moving the
+  // date or the venue is a one-file edit and the two languages cannot disagree.
+  const eventDate = parseLocalDate(BAJAMEISTER.date).toLocaleDateString(locale, {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+  const location = `${BAJAMEISTER.venue}, ${BAJAMEISTER.address}`;
+  const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
 
   return (
     <main className="h-full overflow-x-hidden">
@@ -80,13 +92,33 @@ export default function Bajameister() {
 
         {/* Hero Content */}
         <motion.div
-          className="relative z-10 text-center px-4"
+          /* pt clears the fixed menu; py keeps the block off both edges on short
+             screens, where the hero would otherwise overflow. */
+          className="relative z-10 text-center px-4 pt-24 pb-10 md:pt-20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          {/* Event crest. Cut out of the ticket seller's banner, so it sits on the
+              animated background instead of carrying a green block with it. */}
+          <motion.div
+            className="mx-auto mb-4 md:mb-5"
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <Image
+              src={BAJAMEISTER.logo}
+              alt="Bajameister"
+              width={464}
+              height={477}
+              priority
+              className="mx-auto h-[22vh] max-h-[260px] min-h-[112px] w-auto drop-shadow-[0_0_30px_rgba(0,0,0,0.6)]"
+            />
+          </motion.div>
+
           <motion.h1
-            className="text-7xl md:text-9xl font-bebas mb-4 bg-gradient-to-r from-brand-red via-brand-red-light to-brand-red bg-clip-text text-transparent"
+            className="text-6xl md:text-8xl font-bebas mb-2 bg-gradient-to-r from-brand-red via-brand-red-light to-brand-red bg-clip-text text-transparent"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
@@ -96,7 +128,7 @@ export default function Bajameister() {
             {t('title')}
           </motion.h1>
           <motion.p
-            className="text-2xl md:text-3xl font-bebas text-red-100/90 mb-6"
+            className="text-xl md:text-2xl font-bebas text-red-100/90 mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -104,7 +136,7 @@ export default function Bajameister() {
             {t('subtitle')}
           </motion.p>
           <motion.p
-            className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-8"
+            className="text-base md:text-lg text-white/70 max-w-2xl mx-auto mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -114,13 +146,13 @@ export default function Bajameister() {
 
           {/* Event Details */}
           <motion.div
-            className="flex flex-col items-center gap-3 mb-10"
+            className="flex flex-col items-center gap-2 mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-red-100/90 text-lg md:text-xl font-bebas">
-              <span>{t('event-date')}</span>
+              <span>{eventDate}</span>
               <span className="hidden sm:inline text-brand-red">|</span>
               <span>{t('event-time')}</span>
             </div>
@@ -133,15 +165,13 @@ export default function Bajameister() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
-              {t('event-location')}
+              {location}
             </a>
           </motion.div>
 
           {/* CTA Button - Now in Hero */}
           <motion.a
-            href={joinLink}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#tickets"
             className="relative inline-block px-12 py-4 text-2xl font-bebas text-white rounded-full overflow-hidden group cursor-pointer"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -359,33 +389,21 @@ export default function Bajameister() {
         </div>
       </motion.div>
 
-      {/* Bottom CTA Section */}
+      {/* Ticket Section: the seller's widget, embedded. See components/TicketWidget. */}
       <motion.div
-        className="py-20 px-4 text-center"
+        id="tickets"
+        className="scroll-mt-24 py-20 px-4"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <motion.a
-          href={joinLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative inline-block px-16 py-5 text-3xl font-bebas text-white rounded-full overflow-hidden group cursor-pointer"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="absolute inset-0 bg-gradient-to-r from-brand-red-dark via-brand-red to-brand-red-dark" />
-          <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-brand-red-dark via-brand-red-light to-brand-red-dark"
-            animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            style={{ backgroundSize: "200% 100%" }}
-          />
-          <span className="absolute inset-0 border-2 border-brand-red/50 rounded-full" />
-          <span className="relative z-10">{t('cta')}</span>
-        </motion.a>
+        <h2 className="mb-10 text-center font-bebas text-4xl md:text-6xl text-brand-red">
+          {t('tickets-title')}
+        </h2>
+        <TicketWidget />
       </motion.div>
+
     </main>
   );
 }

@@ -182,6 +182,33 @@ do both, which is on purpose.
 
 The years at each end of the timeline slider update on their own.
 
+### Change the Bajameister event
+
+**File:** `src/content/bajameister.ts`
+
+```ts
+export const BAJAMEISTER = {
+  date: '2026-11-13',
+  venue: 'Resto-Pub 100 Génies',
+  address: '530 rue Peel, Montréal, QC',
+  ticketUrl: 'https://lepointdevente.com/billets/bajameister',
+  ticketEventId: '544585',
+}
+```
+
+`date` is `YYYY-MM-DD`. The site writes it out in the reader's language, so it can never
+say one date in English and another in French.
+
+Get `ticketUrl` and `ticketEventId` from Lepointdevente. The id is the number they show as
+**"Identifiant à utiliser sur WordPress"**.
+
+Two things happen on their own: the floating notice on every page **disappears the day after
+the event**, and if a visitor closes it, it stays closed for them until the next edition. You
+do not need to remember to take it down.
+
+The wording on the page (tagline, description, opening hours) is under `pages.bajameister`
+in both message files.
+
 ### Change the site's colours
 
 **File:** `src/theme/tokens.mjs`

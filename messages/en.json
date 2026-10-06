@@ -8,10 +8,10 @@
       "partners-title": "Powered By",
       "event-highlight": "One Night. Two Legends. Unlimited Energy.",
       "cta": "Join the Experience",
-      "event-date": "February 27th, 2026",
       "event-time": "8 PM - 3 AM",
-      "event-location": "530 Peel Street, Montreal, QC",
-      "event-details-title": "Event Details"
+      "event-details-title": "Event Details",
+      "tickets-title": "Get Your Tickets",
+      "tickets-external": "Or open the ticket page on lepointdevente.com"
     },
     "home": {
       "title": "Home",
@@ -82,7 +82,7 @@
       },
       "details": {
         "2026-baja-sae-ohio-business": "Commercial presentation",
-        "2026-baja-sae-ohio-overall": "Overall ranking with 918.63 points", 
+        "2026-baja-sae-ohio-overall": "Overall ranking with 918.63 points",
         "2026-baja-sae-new-york-overall": "Overall ranking with 919.16 points",
         "2026-baja-sae-new-york-business": "Commercial presentation",
         "2026-baja-sae-new-york-suspension": "Suspension and traction",

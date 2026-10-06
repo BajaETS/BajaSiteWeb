@@ -16,6 +16,10 @@ export const NAV_ITEMS: NavItem[] = [
   { href: '/prizes', labelKey: 'pages.prizes.title' },
   { href: '/partners', labelKey: 'pages.partners.title' },
   { href: '/history', labelKey: 'pages.history.title' },
+  // The event. Remove this line once Bajameister is over; unlike the floating
+  // banner, a menu entry cannot hide itself without the menu jumping about as the
+  // page loads. The page itself stays reachable either way.
+  { href: '/bajameister', labelKey: 'pages.bajameister.title' },
 ]
 
 /**

@@ -210,3 +210,31 @@ export type CompetitionYear = {
   year: number
   competitions: Competition[]
 }
+
+/* ────────────────────────────── Bajameister ────────────────────────────── */
+
+/**
+ * The Bajameister fundraiser party. One event at a time, so this is a single
+ * record rather than a list. Edited in src/content/bajameister.ts.
+ */
+export type BajameisterEvent = {
+  /**
+   * Event date in ISO format: YYYY-MM-DD.
+   * Written in the reader's language automatically, so it can never say
+   * "November 13" on one side of the site and "13 novembre" on the other.
+   */
+  date: string
+  /** The event crest, shown large at the top of the page. Path under public/. */
+  logo: string
+  /** Venue name, e.g. 'Resto-Pub 100 Génies'. A proper noun, so not translated. */
+  venue: string
+  /** Street address, written the same way in both languages. */
+  address: string
+  /** The event's page on the ticket seller's site. Works as a plain link. */
+  ticketUrl: string
+  /**
+   * The seller's numeric event id, used by the embedded ticket widget.
+   * Find it in the Lepointdevente dashboard under "Identifiant a utiliser sur WordPress".
+   */
+  ticketEventId: string
+}

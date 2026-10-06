@@ -1,20 +1,69 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/routing";
+import { useLocale, useTranslations } from "next-intl";
 import { COLORS } from "@/theme/tokens.mjs";
+import { BAJAMEISTER } from "@/content/bajameister";
+import { parseLocalDate } from "@/content/dates";
 
+/** Remembering a dismissal per event date, so a new edition shows the banner again. */
+const DISMISS_KEY = `bajameister-dismissed-${BAJAMEISTER.date}`;
+
+/**
+ * The floating "Bajameister is happening" notification, shown on every page.
+ *
+ * It takes care of itself in two ways, so nobody has to remember to remove it:
+ *   - it stops appearing the day after the event, based on the date in
+ *     src/content/bajameister.ts
+ *   - if a visitor closes it, it stays closed for them until the next edition
+ *
+ * To stop advertising the event before then, remove <BajameisterBanner /> from
+ * src/app/[locale]/layout.tsx.
+ */
 export function BajameisterBanner() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const t = useTranslations('pages.bajameister');
+  const locale = useLocale();
+  const pathname = usePathname();
 
-  if (!isVisible) return null;
+  // Pointless on the page it links to, and on a phone it sits right on top of that
+  // page's "buy tickets" button.
+  const onEventPage = pathname === "/bajameister";
+
+  // Decided in an effect rather than during render: this page is built ahead of time,
+  // so "has the date passed" and "did you close this" are only knowable in the browser.
+  // Deciding during render would make the server and client disagree.
+  useEffect(() => {
+    const dayAfter = parseLocalDate(BAJAMEISTER.date);
+    dayAfter.setDate(dayAfter.getDate() + 1);
+    if (Date.now() >= dayAfter.getTime()) return;
+
+    try {
+      if (window.localStorage.getItem(DISMISS_KEY)) return;
+    } catch {
+      // Private browsing or blocked storage. Showing the banner is the safe default.
+    }
+
+    setIsVisible(true);
+  }, []);
+
+  if (!isVisible || onEventPage) return null;
+
+  const eventDate = parseLocalDate(BAJAMEISTER.date).toLocaleDateString(locale, {
+    day: "numeric",
+    month: "long",
+  });
 
   const handleClose = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     setIsVisible(false);
+    try {
+      window.localStorage.setItem(DISMISS_KEY, "1");
+    } catch {
+      // Nothing to do: it will simply reappear on the next visit.
+    }
   };
 
   return (
@@ -69,7 +118,7 @@ export function BajameisterBanner() {
                   {t('title')}
                 </h4>
                 <p className="text-white/70 text-sm md:text-base truncate">
-                  {t('subtitle')}
+                  {eventDate}
                 </p>
                 <span className="inline-flex items-center text-brand-orange text-sm font-medium mt-1 group-hover:text-brand-orange-light transition-colors">
                   {t('cta')}
