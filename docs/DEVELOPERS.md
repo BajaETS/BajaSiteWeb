@@ -342,12 +342,65 @@ A public repository also makes the project eligible for the
 [Vercel Open Source Program](https://vercel.com/open-source-program), which grants credits
 and support. Applications open quarterly.
 
+## The Bajameister event
+
+The fundraiser party has three moving parts:
+
+| Piece | What it is |
+|---|---|
+| `src/content/bajameister.ts` | The date, venue, address, ticket link and ticket id. The only file to edit when the event moves. |
+| `components/BajameisterBanner` | The floating notice on every page. Mounted in the root layout. |
+| `components/TicketWidget` | The embedded Lepointdevente ticket widget. |
+
+Two things take care of themselves, so nobody has to remember them:
+
+- The banner **stops appearing the day after the date** in the content file.
+- Closing the banner is remembered per event date, so a visitor is not nagged, but a new
+  edition shows it again.
+
+### Why TicketWidget is not just a script tag
+
+Lepointdevente's embed code calls `document.write()` to place its iframe. On a plain HTML
+page that works, because the script runs while the document is still parsing. Here it would
+blank the page, since `document.write()` after load replaces the whole document.
+
+So the component loads the script manually with `document.write` temporarily swapped for a
+function that captures the markup, then puts the captured iframe in its own container.
+
+That is deliberately preferred over hand-building the iframe. The real script also registers
+two `postMessage` listeners the checkout depends on: `resize`, which reports the iframe's
+height so there is no inner scrollbar, and `session`, which hands the iframe a session id the
+seller generated when the script was fetched. That handshake is how the seller works around
+Safari and iOS blocking cookies in a third-party iframe, so skipping it risks breaking
+checkout for those visitors.
+
+If the script is blocked by an ad blocker, the component falls back to a plain link to
+`ticketUrl` rather than showing an empty box.
+
+### Why the ticket panel is white on a black site
+
+This was investigated and settled, so it does not need revisiting.
+
+Lepointdevente has no dark mode. Their stylesheet contains zero `prefers-color-scheme`
+rules, and the widget ignores every theme parameter tried (`theme`, `style`, `dark`, `bg`,
+`color`, `skin` all return a byte-identical page). Because the widget is a cross-origin
+iframe, our own CSS cannot reach inside it either.
+
+The one available lever is a CSS filter on the whole frame, and `TicketWidget` still has
+it behind the `INVERT_TO_DARK` constant. It was tried and rejected: the filter inverts
+every pixel in the frame, including the Baja ETS crest the widget displays, which turns
+from dark green and gold into a washed-out mint square. There is no way to exempt one
+image inside a cross-origin frame. On a page where people enter card details, a crest that
+looks broken is a worse trade than a light panel, and the same would happen to the card
+brand logos at checkout.
+
+Flip `INVERT_TO_DARK` to `true` in `components/TicketWidget/index.tsx` to see it.
+
+The proper fix, if anyone wants it, is to ask Lepointdevente whether they offer branding
+or custom CSS for organizers. That cannot be determined from outside their dashboard.
+
 ## Things deliberately left alone
 
-- **`BajameisterBanner`** (`src/app/components/BajameisterBanner/`) is written but never
-  imported anywhere. It holds the only link to `/bajameister`, so that page is currently
-  reachable only by typing the URL. Mount the banner, or delete both, when someone decides
-  which it should be.
 - **Repository size.** `.git` is over 1 GB because large images have been committed since the
   project started. Deleting files from `public/` does not reclaim that: the bytes stay in
   every past commit. Fixing it properly means rewriting history with `git filter-repo` and a

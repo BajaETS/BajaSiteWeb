@@ -8,6 +8,7 @@ import clsx from "clsx";
 import "./globals.css";
 import { Menu } from "../components/Menu";
 import Footer from "../components/Footer";
+import { BajameisterBanner } from "../components/BajameisterBanner";
 import { routing } from "@/i18n/routing";
 
 /**
@@ -81,6 +82,9 @@ export default async function RootLayout(props: TRootLayoutProps) {
           <Menu />
           {children}
           <Footer />
+          {/* Floating event notice. Hides itself once the date in
+              src/content/bajameister.ts has passed. */}
+          <BajameisterBanner />
           <Analytics />
         </NextIntlClientProvider>
       </body>
