@@ -59,7 +59,7 @@ export const COMPETITION_YEARS: CompetitionYear[] = [
       },
       {
         title: 'Baja SAE Ohio',
-        date: '2026-06-11',
+        date: '2026-09-20',
         image: '/Prizes/ohio2026.jpg',
         results: [
           { place: 3, category: 'overall', medal: 'bronze', points: 	906.03, detailsKey: 'pages.prizes.details.2026-baja-sae-ohio-overall' },
