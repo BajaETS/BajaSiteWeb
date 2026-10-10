@@ -63,6 +63,7 @@ export const COMPETITION_YEARS: CompetitionYear[] = [
         image: '/Prizes/ohio2026.jpg',
         results: [
           { place: 3, category: 'overall', medal: 'bronze', points: 	906.03, detailsKey: 'pages.prizes.details.2026-baja-sae-ohio-overall' },
+          { place: 1, category: 'endurance', medal: 'gold' },
           { place: 2, category: 'business', medal: 'silver', detailsKey: 'pages.prizes.details.2026-baja-sae-ohio-business' },
           { place: 3, category: 'dynamic', medal: 'bronze' },
           { place: 7, category: 'static', medal: 'other' },
@@ -135,7 +136,7 @@ export const COMPETITION_YEARS: CompetitionYear[] = [
       },
       {
         title: 'Baja SAE Williamsport',
-        date: '2024-04-16',
+        date: '2024-05-16',
         image: '/Prizes/penn2024.jpeg',
         results: [
           { place: 1, category: 'overall', medal: 'gold', points: 915.06, detailsKey: 'pages.prizes.details.2024-baja-sae-williamsport-overall' },
