@@ -246,6 +246,13 @@ export const SPONSORS: Sponsor[] = [
     active: false,
   },
   {
+    name: 'Fondation J. Armand Bombardier',
+    tier: 'gold',
+    logo: '/Partners/gold/fondation_JA_Bombardier.png',
+    link: 'https://philanthropie.fondationbombardier.ca/fr/',
+    active: true,
+  },
+  {
     name: 'Industrie L',
     tier: 'gold',
     logo: '/Partners/gold/IndustrieL.png',
